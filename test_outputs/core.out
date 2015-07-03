@@ -1,0 +1,1914 @@
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Spark Project Core 1.4.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-versions) @ spark-core_2.10 ---
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:add-source (eclipse-add-source) @ spark-core_2.10 ---
+[INFO] Add Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala
+[INFO] Add Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/test/scala
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-source (add-scala-sources) @ spark-core_2.10 ---
+[INFO] Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala added.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ spark-core_2.10 ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spark-core_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 20 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:compile (scala-compile-first) @ spark-core_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 75 Scala sources and 36 Java sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/core/target/scala-2.10/classes...[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/SparkContext.scala:834: constructor Job in class Job is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val job = new NewHadoopJob(hadoopConfiguration)[0m
+[0m[[33mwarn[0m] [0m              ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/SparkContext.scala:883: constructor Job in class Job is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val job = new NewHadoopJob(hadoopConfiguration)[0m
+[0m[[33mwarn[0m] [0m              ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/SparkContext.scala:1062: constructor Job in class Job is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val job = new NewHadoopJob(conf)[0m
+[0m[[33mwarn[0m] [0m              ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/SparkContext.scala:1329: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m      val isDir = fs.getFileStatus(hadoopPath).isDir[0m
+[0m[[33mwarn[0m] [0m                                               ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/SparkHadoopWriter.scala:153: constructor TaskID in class TaskID is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m        new TaskAttemptID(new TaskID(jID.value, true, splitID), attemptID))[0m
+[0m[[33mwarn[0m] [0m                          ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/SparkHadoopWriter.scala:174: method makeQualified in class Path is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    outputPath.makeQualified(fs)[0m
+[0m[[33mwarn[0m] [0m               ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/deploy/SparkHadoopUtil.scala:212: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m      val (directories, leaves) = fs.listStatus(status.getPath).partition(_.isDir)[0m
+[0m[[33mwarn[0m] [0m                                                                            ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/deploy/SparkHadoopUtil.scala:216: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    if (baseStatus.isDir) recurse(baseStatus) else Seq(baseStatus)[0m
+[0m[[33mwarn[0m] [0m                   ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/deploy/SparkHadoopUtil.scala:225: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m      val (directories, files) = fs.listStatus(status.getPath).partition(_.isDir)[0m
+[0m[[33mwarn[0m] [0m                                                                           ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/deploy/SparkHadoopUtil.scala:230: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    assert(baseStatus.isDir)[0m
+[0m[[33mwarn[0m] [0m                      ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/deploy/history/FsHistoryProvider.scala:124: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    if (!fs.getFileStatus(path).isDir) {[0m
+[0m[[33mwarn[0m] [0m                                ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/deploy/history/FsHistoryProvider.scala:451: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m  private def isLegacyLogDirectory(entry: FileStatus): Boolean = entry.isDir()[0m
+[0m[[33mwarn[0m] [0m                                                                       ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/input/PortableDataStream.scala:49: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m      if (file.isDir) 0L else file.getLen[0m
+[0m[[33mwarn[0m] [0m               ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/input/WholeTextFileInputFormat.scala:57: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m      if (file.isDir) 0L else file.getLen[0m
+[0m[[33mwarn[0m] [0m               ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/mapred/SparkHadoopMapRedUtil.scala:62: constructor TaskAttemptID in class TaskAttemptID is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    new TaskAttemptID(jtIdentifier, jobId, isMap, taskId, attemptId)[0m
+[0m[[33mwarn[0m] [0m    ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/rdd/CheckpointRDD.scala:112: method getDefaultReplication in class FileSystem is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m      fs.create(tempOutputPath, false, bufferSize, fs.getDefaultReplication, blockSize)[0m
+[0m[[33mwarn[0m] [0m                                                      ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/rdd/HadoopRDD.scala:354: constructor TaskID in class TaskID is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val taId = new TaskAttemptID(new TaskID(jobID, true, splitId), attemptId)[0m
+[0m[[33mwarn[0m] [0m                                 ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/rdd/PairRDDFunctions.scala:933: constructor Job in class Job is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val job = new NewAPIHadoopJob(hadoopConf)[0m
+[0m[[33mwarn[0m] [0m              ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/rdd/PairRDDFunctions.scala:1001: constructor Job in class Job is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val job = new NewAPIHadoopJob(hadoopConf)[0m
+[0m[[33mwarn[0m] [0m              ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/scheduler/EventLoggingListener.scala:100: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    if (!fileSystem.getFileStatus(new Path(logBaseDir)).isDir) {[0m
+[0m[[33mwarn[0m] [0m                                                        ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/main/scala/org/apache/spark/scheduler/InputFormatInfo.scala:106: constructor Job in class Job is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val job = new Job(conf)[0m
+[0m[[33mwarn[0m] [0m              ^[0m
+[0m[[33mwarn[0m] [0m21 warnings found[0m
+[0m[[33mwarn[0m] [0mwarning: [options] bootstrap class path not set in conjunction with -source 1.6[0m
+[0m[[33mwarn[0m] [0m1 warning[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:21:58 PM [34.261s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ spark-core_2.10 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 48 source files to /Users/jeromenilmeier/Documents/spark_28may2015/spark/core/target/scala-2.10/classes
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-test-source (add-scala-test-sources) @ spark-core_2.10 ---
+[INFO] Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/test/scala added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spark-core_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 57 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:testCompile (scala-test-compile-first) @ spark-core_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 25 Scala sources and 9 Java sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/core/target/scala-2.10/test-classes...[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/test/scala/org/apache/spark/FileSuite.scala:504: constructor Job in class Job is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val job = new Job(sc.hadoopConfiguration)[0m
+[0m[[33mwarn[0m] [0m              ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/test/scala/org/apache/spark/scheduler/EventLoggingListenerSuite.scala:70: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    assert(!logStatus.isDir)[0m
+[0m[[33mwarn[0m] [0m                      ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/test/scala/org/apache/spark/scheduler/EventLoggingListenerSuite.scala:74: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    assert(!fileSystem.getFileStatus(new Path(eventLogger.logPath)).isDir)[0m
+[0m[[33mwarn[0m] [0m                                                                    ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/test/scala/org/apache/spark/scheduler/ReplayListenerSuite.scala:116: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    assert(!eventLog.isDir)[0m
+[0m[[33mwarn[0m] [0m                     ^[0m
+[0m[[33mwarn[0m] [0mfour warnings found[0m
+[0m[[33mwarn[0m] [0mwarning: [options] bootstrap class path not set in conjunction with -source 1.6[0m
+[0m[[33mwarn[0m] [0mNote: /Users/jeromenilmeier/Documents/spark_28may2015/spark/core/src/test/java/org/apache/spark/JavaAPISuite.java uses or overrides a deprecated API.[0m
+[0m[[33mwarn[0m] [0mNote: Recompile with -Xlint:deprecation for details.[0m
+[0m[[33mwarn[0m] [0m1 warning[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:22:20 PM [18.874s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ spark-core_2.10 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:build-classpath (default) @ spark-core_2.10 ---
+[INFO] Wrote classpath file '/Users/jeromenilmeier/Documents/spark_28may2015/spark/core/target/spark-test-classpath.txt'.
+[INFO] 
+[INFO] --- gmavenplus-plugin:1.5:execute (default) @ spark-core_2.10 ---
+[INFO] Using Groovy 2.3.7 to perform execute.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ spark-core_2.10 ---
+[INFO] Surefire report directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/core/target/surefire-reports
+Downloading: https://repo1.maven.org/maven2/org/apache/maven/surefire/surefire-junit4/2.18.1/surefire-junit4-2.18.1.pom
+3/3 KB            Downloaded: https://repo1.maven.org/maven2/org/apache/maven/surefire/surefire-junit4/2.18.1/surefire-junit4-2.18.1.pom (3 KB at 4.4 KB/sec)
+Downloading: https://repo1.maven.org/maven2/org/apache/maven/surefire/surefire-providers/2.18.1/surefire-providers-2.18.1.pom
+3/3 KB            Downloaded: https://repo1.maven.org/maven2/org/apache/maven/surefire/surefire-providers/2.18.1/surefire-providers-2.18.1.pom (3 KB at 23.0 KB/sec)
+Downloading: https://repo1.maven.org/maven2/org/apache/maven/surefire/surefire-junit4/2.18.1/surefire-junit4-2.18.1.jar
+4/67 KB   8/67 KB   12/67 KB   16/67 KB   20/67 KB   24/67 KB   28/67 KB   32/67 KB   36/67 KB   40/67 KB   44/67 KB   48/67 KB   52/67 KB   56/67 KB   60/67 KB   64/67 KB   67/67 KB              Downloaded: https://repo1.maven.org/maven2/org/apache/maven/surefire/surefire-junit4/2.18.1/surefire-junit4-2.18.1.jar (67 KB at 212.1 KB/sec)
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+Running org.apache.spark.JavaAPISuite
+Tests run: 90, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.629 sec - in org.apache.spark.JavaAPISuite
+Running org.apache.spark.JavaJdbcRDDSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.9 sec - in org.apache.spark.JavaJdbcRDDSuite
+Running org.apache.spark.shuffle.unsafe.PackedRecordPointerSuite
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.spark.shuffle.unsafe.PackedRecordPointerSuite
+Running org.apache.spark.shuffle.unsafe.UnsafeShuffleInMemorySorterSuite
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.203 sec - in org.apache.spark.shuffle.unsafe.UnsafeShuffleInMemorySorterSuite
+Running org.apache.spark.shuffle.unsafe.UnsafeShuffleWriterSuite
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.044 sec - in org.apache.spark.shuffle.unsafe.UnsafeShuffleWriterSuite
+
+Results :
+
+Tests run: 117, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- scalatest-maven-plugin:1.0:test (test) @ spark-core_2.10 ---
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+[36mDiscovery starting.[0m
+[36mDiscovery completed in 3 seconds, 730 milliseconds.[0m
+[36mRun starting. Expected test count is: 1250[0m
+[32mExternalSorterSuite:[0m
+[32m- empty data stream with kryo ser[0m
+[32m- empty data stream with java ser[0m
+[32m- few elements per partition with kryo ser[0m
+[32m- few elements per partition with java ser[0m
+[32m- empty partitions with spilling with kryo ser[0m
+[32m- empty partitions with spilling with java ser[0m
+[32m- empty partitions with spilling, bypass merge-sort with kryo ser[0m
+[32m- empty partitions with spilling, bypass merge-sort with java ser[0m
+[32m- spilling in local cluster with kryo ser[0m
+[32m- spilling in local cluster with java ser[0m
+[32m- spilling in local cluster with many reduce tasks with kryo ser[0m
+[32m- spilling in local cluster with many reduce tasks with java ser[0m
+[32m- cleanup of intermediate files in sorter[0m
+[32m- cleanup of intermediate files in sorter, bypass merge-sort[0m
+[32m- cleanup of intermediate files in sorter if there are errors[0m
+[32m- cleanup of intermediate files in sorter if there are errors, bypass merge-sort[0m
+[32m- cleanup of intermediate files in shuffle[0m
+[32m- cleanup of intermediate files in shuffle with errors[0m
+[32m- no partial aggregation or sorting with kryo ser[0m
+[32m- no partial aggregation or sorting with java ser[0m
+[32m- partial aggregation without spill with kryo ser[0m
+[32m- partial aggregation without spill with java ser[0m
+[32m- partial aggregation with spill, no ordering with kryo ser[0m
+[32m- partial aggregation with spill, no ordering with java ser[0m
+[32m- partial aggregation with spill, with ordering with kryo ser[0m
+[32m- partial aggregation with spill, with ordering with java ser[0m
+[32m- sorting without aggregation, no spill with kryo ser[0m
+[32m- sorting without aggregation, no spill with java ser[0m
+[32m- sorting without aggregation, with spill with kryo ser[0m
+[32m- sorting without aggregation, with spill with java ser[0m
+[32m- spilling with hash collisions[0m
+[32m- spilling with many hash collisions[0m
+[32m- spilling with hash collisions using the Int.MaxValue key[0m
+[32m- spilling with null keys and values[0m
+[32m- conditions for bypassing merge-sort[0m
+[32m- sort without breaking sorting contracts with kryo ser[0m
+[32m- sort without breaking sorting contracts with java ser[0m
+[32mDAGSchedulerSuite:[0m
+[32m- [SPARK-3353] parent stage should have lower stage id[0m
+[32m- zero split job[0m
+[32m- run trivial job[0m
+[32m- local job[0m
+[32m- local job oom[0m
+[32m- run trivial job w/ dependency[0m
+[32m- cache location preferences w/ dependency[0m
+[32m- regression test for getCacheLocs[0m
+[32m- avoid exponential blowup when getting preferred locs list[0m
+[32m- unserializable task[0m
+[32m- trivial job failure[0m
+[32m- trivial job cancellation[0m
+[32m- job cancellation no-kill backend[0m
+[32m- run trivial shuffle[0m
+[32m- run trivial shuffle with fetch failure[0m
+[32m- trivial shuffle with multiple fetch failures[0m
+[32m- ignore late map task completions[0m
+[32m- run shuffle with map stage failure[0m
+[32m- failure of stage used by two jobs[0m
+[32m- run trivial shuffle with out-of-band failure and retry[0m
+[32m- recursive shuffle failures[0m
+[32m- cached post-shuffle[0m
+[32m- misbehaved accumulator should not crash DAGScheduler and SparkContext[0m
+[32m- misbehaved resultHandler should not crash DAGScheduler and SparkContext[0m
+[32m- accumulator not calculated for resubmitted result stage[0m
+[32mFsHistoryProviderSuite:[0m
+[32m- Parse new and old application logs[0m
+[32m- Parse legacy logs with compression codec set[0m
+[32m- SPARK-3697: ignore directories that cannot be read.[0m
+[32m- history file is renamed from inprogress to completed[0m
+[32m- SPARK-5582: empty log directory[0m
+[32m- apps with multiple attempts[0m
+[32m- log cleaner[0m
+[32mRDDSuite:[0m
+[32m- basic operations[0m
+[32m- serialization[0m
+[32m- countApproxDistinct[0m
+[32m- SparkContext.union[0m
+[32m- SparkContext.union creates UnionRDD if at least one RDD has no partitioner[0m
+[32m- SparkContext.union creates PartitionAwareUnionRDD if all RDDs have partitioners[0m
+[32m- PartitionAwareUnionRDD raises exception if at least one RDD has no partitioner[0m
+[32m- partitioner aware union[0m
+[32m- UnionRDD partition serialized size should be small[0m
+[32m- aggregate[0m
+[32m- treeAggregate[0m
+[32m- treeReduce[0m
+[32m- basic caching[0m
+[32m- caching with failures[0m
+[32m- empty RDD[0m
+[32m- repartitioned RDDs[0m
+[32m- repartitioned RDDs perform load balancing[0m
+[32m- coalesced RDDs[0m
+[32m- coalesced RDDs with locality[0m
+[32m- coalesced RDDs with locality, large scale (10K partitions)[0m
+[32m- coalesced RDDs with locality, fail first pass[0m
+[32m- zipped RDDs[0m
+[32m- partition pruning[0m
+[32m- mapWith[0m
+[32m- flatMapWith[0m
+[32m- filterWith[0m
+[32m- collect large number of empty partitions[0m
+[32m- take[0m
+[32m- top with predefined ordering[0m
+[32m- top with custom ordering[0m
+[32m- takeOrdered with predefined ordering[0m
+[32m- takeOrdered with limit 0[0m
+[32m- takeOrdered with custom ordering[0m
+[32m- isEmpty[0m
+[32m- sample preserves partitioner[0m
+[32m- takeSample[0m
+[32m- takeSample from an empty rdd[0m
+[32m- randomSplit[0m
+[32m- runJob on an invalid partition[0m
+[32m- sort an empty RDD[0m
+[32m- sortByKey[0m
+[32m- sortByKey ascending parameter[0m
+[32m- sortByKey with explicit ordering[0m
+[32m- repartitionAndSortWithinPartitions[0m
+[32m- intersection[0m
+[32m- intersection strips duplicates in an input[0m
+[32m- zipWithIndex[0m
+[32m- zipWithIndex with a single partition[0m
+[32m- zipWithIndex chained with other RDDs (SPARK-4433)[0m
+[32m- zipWithUniqueId[0m
+[32m- retag with implicit ClassTag[0m
+[32m- parent method[0m
+[32m- getNarrowAncestors[0m
+[32m- getNarrowAncestors with multiple parents[0m
+[32m- getNarrowAncestors with cycles[0m
+[32m- task serialization exception should not hang scheduler[0m
+[32m- nested RDDs are not supported (SPARK-5063)[0m
+[32m- actions cannot be performed inside of transformations (SPARK-5063)[0m
+[32m- cannot run actions after SparkContext has been stopped (SPARK-5063)[0m
+[32m- cannot call methods on a stopped SparkContext (SPARK-5063)[0m
+[32mSerDeUtilSuite:[0m
+[32m- Converting an empty pair RDD to python does not throw an exception (SPARK-5441)[0m
+[32m- Converting an empty python RDD to pair RDD does not throw an exception (SPARK-5441)[0m
+[32mUtilsSuite:[0m
+[32m- timeConversion[0m
+[32m- Test byteString conversion[0m
+[32m- bytesToString[0m
+[32m- copyStream[0m
+[32m- memoryStringToMb[0m
+[32m- splitCommandString[0m
+[32m- string formatting of time durations[0m
+[32m- reading offset bytes of a file[0m
+[32m- reading offset bytes across multiple files[0m
+[32m- deserialize long value[0m
+[32m- get iterator size[0m
+[32m- doesDirectoryContainFilesNewerThan[0m
+[32m- resolveURI[0m
+[32m- resolveURIs with multiple paths[0m
+[32m- nonLocalPaths[0m
+[32m- isBindCollision[0m
+[32m- log4j log level change[0m
+[32m- deleteRecursively[0m
+[32m- loading properties from file[0m
+[32m- timeIt with prepare[0m
+[32m- fetch hcfs dir[0m
+[32m- shutdown hook manager[0m
+[32mUnsafeShuffleManagerSuite:[0m
+[32m- supported shuffle dependencies[0m
+[32m- unsupported shuffle dependencies[0m
+[32mSortingSuite:[0m
+[32m- sortByKey[0m
+[32m- large array[0m
+[32m- large array with one split[0m
+[32m- large array with many partitions[0m
+[32m- sort descending[0m
+[32m- sort descending with one split[0m
+[32m- sort descending with many partitions[0m
+[32m- more partitions than elements[0m
+[32m- empty RDD[0m
+[32m- partition balancing[0m
+[32m- partition balancing for descending sort[0m
+[32m- get a range of elements in a sorted RDD that is on one partition[0m
+[32m- get a range of elements over multiple partitions in a descendingly sorted RDD[0m
+[32m- get a range of elements in an array not partitioned by a range partitioner[0m
+[32m- get a range of elements over multiple partitions but not taking up full partitions[0m
+[32mJavaSerializerSuite:[0m
+[32m- JavaSerializer instances are serializable[0m
+[32mLocalDirsSuite:[0m
+[32m- Utils.getLocalDir() returns a valid directory, even if some local dirs are missing[0m
+[32m- SPARK_LOCAL_DIRS override also affects driver[0m
+[32mMesosClusterSchedulerSuite:[0m
+[32m- can queue drivers[0m
+[32m- can kill queued drivers[0m
+[32mTaskContextSuite:[0m
+[32m- calls TaskCompletionListener after failure[0m
+[32m- all TaskCompletionListeners should be called even if some fail[0m
+[32m- TaskContext.attemptNumber should return attempt number, not task id (SPARK-4014)[0m
+[32m- TaskContext.attemptId returns taskAttemptId for backwards-compatibility (SPARK-4014)[0m
+[32mHistoryServerSuite:[0m
+[32m- application list json[0m
+[32m- completed app list json[0m
+[32m- running app list json[0m
+[32m- minDate app list json[0m
+[32m- maxDate app list json[0m
+[32m- maxDate2 app list json[0m
+[32m- one app json[0m
+[32m- one app multi-attempt json[0m
+[32m- job list json[0m
+[32m- job list from multi-attempt app json(1)[0m
+[32m- job list from multi-attempt app json(2)[0m
+[32m- one job json[0m
+[32m- succeeded job list json[0m
+[32m- succeeded&failed job list json[0m
+[32m- executor list json[0m
+[32m- stage list json[0m
+[32m- complete stage list json[0m
+[32m- failed stage list json[0m
+[32m- one stage json[0m
+[32m- one stage attempt json[0m
+[32m- stage task summary w shuffle write[0m
+[32m- stage task summary w shuffle read[0m
+[32m- stage task summary w/ custom quantiles[0m
+[32m- stage task list[0m
+[32m- stage task list w/ offset & length[0m
+[32m- stage task list w/ sortBy[0m
+[32m- stage task list w/ sortBy short names: -runtime[0m
+[32m- stage task list w/ sortBy short names: runtime[0m
+[32m- stage list with accumulable json[0m
+[32m- stage with accumulable json[0m
+[32m- stage task list from multi-attempt app json(1)[0m
+[32m- stage task list from multi-attempt app json(2)[0m
+[32m- rdd list storage json[0m
+[32m- one rdd storage json[0m
+[32m- response codes on bad paths[0m
+[32m- generate history page with relative links[0m
+[32mNextIteratorSuite:[0m
+[32m- one iteration[0m
+[32m- two iterations[0m
+[32m- empty iteration[0m
+[32m- close is called once for empty iterations[0m
+[32m- close is called once for non-empty iterations[0m
+[32mParallelCollectionSplitSuite:[0m
+[32m- one element per slice[0m
+[32m- one slice[0m
+[32m- equal slices[0m
+[32m- non-equal slices[0m
+[32m- splitting exclusive range[0m
+[32m- splitting inclusive range[0m
+[32m- empty data[0m
+[32m- zero slices[0m
+[32m- negative number of slices[0m
+[32m- exclusive ranges sliced into ranges[0m
+[32m- inclusive ranges sliced into ranges[0m
+[32m- identical slice sizes between Range and NumericRange[0m
+[32m- identical slice sizes between List and NumericRange[0m
+[32m- large ranges don't overflow[0m
+[32m- random array tests[0m
+[32m- random exclusive range tests[0m
+[32m- random inclusive range tests[0m
+[32m- exclusive ranges of longs[0m
+[32m- inclusive ranges of longs[0m
+[32m- exclusive ranges of doubles[0m
+[32m- inclusive ranges of doubles[0m
+[32m- inclusive ranges with Int.MaxValue and Int.MinValue[0m
+[32m- empty ranges with Int.MaxValue and Int.MinValue[0m
+[32mUISeleniumSuite:[0m
+[32m- effects of unpersist() / persist() should be reflected[0m
+[32m- failed stages should not appear to be active[0m
+[32m- spark.ui.killEnabled should properly control kill button display[0m
+[32m- jobs page should not display job group name unless some job was submitted in a job group[0m
+[32m- job progress bars should handle stage / task failures[0m
+[32m- job details page should display useful information for stages that haven't started[0m
+[32m- job progress bars / cells reflect skipped stages / tasks[0m
+[32m- stages that aren't run appear as 'skipped stages' after a job finishes[0m
+[32m- jobs with stages that are skipped should show correct link descriptions on all jobs page[0m
+[32m- attaching and detaching a new tab[0m
+[32m- kill stage POST/GET response is correct[0m
+[32m- stage & job retention[0m
+[32m- live UI json application list[0m
+[32mExecutorRunnerTest:[0m
+[32m- command includes appId[0m
+[32mUnsafeShuffleSuite:[0m
+[32m- groupByKey without compression[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- shuffle non-zero block size[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+                                                                      
+[32m- shuffle serializer[0m
+
+[Stage 0:>                                              (0 + 0) / 201]
+[Stage 0:>                                              (0 + 2) / 201]
+[Stage 0:==>                                           (10 + 2) / 201]
+[Stage 0:==========>                                   (48 + 2) / 201]
+[Stage 0:=====================>                        (92 + 2) / 201]
+[Stage 0:=============================>               (131 + 2) / 201]
+[Stage 0:=========================================>   (187 + 2) / 201]
+                                                                      
+[32m- zero sized blocks[0m
+
+[Stage 0:>                                              (0 + 0) / 201]
+[Stage 0:>                                              (0 + 1) / 201]
+[Stage 0:>                                              (0 + 2) / 201]
+[Stage 0:>                                              (1 + 2) / 201]
+[Stage 0:============>                                 (53 + 2) / 201]
+[Stage 0:==============================>              (138 + 2) / 201]
+                                                                      
+[32m- zero sized blocks without kryo[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- shuffle on mutable pairs[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- sorting on mutable pairs[0m
+
+[Stage 0:>             (0 + 0) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 2) / 2][Stage 1:>             (0 + 0) / 2]
+                                                                      
+[32m- cogroup using mutable pairs[0m
+
+[Stage 0:>             (0 + 0) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 1) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 2) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- subtract mutable pairs[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- sort with Java non serializable class - Kryo[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[32m- sort with Java non serializable class - Java[0m
+[32m- shuffle with different compression settings (SPARK-3426)[0m
+[32m- [SPARK-4085] rerun map stage if reduce stage cannot find its local shuffle file[0m
+[32m- UnsafeShuffleManager properly cleans up files for shuffles that use the new shuffle path[0m
+[32m- UnsafeShuffleManager properly cleans up files for shuffles that use the old shuffle path[0m
+[32mEventLoggingListenerSuite:[0m
+[32m- Verify log file exist[0m
+[32m- Basic event logging[0m
+[32m- Basic event logging with compression[0m
+[32m- End-to-end event logging[0m
+[32m- End-to-end event logging with compression[0m
+[32m- Log overwriting[0m
+[32m- Event log name[0m
+[32mDriverRunnerTest:[0m
+[32m- Process succeeds instantly[0m
+[32m- Process failing several times and then succeeding[0m
+[32m- Process doesn't restart if not supervised[0m
+[32m- Process doesn't restart if killed[0m
+[32m- Reset of backoff counter[0m
+[32mNettyBlockTransferSecuritySuite:[0m
+[32m- security default off[0m
+[32m- security on same password[0m
+[32m- security on mismatch password[0m
+[32m- security mismatch auth off on server[0m
+[32m- security mismatch auth off on client[0m
+[32mCommandUtilsSuite:[0m
+[32m- set libraryPath correctly[0m
+[32mPairRDDFunctionsSuite:[0m
+[32m- aggregateByKey[0m
+[32m- groupByKey[0m
+[32m- groupByKey with duplicates[0m
+[32m- groupByKey with negative key hash codes[0m
+[32m- groupByKey with many output partitions[0m
+[32m- sampleByKey[0m
+[32m- sampleByKeyExact[0m
+[32m- reduceByKey[0m
+[32m- reduceByKey with collectAsMap[0m
+[32m- reduceByKey with many output partitons[0m
+[32m- reduceByKey with partitioner[0m
+[32m- countApproxDistinctByKey[0m
+[32m- join[0m
+[32m- join all-to-all[0m
+[32m- leftOuterJoin[0m
+[32m- rightOuterJoin[0m
+[32m- fullOuterJoin[0m
+[32m- join with no matches[0m
+[32m- join with many output partitions[0m
+[32m- groupWith[0m
+[32m- groupWith3[0m
+[32m- groupWith4[0m
+[32m- zero-partition RDD[0m
+[32m- keys and values[0m
+[32m- default partitioner uses partition size[0m
+[32m- default partitioner uses largest partitioner[0m
+[32m- subtract[0m
+[32m- subtract with narrow dependency[0m
+[32m- subtractByKey[0m
+[32m- subtractByKey with narrow dependency[0m
+[32m- foldByKey[0m
+[32m- foldByKey with mutable result type[0m
+[32m- saveNewAPIHadoopFile should call setConf if format is configurable[0m
+[32m- saveAsHadoopFile should respect configured output committers[0m
+[32m- lookup[0m
+[32m- lookup with partitioner[0m
+[32m- lookup with bad partitioner[0m
+[32mPrimitiveVectorSuite:[0m
+[32m- primitive value[0m
+[32m- non-primitive value[0m
+[32m- ideal growth[0m
+[32m- ideal size[0m
+[32m- resizing[0m
+[32mMetricsConfigSuite:[0m
+[32m- MetricsConfig with default properties[0m
+[32m- MetricsConfig with properties set[0m
+[32m- MetricsConfig with subProperties[0m
+[32mSparkContextSchedulerCreationSuite:[0m
+[32m- bad-master[0m
+[32m- local[0m
+[32m- local-*[0m
+[32m- local-n[0m
+[32m- local-*-n-failures[0m
+[32m- local-n-failures[0m
+[32m- bad-local-n[0m
+[32m- bad-local-n-failures[0m
+[32m- local-default-parallelism[0m
+[32m- simr[0m
+[32m- local-cluster[0m
+[32m- yarn-cluster[0m
+[32m- yarn-standalone[0m
+[32m- yarn-client[0m
+[Stage 0:>                                                (0 + 2) / 2]Failed to load native Mesos library from /Users/jeromenilmeier/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+[32m- mesos fine-grained[0m
+Failed to load native Mesos library from /Users/jeromenilmeier/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+[32m- mesos coarse-grained[0m
+Failed to load native Mesos library from /Users/jeromenilmeier/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+[32m- mesos with zookeeper[0m
+[32mSerializationDebuggerSuite:[0m
+[32m- primitives, strings, and nulls[0m
+[32m- primitive arrays[0m
+[32m- non-primitive arrays[0m
+[32m- serializable object[0m
+[32m- nested arrays[0m
+[32m- nested objects[0m
+[32m- cycles (should not loop forever)[0m
+[32m- root object not serializable[0m
+[32m- array containing not serializable element[0m
+[32m- object containing not serializable field[0m
+[32m- externalizable class writing out not serializable object[0m
+[32mSamplingUtilsSuite:[0m
+[32m- reservoirSampleAndCount[0m
+[32m- computeFraction[0m
+[32mMesosTaskLaunchDataSuite:[0m
+[32m- serialize and deserialize data must be same[0m
+[32mTimeStampedHashMapSuite:[0m
+[32m- HashMap - basic test[0m
+[32m- TimeStampedHashMap - basic test[0m
+[32m- TimeStampedHashMap - threading safety test[0m
+[32m- TimeStampedWeakValueHashMap - basic test[0m
+[32m- TimeStampedWeakValueHashMap - threading safety test[0m
+[32m- TimeStampedHashMap - clearing by timestamp[0m
+[32m- TimeStampedWeakValueHashMap - clearing by timestamp[0m
+[32m- TimeStampedWeakValueHashMap - clearing weak references[0m
+[32mRandomSamplerSuite:[0m
+[32m- utilities[0m
+[32m- sanity check medianKSD against references[0m
+[32m- bernoulli sampling[0m
+[32m- bernoulli sampling with gap sampling optimization[0m
+[32m- bernoulli boundary cases[0m
+[32m- bernoulli data types[0m
+[32m- bernoulli clone[0m
+[32m- bernoulli set seed[0m
+[32m- replacement sampling[0m
+[32m- replacement sampling with gap sampling[0m
+[32m- replacement boundary cases[0m
+[32m- replacement data types[0m
+[32m- replacement clone[0m
+[32m- replacement set seed[0m
+[32m- bernoulli partitioning sampling[0m
+[32m- bernoulli partitioning boundary cases[0m
+[32m- bernoulli partitioning data[0m
+[32m- bernoulli partitioning clone[0m
+[32mSparkSubmitUtilsSuite:[0m
+[32m- incorrect maven coordinate throws error[0m
+[32m- create repo resolvers[0m
+:: loading settings :: url = jar:file:/Users/jeromenilmeier/.m2/repository/org/apache/ivy/ivy/2.4.0/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[32m- add dependencies works correctly[0m
+[32m- ivy path works correctly[0m
+[32m- search for artifact at local repositories[0m
+[32m- dependency not found throws RuntimeException[0m
+[32m- neglects Spark and Spark's dependencies[0m
+[32mImplicitOrderingSuite:[0m
+[32m- basic inference of Orderings[0m
+[32mTaskMetricsSuite:[0m
+[32m- [SPARK-5701] updateShuffleReadMetrics: ShuffleReadMetrics not added when no shuffle deps[0m
+[32mExternalShuffleServiceSuite:[0m
+[32m- groupByKey without compression[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+                                                                      
+[32m- shuffle non-zero block size[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+                                                                      
+[32m- shuffle serializer[0m
+
+[Stage 0:>                                              (0 + 0) / 201]
+[Stage 0:>                                              (0 + 1) / 201]
+[Stage 0:>                                              (0 + 2) / 201]
+[Stage 0:===>                                          (17 + 2) / 201]
+[Stage 0:===========>                                  (52 + 2) / 201]
+[Stage 0:======================>                       (99 + 2) / 201]
+[Stage 0:=================================>           (148 + 2) / 201]
+[Stage 0:============================================>(197 + 2) / 201]
+[Stage 1:===========================================> (195 + 2) / 201]
+                                                                      
+[32m- zero sized blocks[0m
+
+[Stage 0:>                                              (0 + 0) / 201]
+[Stage 0:>                                              (0 + 1) / 201]
+[Stage 0:==>                                            (9 + 1) / 201]
+[Stage 0:=============>                                (59 + 1) / 201]
+[Stage 0:========================>                    (111 + 1) / 201]
+[Stage 0:====================================>        (164 + 1) / 201]
+[Stage 1:==========================================>  (189 + 2) / 201]
+                                                                      
+[32m- zero sized blocks without kryo[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- shuffle on mutable pairs[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- sorting on mutable pairs[0m
+
+[Stage 0:>             (0 + 0) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 1) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 2) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:=======>      (1 + 1) / 2][Stage 1:>             (0 + 1) / 2]
+                                                                      
+[32m- cogroup using mutable pairs[0m
+
+[Stage 0:>             (0 + 0) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 1) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 2) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- subtract mutable pairs[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+                                                                      
+[32m- sort with Java non serializable class - Kryo[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[32m- sort with Java non serializable class - Java[0m
+[32m- shuffle with different compression settings (SPARK-3426)[0m
+[32m- [SPARK-4085] rerun map stage if reduce stage cannot find its local shuffle file[0m
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:>                                               (0 + 0) / 10]
+[Stage 0:>                                               (0 + 1) / 10]
+[Stage 0:>                                               (0 + 2) / 10]
+                                                                      
+[32m- using external shuffle service[0m
+[32mClosureCleanerSuite:[0m
+[32m- closures inside an object[0m
+[32m- closures inside a class[0m
+[32m- closures inside a class with no default constructor[0m
+[32m- closures that don't use fields of the outer class[0m
+[32m- nested closures inside an object[0m
+[32m- nested closures inside a class[0m
+[32m- toplevel return statements in closures are identified at cleaning time[0m
+[32m- return statements from named functions nested in closures don't raise exceptions[0m
+[32m- user provided closures are actually cleaned[0m
+[32mUnpersistSuite:[0m
+[32m- unpersist RDD[0m
+[32mTaskSetManagerSuite:[0m
+[32m- TaskSet with no preferences[0m
+[32m- multiple offers with no preferences[0m
+[32m- skip unsatisfiable locality levels[0m
+[32m- basic delay scheduling[0m
+[32m- we do not need to delay scheduling when we only have noPref tasks in the queue[0m
+[32m- delay scheduling with fallback[0m
+[32m- delay scheduling with failed hosts[0m
+[32m- task result lost[0m
+[32m- repeated failures lead to task set abortion[0m
+[32m- executors should be blacklisted after task failure, in spite of locality preferences[0m
+[32m- new executors get added and lost[0m
+[32m- test RACK_LOCAL tasks[0m
+[32m- do not emit warning when serialized task is small[0m
+[32m- emit warning when serialized task is large[0m
+[32m- Not serializable exception thrown if the task cannot be serialized[0m
+[32m- abort the job if total size of results is too large[0m
+[32m- speculative and noPref task should be scheduled after node-local[0m
+[32m- node-local tasks should be scheduled right away when there are only node-local and no-preference tasks[0m
+[32m- SPARK-4939: node-local tasks should be scheduled right after process-local tasks finished[0m
+[32m- SPARK-4939: no-pref tasks should be scheduled after process-local tasks finished[0m
+[32m- Ensure TaskSetManager is usable after addition of levels[0m
+[32m- Test that locations with HDFSCacheTaskLocation are treated as PROCESS_LOCAL.[0m
+[32mConnectionManagerSuite:[0m
+[32m- security default off[0m
+[32m- security on same password[0m
+[32m- security mismatch password[0m
+[32m- security mismatch auth off[0m
+[32m- security auth off[0m
+[32m- Ack error message[0m
+[32m- sendMessageReliably timeout[0m
+[32mPythonBroadcastSuite:[0m
+[32m- PythonBroadcast can be serialized with Kryo (SPARK-4882)[0m
+[32mNettyBlockTransferServiceSuite:[0m
+[32m- can bind to a random port[0m
+[32m- can bind to two random ports[0m
+[32m- can bind to a specific port[0m
+[32m- can bind to a specific port twice and the second increments[0m
+[32mDriverSuite:[0m
+[33m- driver should exit after finishing without cleanup (SPARK-530) !!! IGNORED !!![0m
+[32mCompactBufferSuite:[0m
+[32m- empty buffer[0m
+[32m- basic inserts[0m
+[32m- adding sequences[0m
+[32m- adding the same buffer to itself[0m
+[32mMapStatusSuite:[0m
+[32m- compressSize[0m
+[32m- decompressSize[0m
+[32m- MapStatus should never report non-empty blocks' sizes as 0[0m
+[32m- large tasks should use org.apache.spark.scheduler.HighlyCompressedMapStatus[0m
+[32m- HighlyCompressedMapStatus: estimated size should be the average non-empty block size[0m
+[32mCacheManagerSuite:[0m
+[32m- get uncached rdd[0m
+[32m- get cached rdd[0m
+[32m- get uncached local rdd[0m
+[32m- verify task metrics updated correctly[0m
+[32mTaskSchedulerImplSuite:[0m
+[32m- Scheduler does not always schedule tasks on the same workers[0m
+[32m- Scheduler correctly accounts for multiple CPUs per task[0m
+[32m- Scheduler does not crash when tasks are not serializable[0m
+[32mSparkConfSuite:[0m
+[32m- Test byteString conversion[0m
+[32m- Test timeString conversion[0m
+[32m- loading from system properties[0m
+[32m- initializing without loading defaults[0m
+[32m- named set methods[0m
+[32m- basic get and set[0m
+[32m- creating SparkContext without master and app name[0m
+[32m- creating SparkContext without master[0m
+[32m- creating SparkContext without app name[0m
+[32m- creating SparkContext with both master and app name[0m
+[32m- SparkContext property overriding[0m
+[32m- nested property names[0m
+[32m- Thread safeness - SPARK-5425[0m
+[32m- register kryo classes through registerKryoClasses[0m
+[32m- register kryo classes through registerKryoClasses and custom registrator[0m
+[32m- register kryo classes through conf[0m
+[32m- deprecated configs[0m
+[32m- akka deprecated configs[0m
+[32mShuffleBlockFetcherIteratorSuite:[0m
+[32m- successful 3 local reads + 2 remote reads[0m
+[32m- release current unexhausted buffer in case the task completes early[0m
+[32m- fail all blocks if any of the remote request fails[0m
+[32mWorkerSuite:[0m
+[32m- test isUseLocalNodeSSLConfig[0m
+[32m- test maybeUpdateSSLSettings[0m
+[32mShuffleMemoryManagerSuite:[0m
+[32m- single thread requesting memory[0m
+[32m- two threads requesting full memory[0m
+[32m- threads cannot grow past 1 / N[0m
+[32m- threads can block to get at least 1 / 2N memory[0m
+[32m- releaseMemoryForThisThread[0m
+[32m- threads should not be granted a negative size[0m
+[32mBlockManagerSuite:[0m
+[32m- StorageLevel object caching[0m
+[32m- BlockManagerId object caching[0m
+[32m- BlockManagerId.isDriver() backwards-compatibility with legacy driver ids (SPARK-6716)[0m
+[32m- master + 1 manager interaction[0m
+[32m- master + 2 managers interaction[0m
+[32m- removing block[0m
+[32m- removing rdd[0m
+[32m- removing broadcast[0m
+[32m- reregistration on heart beat[0m
+[32m- reregistration on block update[0m
+[32m- reregistration doesn't dead lock[0m
+[32m- correct BlockResult returned from get() calls[0m
+[32m- in-memory LRU storage[0m
+[32m- in-memory LRU storage with serialization[0m
+[32m- in-memory LRU for partitions of same RDD[0m
+[32m- in-memory LRU for partitions of multiple RDDs[0m
+[32m- tachyon storage[0m
+[32m  + tachyon storage test disabled. [0m
+[32m- on-disk storage[0m
+[32m- disk and memory storage[0m
+[32m- disk and memory storage with getLocalBytes[0m
+[32m- disk and memory storage with serialization[0m
+[32m- disk and memory storage with serialization and getLocalBytes[0m
+[32m- LRU with mixed storage levels[0m
+[32m- in-memory LRU with streams[0m
+[32m- LRU with mixed storage levels and streams[0m
+[32m- negative byte values in ByteBufferInputStream[0m
+[32m- overly large block[0m
+[32m- block compression[0m
+[32m- block store put failure[0m
+[32m- reads of memory-mapped and non memory-mapped files are equivalent[0m
+[32m- updated block statuses[0m
+[32m- query block statuses[0m
+[32m- get matching blocks[0m
+[32m- SPARK-1194 regression: fix the same-RDD rule for cache replacement[0m
+[32m- reserve/release unroll memory[0m
+[32m- safely unroll blocks[0m
+[32m- safely unroll blocks through putIterator[0m
+[32m- safely unroll blocks through putIterator (disk)[0m
+[32m- multiple unrolls by the same thread[0m
+[32m- lazily create a big ByteBuffer to avoid OOM if it cannot be put into MemoryStore[0m
+[32m- put a small ByteBuffer to MemoryStore[0m
+[32mPythonRunnerSuite:[0m
+[32m- format path[0m
+[32m- format paths[0m
+[32mCompletionIteratorSuite:[0m
+[32m- basic test[0m
+[32mBitSetSuite:[0m
+[32m- basic set and get[0m
+[32m- 100% full bit set[0m
+[32m- nextSetBit[0m
+[32m- xor len(bitsetX) < len(bitsetY)[0m
+[32m- xor len(bitsetX) > len(bitsetY)[0m
+[32m- andNot len(bitsetX) < len(bitsetY)[0m
+[32m- andNot len(bitsetX) > len(bitsetY)[0m
+[32mAsyncRDDActionsSuite:[0m
+[32m- countAsync[0m
+[32m- collectAsync[0m
+[32m- foreachAsync[0m
+[32m- foreachPartitionAsync[0m
+[32m- takeAsync[0m
+[32m- async success handling[0m
+[32m- async failure handling[0m
+[32m- FutureAction result, infinite wait[0m
+[32m- FutureAction result, finite wait[0m
+[32m- FutureAction result, timeout[0m
+[32mMetricsSystemSuite:[0m
+[32m- MetricsSystem with default config[0m
+[32m- MetricsSystem with sources add[0m
+[32m- MetricsSystem with Driver instance[0m
+[32m- MetricsSystem with Driver instance and spark.app.id is not set[0m
+[32m- MetricsSystem with Driver instance and spark.executor.id is not set[0m
+[32m- MetricsSystem with Executor instance[0m
+[32m- MetricsSystem with Executor instance and spark.app.id is not set[0m
+[32m- MetricsSystem with Executor instance and spark.executor.id is not set[0m
+[32m- MetricsSystem with instance which is neither Driver nor Executor[0m
+[32mJobCancellationSuite:[0m
+[32m- local mode, FIFO scheduler[0m
+[32m- local mode, fair scheduler[0m
+[32m- cluster mode, FIFO scheduler[0m
+[32m- cluster mode, fair scheduler[0m
+[32m- do not put partially executed partitions into cache[0m
+[32m- job group[0m
+[32m- inherited job group (SPARK-6629)[0m
+[32m- job group with interruption[0m
+[32m- two jobs sharing the same stage[0m
+[32mPartitioningSuite:[0m
+[32m- HashPartitioner equality[0m
+[32m- RangePartitioner equality[0m
+[32m- RangePartitioner getPartition[0m
+[32m- RangePartitioner for keys that are not Comparable (but with Ordering)[0m
+[32m- RangPartitioner.sketch[0m
+[32m- RangePartitioner.determineBounds[0m
+[32m- RangePartitioner should run only one job if data is roughly balanced[0m
+[32m- RangePartitioner should work well on unbalanced data[0m
+[32m- RangePartitioner should return a single partition for empty RDDs[0m
+[32m- HashPartitioner not equal to RangePartitioner[0m
+[32m- partitioner preservation[0m
+[32m- partitioning Java arrays should fail[0m
+[32m- zero-length partitions should be correctly handled[0m
+[32mSecurityManagerSuite:[0m
+[32m- set security with conf[0m
+[32m- set security with api[0m
+[32m- set security modify acls[0m
+[32m- set security admin acls[0m
+[32m- ssl on setup[0m
+[32m- ssl off setup[0m
+[32mUISuite:[0m
+[33m- basic ui visibility !!! IGNORED !!![0m
+[33m- visibility at localhost:4040 !!! IGNORED !!![0m
+[32m- jetty selects different port under contention[0m
+[32m- jetty binds to port 0 correctly[0m
+[32m- verify appUIAddress contains the scheme[0m
+[32m- verify appUIAddress contains the port[0m
+[32mSSLOptionsSuite:[0m
+[32m- test resolving property file as spark conf [0m
+[32m- test resolving property with defaults specified [0m
+[32m- test whether defaults can be overridden [0m
+[32mSparkListenerWithClusterSuite:[0m
+[32m- SparkListener sends executor added message[0m
+[32mInputOutputMetricsSuite:[0m
+[32m- input metrics for old hadoop with coalesce[0m
+[32m- input metrics with cache and coalesce[0m
+
+[Stage 8:>                                                (0 + 4) / 4]
+                                                                      
+[32m- input metrics with mixed read method[0m
+[32m- input metrics for new Hadoop API with coalesce[0m
+[32m- input metrics when reading text file[0m
+[32m- input metrics on records read - simple[0m
+[32m- input metrics on records read - more stages[0m
+[32m- input metrics on records - New Hadoop API[0m
+[32m- input metrics on recordsd read with cache[0m
+[32m- shuffle records read metrics[0m
+[32m- shuffle records written metrics[0m
+[32m- input read/write and shuffle read/write metrics all line up[0m
+[32m- input metrics with interleaved reads[0m
+[32m- output metrics on records written[0m
+[32m- output metrics on records written - new Hadoop API[0m
+[32m- output metrics when writing text file[0m
+[32m- input metrics with old CombineFileInputFormat[0m
+[32m- input metrics with new CombineFileInputFormat[0m
+[32mMemoryUtilsSuite:[0m
+[32m- MesosMemoryUtils should always override memoryOverhead when it's set[0m
+[32mStandaloneRestSubmitSuite:[0m
+[32m- construct submit request[0m
+[32m- create submission[0m
+[32m- create submission from main method[0m
+[32m- kill submission[0m
+[32m- request submission status[0m
+[32m- create then kill[0m
+[32m- create then request status[0m
+[32m- create then kill then request status[0m
+[32m- kill or request status before create[0m
+[32m- good request paths[0m
+[32m- good request paths, bad requests[0m
+[32m- bad request paths[0m
+[32m- server returns unknown fields[0m
+[32m- client handles faulty server[0m
+[32mOutputCommitCoordinatorSuite:[0m
+[32m- Only one of two duplicate commit tasks should commit[0m
+[32m- If commit fails, if task is retried it should not be locked, and will succeed.[0m
+[32m- Job should not complete if all commits are denied[0m
+[32m- Only authorized committer failures can clear the authorized committer lock (SPARK-6614)[0m
+[32mSortShuffleSuite:[0m
+[32m- groupByKey without compression[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- shuffle non-zero block size[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+                                                                      
+[32m- shuffle serializer[0m
+
+[Stage 0:>                                              (0 + 0) / 201]
+[Stage 0:>                                              (0 + 1) / 201]
+[Stage 0:>                                              (0 + 2) / 201]
+[Stage 0:===>                                          (15 + 2) / 201]
+[Stage 0:==========>                                   (47 + 2) / 201]
+[Stage 0:====================>                         (91 + 2) / 201]
+[Stage 0:============================>                (129 + 2) / 201]
+[Stage 0:======================================>      (173 + 2) / 201]
+                                                                      
+[32m- zero sized blocks[0m
+
+[Stage 0:>                                              (0 + 0) / 201]
+[Stage 0:>                                              (0 + 2) / 201]
+[Stage 0:>                                              (1 + 2) / 201]
+[Stage 0:==========>                                   (45 + 2) / 201]
+[Stage 0:============================>                (129 + 2) / 201]
+                                                                      
+[32m- zero sized blocks without kryo[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+                                                                      
+[32m- shuffle on mutable pairs[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+                                                                      
+[32m- sorting on mutable pairs[0m
+
+[Stage 0:>             (0 + 0) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 1) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 2) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- cogroup using mutable pairs[0m
+
+[Stage 0:>             (0 + 0) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 2) / 2][Stage 1:>             (0 + 0) / 2]
+                                                                      
+[32m- subtract mutable pairs[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+                                                                      
+[32m- sort with Java non serializable class - Kryo[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[32m- sort with Java non serializable class - Java[0m
+[32m- shuffle with different compression settings (SPARK-3426)[0m
+[32m- [SPARK-4085] rerun map stage if reduce stage cannot find its local shuffle file[0m
+[32mMapOutputTrackerSuite:[0m
+[32m- master start and stop[0m
+[32m- master register shuffle and fetch[0m
+[32m- master register and unregister shuffle[0m
+[32m- master register shuffle and unregister map output and fetch[0m
+[32m- remote fetch[0m
+[32m- remote fetch below akka frame size[0m
+[32m- remote fetch exceeds akka frame size[0m
+[32mSparkListenerSuite:[0m
+[32m- basic creation and shutdown of LiveListenerBus[0m
+[32m- bus.stop() waits for the event queue to completely drain[0m
+[32m- basic creation of StageInfo[0m
+[32m- basic creation of StageInfo with shuffle[0m
+[32m- StageInfo with fewer tasks than partitions[0m
+[32m- local metrics[0m
+[32m- onTaskGettingResult() called when result fetched remotely[0m
+[32m- onTaskGettingResult() not called when result sent directly[0m
+[32m- onTaskEnd() should be called for all started tasks, even after job has been killed[0m
+[32m- SparkListener moves on if a listener throws an exception[0m
+[32m- registering listeners via spark.extraListeners[0m
+[32mSizeTrackerSuite:[0m
+[32m- vector fixed size insertions[0m
+[32m- vector variable size insertions[0m
+[32m- map fixed size insertions[0m
+[32m- map variable size insertions[0m
+[32m- map updates[0m
+[32mKryoSerializerAutoResetDisabledSuite:[0m
+[32m- sort-shuffle with bypassMergeSort (SPARK-7873)[0m
+[32m- calling deserialize() after deserializeStream()[0m
+[32mCompressionCodecSuite:[0m
+[32m- default compression codec[0m
+[32m- lz4 compression codec[0m
+[32m- lz4 compression codec short form[0m
+[32m- lz4 does not support concatenation of serialized streams[0m
+[32m- lzf compression codec[0m
+[32m- lzf compression codec short form[0m
+[32m- lzf supports concatenation of serialized streams[0m
+[32m- snappy compression codec[0m
+[32m- snappy compression codec short form[0m
+[32m- snappy does not support concatenation of serialized streams[0m
+[32m- bad compression codec[0m
+[32mXORShiftRandomSuite:[0m
+[32m- XORShift generates valid random numbers[0m
+[32m- XORShift with zero seed[0m
+[32mCoarseGrainedSchedulerBackendSuite:[0m
+[32m- serialized task larger than akka frame size[0m
+[32mAppendOnlyMapSuite:[0m
+[32m- initialization[0m
+[32m- object keys and values[0m
+[32m- primitive keys and values[0m
+[32m- null keys[0m
+[32m- null values[0m
+[32m- changeValue[0m
+[32m- inserting in capacity-1 map[0m
+[32m- destructive sort[0m
+[32mThreadUtilsSuite:[0m
+[32m- newDaemonSingleThreadExecutor[0m
+[32m- newDaemonSingleThreadScheduledExecutor[0m
+[32m- sameThread[0m
+[32mRDDOperationScopeSuite:[0m
+[32m- getAllScopes[0m
+[32m- json de/serialization[0m
+[32m- withScope[0m
+[32m- withScope with partial nesting[0m
+[32m- withScope with multiple layers of nesting[0m
+[32mKryoSerializerDistributedSuite:[0m
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:>             (0 + 0) / 3][Stage 1:>             (0 + 0) / 3]
+[Stage 0:>             (0 + 1) / 3][Stage 1:>             (0 + 0) / 3]
+[Stage 0:>             (0 + 2) / 3][Stage 1:>             (0 + 0) / 3]
+[Stage 0:=========>    (2 + 1) / 3][Stage 1:>             (0 + 1) / 3]
+                                                                      
+[32m- kryo objects are serialised consistently in different processes[0m
+[32mOpenHashMapSuite:[0m
+[32m- size for specialized, primitive value (int)[0m
+[32m- initialization[0m
+[32m- primitive value[0m
+[32m- non-primitive value[0m
+[32m- null keys[0m
+[32m- null values[0m
+[32m- changeValue[0m
+[32m- inserting in capacity-1 map[0m
+[32m- contains[0m
+[32mOpenHashSetSuite:[0m
+[32m- size for specialized, primitive int[0m
+[32m- primitive int[0m
+[32m- primitive long[0m
+[32m- non-primitive[0m
+[32m- non-primitive set growth[0m
+[32m- primitive set growth[0m
+[32mAccumulatorSuite:[0m
+[32m- basic accumulation[0m
+[32m- value not assignable from tasks[0m
+[32m- add value to collection accumulators[0m
+[32m- value not readable in tasks[0m
+[32m- collection accumulators[0m
+[32m- localValue readable in tasks[0m
+[32m- garbage collection[0m
+[32mSparkContextInfoSuite:[0m
+[32m- getPersistentRDDs only returns RDDs that are marked as cached[0m
+[32m- getPersistentRDDs returns an immutable map[0m
+[32m- getRDDStorageInfo only reports on RDDs that actually persist data[0m
+[32m- call sites report correct locations[0m
+[32mExecutorAllocationManagerSuite:[0m
+[32m- verify min/max executors[0m
+[32m- starting state[0m
+[32m- add executors[0m
+[32m- add executors capped by num pending tasks[0m
+[32m- cancel pending executors when no longer needed[0m
+[32m- remove executors[0m
+[32m- interleaving add and remove[0m
+[32m- starting/canceling add timer[0m
+[32m- starting/canceling remove timers[0m
+[32m- mock polling loop with no events[0m
+[32m- mock polling loop add behavior[0m
+[32m- mock polling loop remove behavior[0m
+[32m- listeners trigger add executors correctly[0m
+[32m- listeners trigger remove executors correctly[0m
+[32m- listeners trigger add and remove executor callbacks correctly[0m
+[32m- SPARK-4951: call onTaskStart before onBlockManagerAdded[0m
+[32m- SPARK-4951: onExecutorAdded should not add a busy executor to removeTimes[0m
+[32m- avoid ramp up when target < running executors[0m
+[32mSparkSubmitSuite:[0m
+[32m- prints usage on empty input[0m
+[32m- prints usage with only --help[0m
+[32m- prints error with unrecognized options[0m
+[32m- handle binary specified but not class[0m
+[32m- handles arguments with --key=val[0m
+[32m- handles arguments to user program[0m
+[32m- handles arguments to user program with name collision[0m
+[32m- handles YARN cluster mode[0m
+[32m- handles YARN client mode[0m
+[32m- handles standalone cluster mode[0m
+[32m- handles legacy standalone cluster mode[0m
+[32m- handles standalone client mode[0m
+[32m- handles mesos client mode[0m
+[32m- handles confs with flag equivalents[0m
+[32m- launch simple application with spark-submit[0m
+[33m- includes jars passed in through --jars !!! IGNORED !!![0m
+[33m- includes jars passed in through --packages !!! IGNORED !!![0m
+[32m- resolves command line argument paths correctly[0m
+[32m- resolves config paths correctly[0m
+[32m- user classpath first in driver[0m
+[32m- SPARK_CONF_DIR overrides spark-defaults.conf[0m
+[32mVectorSuite:[0m
+[32m- random with default random number generator[0m
+[32m- random with given random number generator[0m
+[32mShuffleNettySuite:[0m
+[32m- groupByKey without compression[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- shuffle non-zero block size[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+                                                                      
+[32m- shuffle serializer[0m
+
+[Stage 0:>                                              (0 + 0) / 201]
+[Stage 0:>                                              (0 + 1) / 201]
+[Stage 0:>                                              (0 + 2) / 201]
+[Stage 0:=>                                             (6 + 2) / 201]
+[Stage 0:=======>                                      (33 + 2) / 201]
+[Stage 0:================>                             (74 + 2) / 201]
+[Stage 0:==========================>                  (117 + 2) / 201]
+[Stage 0:=====================================>       (166 + 2) / 201]
+                                                                      
+[32m- zero sized blocks[0m
+
+[Stage 0:>                                              (0 + 0) / 201]
+[Stage 0:>                                              (0 + 1) / 201]
+[Stage 0:>                                              (0 + 2) / 201]
+[Stage 0:====>                                         (18 + 2) / 201]
+[Stage 0:=====================>                        (94 + 2) / 201]
+[Stage 0:============================================>(200 + 1) / 201]
+                                                                      
+[32m- zero sized blocks without kryo[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+                                                                      
+[32m- shuffle on mutable pairs[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+                                                                      
+[32m- sorting on mutable pairs[0m
+
+[Stage 0:>             (0 + 0) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 1) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 2) / 2][Stage 1:>             (0 + 0) / 2]
+                                                                      
+[32m- cogroup using mutable pairs[0m
+
+[Stage 0:>             (0 + 0) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 1) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 2) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- subtract mutable pairs[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- sort with Java non serializable class - Kryo[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[32m- sort with Java non serializable class - Java[0m
+[32m- shuffle with different compression settings (SPARK-3426)[0m
+[32m- [SPARK-4085] rerun map stage if reduce stage cannot find its local shuffle file[0m
+[32mHashShuffleSuite:[0m
+[32m- groupByKey without compression[0m
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- shuffle non-zero block size[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- shuffle serializer[0m
+
+[Stage 0:>                                              (0 + 0) / 201]
+[Stage 0:>                                              (0 + 1) / 201]
+[Stage 0:>                                              (0 + 2) / 201]
+[Stage 0:>                                              (1 + 2) / 201]
+[Stage 0:======>                                       (27 + 2) / 201]
+[Stage 0:=============>                                (60 + 2) / 201]
+[Stage 0:=====================>                        (94 + 2) / 201]
+[Stage 0:==============================>              (135 + 2) / 201]
+[Stage 0:=======================================>     (177 + 2) / 201]
+                                                                      
+[32m- zero sized blocks[0m
+
+[Stage 0:>                                              (0 + 0) / 201]
+[Stage 0:>                                              (0 + 1) / 201]
+[Stage 0:>                                              (0 + 2) / 201]
+[Stage 0:===>                                          (17 + 2) / 201]
+[Stage 0:============>                                 (55 + 2) / 201]
+[Stage 0:=======================>                     (104 + 2) / 201]
+[Stage 0:==================================>          (153 + 2) / 201]
+[Stage 0:============================================>(200 + 1) / 201]
+                                                                      
+[32m- zero sized blocks without kryo[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+                                                                      
+[32m- shuffle on mutable pairs[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+                                                                      
+[32m- sorting on mutable pairs[0m
+
+[Stage 0:>             (0 + 0) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 2) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- cogroup using mutable pairs[0m
+
+[Stage 0:>             (0 + 0) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:>             (0 + 2) / 2][Stage 1:>             (0 + 0) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- subtract mutable pairs[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:========================>                        (1 + 1) / 2]
+                                                                      
+[32m- sort with Java non serializable class - Kryo[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+[32m- sort with Java non serializable class - Java[0m
+[32m- shuffle with different compression settings (SPARK-3426)[0m
+[32m- [SPARK-4085] rerun map stage if reduce stage cannot find its local shuffle file[0m
+[32mKryoSerializerSuite:[0m
+[32m- SPARK-7392 configuration limits[0m
+[32m- basic types[0m
+[32m- pairs[0m
+[32m- Scala data structures[0m
+[32m- ranges[0m
+[32m- asJavaIterable[0m
+[32m- custom registrator[0m
+[32m- kryo with collect[0m
+[32m- kryo with parallelize[0m
+[32m- kryo with parallelize for specialized tuples[0m
+[32m- kryo with parallelize for primitive arrays[0m
+[32m- kryo with collect for specialized tuples[0m
+[32m- kryo with SerializableHyperLogLog[0m
+[32m- kryo with reduce[0m
+[32m- kryo with fold[0m
+[32m- kryo with nonexistent custom registrator should fail[0m
+[32m- default class loader can be set by a different thread[0m
+[32m- registration of HighlyCompressedMapStatus[0m
+[32m- serialization buffer overflow reporting[0m
+[32m- getAutoReset[0m
+[32m- instance reuse with autoReset = true, referenceTracking = true[0m
+[32m- instance reuse with autoReset = false, referenceTracking = true[0m
+[32m- instance reuse with autoReset = true, referenceTracking = false[0m
+[32m- instance reuse with autoReset = false, referenceTracking = false[0m
+[32mFailureSuite:[0m
+[32m- failure in a single-stage job[0m
+[32m- failure in a two-stage job[0m
+[32m- failure in a map stage[0m
+[32m- failure because task results are not serializable[0m
+[32m- failure because task closure is not serializable[0m
+[32mPartitionwiseSampledRDDSuite:[0m
+[32m- seed distribution[0m
+[32m- concurrency[0m
+[32mAkkaUtilsSuite:[0m
+[32m- remote fetch security bad password[0m
+[32m- remote fetch security off[0m
+[32m- remote fetch security pass[0m
+[32m- remote fetch security off client[0m
+[32m- remote fetch ssl on[0m
+[32m- remote fetch ssl on and security enabled[0m
+[32m- remote fetch ssl on and security enabled - bad credentials[0m
+[32m- remote fetch ssl on - untrusted server[0m
+[32mJdbcRDDSuite:[0m
+[32m- basic functionality[0m
+[32m- large id overflow[0m
+[32mFileSuite:[0m
+[32m- text files[0m
+[32m- text files (compressed)[0m
+[32m- SequenceFiles[0m
+[32m- SequenceFile (compressed)[0m
+[32m- SequenceFile with writable key[0m
+[32m- SequenceFile with writable value[0m
+[32m- SequenceFile with writable key and value[0m
+[32m- implicit conversions in reading SequenceFiles[0m
+[32m- object files of ints[0m
+[32m- object files of complex types[0m
+[32m- object files of classes from a JAR[0m
+[32m- write SequenceFile using new Hadoop API[0m
+[32m- read SequenceFile using new Hadoop API[0m
+[32m- binary file input as byte array[0m
+[32m- portabledatastream caching tests[0m
+[32m- portabledatastream persist disk storage[0m
+[32m- portabledatastream flatmap tests[0m
+[32m- fixed record length binary file as byte array[0m
+record length is less than 0, file cannot be split
+[32m- negative binary record length should raise an exception[0m
+[32m- file caching[0m
+[32m- prevent user from overwriting the empty directory (old Hadoop API)[0m
+[32m- prevent user from overwriting the non-empty directory (old Hadoop API)[0m
+[32m- allow user to disable the output directory existence checking (old Hadoop API[0m
+[32m- prevent user from overwriting the empty directory (new Hadoop API)[0m
+[32m- prevent user from overwriting the non-empty directory (new Hadoop API)[0m
+[32m- allow user to disable the output directory existence checking (new Hadoop API[0m
+[32m- save Hadoop Dataset through old Hadoop API[0m
+[32m- save Hadoop Dataset through new Hadoop API[0m
+[32m- Get input files via old Hadoop API[0m
+[32m- Get input files via new Hadoop API[0m
+[32mSparkContextSuite:[0m
+[32m- Only one SparkContext may be active at a time[0m
+[32m- Can still construct a new SparkContext after failing to construct a previous one[0m
+[32m- Check for multiple SparkContexts can be disabled via undocumented debug option[0m
+[32m- Test getOrCreate[0m
+[32m- BytesWritable implicit conversion is correct[0m
+[32m- addFile works[0m
+[32m- addFile recursive works[0m
+[32m- addFile recursive can't add directories by default[0m
+[32m- Cancelling job group should not cause SparkContext to shutdown (SPARK-6414)[0m
+[32m- Comma separated paths for newAPIHadoopFile/wholeTextFiles/binaryFiles (SPARK-7155)[0m
+[32mThreadingSuite:[0m
+[32m- accessing SparkContext form a different thread[0m
+[32m- accessing SparkContext form multiple threads[0m
+[32m- accessing multi-threaded SparkContext form multiple threads[0m
+[32m- parallel job execution[0m
+[32m- set local properties in different thread[0m
+[32m- set and get local properties in parent-children thread[0m
+[32m- mutations to local properties should not affect submitted jobs (SPARK-6629)[0m
+[32mPythonRDDSuite:[0m
+[32m- Writing large strings to the worker[0m
+[32m- Handle nulls gracefully[0m
+[32mChainedBufferSuite:[0m
+[32m- write and read at start[0m
+[32m- write and read at middle[0m
+[32m- write and read at later buffer[0m
+[32mStorageTabSuite:[0m
+[32m- stage submitted / completed[0m
+[32m- unpersist[0m
+[32m- task end[0m
+[32m- verify StorageTab contains all cached rdds[0m
+[32mClosureCleanerSuite2:[0m
+[32m- get inner closure classes[0m
+[32m- get outer classes and objects[0m
+[32m- get outer classes and objects with nesting[0m
+[32m- find accessed fields[0m
+[32m- find accessed fields with nesting[0m
+[32m- clean basic serializable closures[0m
+[32m- clean basic non-serializable closures[0m
+[32m- clean basic nested serializable closures[0m
+[32m- clean basic nested non-serializable closures[0m
+[32m- clean complicated nested serializable closures[0m
+[32m- clean complicated nested non-serializable closures[0m
+[32mPartitionPruningRDDSuite:[0m
+[32m- Pruned Partitions inherit locality prefs correctly[0m
+[32m- Pruned Partitions can be unioned [0m
+[32mSimpleDateParamSuite:[0m
+[32m- date parsing[0m
+[32mStorageSuite:[0m
+[32m- storage status add non-RDD blocks[0m
+[32m- storage status update non-RDD blocks[0m
+[32m- storage status remove non-RDD blocks[0m
+[32m- storage status add RDD blocks[0m
+[32m- storage status update RDD blocks[0m
+[32m- storage status remove RDD blocks[0m
+[32m- storage status containsBlock[0m
+[32m- storage status getBlock[0m
+[32m- storage status num[Rdd]Blocks[0m
+[32m- storage status memUsed, diskUsed, externalBlockStoreUsed[0m
+[32m- StorageUtils.updateRddInfo[0m
+[32m- StorageUtils.getRddBlockLocations[0m
+[32m- StorageUtils.getRddBlockLocations with multiple locations[0m
+[32mFileServerSuite:[0m
+[32m- Distributing files locally[0m
+[32m- Distributing files locally security On[0m
+[32m- Distributing files locally using URL as input[0m
+[32m- Dynamically adding JARS locally[0m
+[Stage 0:>                                                (0 + 2) / 2]
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+                                                                      
+[32m- Distributing files on a standalone cluster[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+                                                                      
+[32m- Dynamically adding JARS on a standalone cluster[0m
+
+[Stage 0:>                                                (0 + 0) / 2]
+[Stage 0:>                                                (0 + 1) / 2]
+                                                                      
+[32m- Dynamically adding JARS on a standalone cluster using local: URL[0m
+[32m- HttpFileServer should work with SSL[0m
+[32m- HttpFileServer should work with SSL and good credentials[0m
+[32m- HttpFileServer should not work with valid SSL and bad credentials[0m
+[32m- HttpFileServer should not work with SSL when the server is untrusted[0m
+[32mFileAppenderSuite:[0m
+[32m- basic file appender[0m
+[32m- rolling file appender - time-based rolling[0m
+[32m- rolling file appender - size-based rolling[0m
+[32m- rolling file appender - cleaning[0m
+[32m- file appender selection[0m
+[32mDistributedSuite:[0m
+[32m- task throws not serializable exception[0m
+[32m- local-cluster format[0m
+[32m- simple groupByKey[0m
+[32m- groupByKey where map output sizes exceed maxMbInFlight[0m
+[32m- accumulators[0m
+[32m- broadcast variables[0m
+[32m- repeatedly failing task[0m
+[32m- repeatedly failing task that crashes JVM[0m
+[32m- caching[0m
+[32m- caching on disk[0m
+[32m- caching in memory, replicated[0m
+[32m- caching in memory, serialized, replicated[0m
+[32m- caching on disk, replicated[0m
+[32m- caching in memory and disk, replicated[0m
+[32m- caching in memory and disk, serialized, replicated[0m
+[32m- compute without caching when no partitions fit in memory[0m
+[32m- compute when only some partitions fit in memory[0m
+[32m- passing environment variables to cluster[0m
+[32m- recover from node failures[0m
+[32m- recover from repeated node failures during shuffle-map[0m
+[32m- recover from repeated node failures during shuffle-reduce[0m
+[32m- recover from node failures with replication[0m
+[32m- unpersist RDDs[0m
+[32mFutureActionSuite:[0m
+[32m- simple async action[0m
+[32m- complex async action[0m
+[32mWorkerWatcherSuite:[0m
+[32m- WorkerWatcher shuts down on valid disassociation[0m
+[32m- WorkerWatcher stays alive on invalid disassociation[0m
+[32mAkkaRpcEnvSuite:[0m
+[32m- send a message locally[0m
+[32m- send a message remotely[0m
+[32m- send a RpcEndpointRef[0m
+[32m- ask a message locally[0m
+[32m- ask a message remotely[0m
+[32m- ask a message timeout[0m
+[32m- onStart and onStop[0m
+[32m- onError: error in onStart[0m
+[32m- onError: error in onStop[0m
+[32m- onError: error in receive[0m
+[32m- self: call in onStart[0m
+[32m- self: call in receive[0m
+[32m- self: call in onStop[0m
+[32m- call receive in sequence[0m
+[32m- stop(RpcEndpointRef) reentrant[0m
+[32m- sendWithReply[0m
+[32m- sendWithReply: remotely[0m
+[32m- sendWithReply: error[0m
+[32m- sendWithReply: remotely error[0m
+[32m- network events[0m
+[32m- sendWithReply: unserializable error[0m
+[32m- setupEndpointRef: systemName, address, endpointName[0m
+[32mClientSuite:[0m
+[32m- correctly validates driver jar URL's[0m
+[32mBlockIdSuite:[0m
+[32m- test-bad-deserialization[0m
+[32m- rdd[0m
+[32m- shuffle[0m
+[32m- broadcast[0m
+[32m- taskresult[0m
+[32m- stream[0m
+[32m- test[0m
+[32mKryoSerializerResizableOutputSuite:[0m
+[32m- kryo without resizable output buffer should fail on large array[0m
+[32m- kryo with resizable output buffer should succeed on large array[0m
+[32mBlockManagerReplicationSuite:[0m
+[32m- get peers with addition and removal of block managers[0m
+[32m- block replication - 2x replication[0m
+[32m- block replication - 3x replication[0m
+[32m- block replication - mixed between 1x to 5x[0m
+[32m- block replication - 2x replication without peers[0m
+[32m- block replication - deterministic node selection[0m
+[32m- block replication - replication failures[0m
+[32m- block replication - addition and deletion of block managers[0m
+[32mJobProgressListenerSuite:[0m
+[32m- test LRU eviction of stages[0m
+[32m- test clearing of stageIdToActiveJobs[0m
+[32m- test clearing of jobGroupToJobIds[0m
+[32m- test LRU eviction of jobs[0m
+[32m- test executor id to summary[0m
+[32m- test task success vs failure counting for different task end reasons[0m
+[32m- test update metrics[0m
+[32mWholeTextFileRecordReaderSuite:[0m
+Local disk address is /private/var/folders/j5/0ggqyz5j0z12f2q5cz3562rh0000gn/T/spark-21865740-4043-4216-b843-556807ee830c.
+[32m- Correctness of WholeTextFileRecordReader.[0m
+Local disk address is /private/var/folders/j5/0ggqyz5j0z12f2q5cz3562rh0000gn/T/spark-d04dcf99-1531-4787-a55f-47e0f985d09d.
+[32m- Correctness of WholeTextFileRecordReader with GzipCodec.[0m
+[32mSubmitRestProtocolSuite:[0m
+[32m- validate[0m
+[32m- request to and from JSON[0m
+[32m- response to and from JSON[0m
+[32m- CreateSubmissionRequest[0m
+[32m- CreateSubmissionResponse[0m
+[32m- KillSubmissionResponse[0m
+[32m- SubmissionStatusResponse[0m
+[32m- ErrorResponse[0m
+[32mFlatmapIteratorSuite:[0m
+[32m- Flatmap Iterator to Disk[0m
+[32m- Flatmap Iterator to Memory[0m
+[32m- Serializer Reset[0m
+[32mSizeEstimatorSuite:[0m
+[32m- simple classes[0m
+[32m- primitive wrapper objects[0m
+[32m- class field blocks rounding[0m
+[32m- strings[0m
+[32m- primitive arrays[0m
+[32m- object arrays[0m
+[32m- 32-bit arch[0m
+[32m- 64-bit arch with no compressed oops[0m
+[32m- class field blocks rounding on 64-bit VM without useCompressedOops[0m
+[32m- check 64-bit detection for s390x arch[0m
+[32mPipedRDDSuite:[0m
+[32m- basic pipe[0m
+[32m- advanced pipe[0m
+[32m- pipe with env variable[0m
+[32m- pipe with non-zero exit status[0m
+[32m- basic pipe with separate working directory[0m
+[32m- test pipe exports map_input_file[0m
+[32m- test pipe exports mapreduce_map_input_file[0m
+[32mDiskBlockManagerSuite:[0m
+[32m- basic block creation[0m
+[32m- enumerating blocks[0m
+[32mWorkerArgumentsTest:[0m
+[32m- Memory can't be set to 0 when cmd line args leave off M or G[0m
+[32m- Memory can't be set to 0 when SPARK_WORKER_MEMORY env property leaves off M or G[0m
+[32m- Memory correctly set when SPARK_WORKER_MEMORY env property appends G[0m
+[32m- Memory correctly set from args with M appended to memory value[0m
+[32mStatusTrackerSuite:[0m
+[32m- basic status API usage[0m
+[32m- getJobIdsForGroup()[0m
+[32mPrimitiveKeyOpenHashMapSuite:[0m
+[32m- size for specialized, primitive key, value (int, int)[0m
+[32m- initialization[0m
+[32m- basic operations[0m
+[32m- null values[0m
+[32m- changeValue[0m
+[32m- inserting in capacity-1 map[0m
+[32m- contains[0m
+[32mLogUrlsStandaloneSuite:[0m
+[32m- verify that correct log urls get propagated from workers[0m
+
+[Stage 0:>                                                (0 + 0) / 4]
+[Stage 0:>                                                (0 + 1) / 4]
+[Stage 0:>                                                (0 + 2) / 4]
+                                                                      
+[32m- verify that log urls reflect SPARK_PUBLIC_DNS (SPARK-6175)[0m
+[32mByteArrayChunkOutputStreamSuite:[0m
+[32m- empty output[0m
+[32m- write a single byte[0m
+[32m- write a single near boundary[0m
+[32m- write a single at boundary[0m
+[32m- single chunk output[0m
+[32m- single chunk output at boundary size[0m
+[32m- multiple chunk output[0m
+[32m- multiple chunk output at boundary size[0m
+[32mJsonProtocolSuite:[0m
+[32m- SparkListenerEvent[0m
+[32m- Dependent Classes[0m
+[32m- ExceptionFailure backward compatibility[0m
+[32m- StageInfo backward compatibility (details, accumulables)[0m
+[32m- InputMetrics backward compatibility[0m
+[32m- Input/Output records backwards compatibility[0m
+[32m- Shuffle Read/Write records backwards compatibility[0m
+[32m- OutputMetrics backward compatibility[0m
+[32m- BlockManager events backward compatibility[0m
+[32m- FetchFailed backwards compatibility[0m
+[32m- ShuffleReadMetrics: Local bytes read and time taken backwards compatibility[0m
+[32m- SparkListenerApplicationStart backwards compatibility[0m
+[32m- ExecutorLostFailure backward compatibility[0m
+[32m- SparkListenerJobStart backward compatibility[0m
+[32m- SparkListenerJobStart and SparkListenerJobEnd backward compatibility[0m
+[32m- RDDInfo backward compatibility (scope, parent IDs)[0m
+[32m- StageInfo backward compatibility (parent IDs)[0m
+[32mBroadcastSuite:[0m
+[32m- Using HttpBroadcast locally[0m
+[32m- Accessing HttpBroadcast variables from multiple threads[0m
+[32m- Accessing HttpBroadcast variables in a local cluster[0m
+[32m- Using TorrentBroadcast locally[0m
+[32m- Accessing TorrentBroadcast variables from multiple threads[0m
+[32m- Accessing TorrentBroadcast variables in a local cluster[0m
+[32m- TorrentBroadcast's blockifyObject and unblockifyObject are inverses[0m
+[32m- Test Lazy Broadcast variables with TorrentBroadcast[0m
+[32m- Unpersisting HttpBroadcast on executors only in local mode[0m
+[32m- Unpersisting HttpBroadcast on executors and driver in local mode[0m
+[32m- Unpersisting HttpBroadcast on executors only in distributed mode[0m
+[32m- Unpersisting HttpBroadcast on executors and driver in distributed mode[0m
+[32m- Unpersisting TorrentBroadcast on executors only in local mode[0m
+[32m- Unpersisting TorrentBroadcast on executors and driver in local mode[0m
+[32m- Unpersisting TorrentBroadcast on executors only in distributed mode[0m
+[32m- Unpersisting TorrentBroadcast on executors and driver in distributed mode[0m
+[32m- Using broadcast after destroy prints callsite[0m
+[32m- Broadcast variables cannot be created after SparkContext is stopped (SPARK-5065)[0m
+[32mSortShuffleContextCleanerSuite:[0m
+[32m- cleanup shuffle[0m
+[32m- automatically cleanup shuffle[0m
+[32m- automatically cleanup RDD + shuffle + broadcast in distributed mode[0m
+[32mSerializerPropertiesSuite:[0m
+[32m- JavaSerializer does not support relocation[0m
+[32m- KryoSerializer supports relocation when auto-reset is enabled[0m
+[32m- KryoSerializer does not support relocation when auto-reset is disabled[0m
+[32mEventLoopSuite:[0m
+[32m- EventLoop[0m
+[32m- EventLoop: start and stop[0m
+[32m- EventLoop: onError[0m
+[32m- EventLoop: error thrown from onError should not crash the event thread[0m
+[32m- EventLoop: calling stop multiple times should only call onStop once[0m
+[32m- EventLoop: post event in multiple threads[0m
+[32m- EventLoop: onReceive swallows InterruptException[0m
+[32m- EventLoop: stop in eventThread[0m
+[32m- EventLoop: stop() in onStart should call onStop[0m
+[32m- EventLoop: stop() in onReceive should call onStop[0m
+[32m- EventLoop: stop() in onError should call onStop[0m
+[32mZippedPartitionsSuite:[0m
+[32m- print sizes[0m
+[32mDoubleRDDSuite:[0m
+[32m- sum[0m
+[32m- WorksOnEmpty[0m
+[32m- WorksWithOutOfRangeWithOneBucket[0m
+[32m- WorksInRangeWithOneBucket[0m
+[32m- WorksInRangeWithOneBucketExactMatch[0m
+[32m- WorksWithOutOfRangeWithTwoBuckets[0m
+[32m- WorksWithOutOfRangeWithTwoUnEvenBuckets[0m
+[32m- WorksInRangeWithTwoBuckets[0m
+[32m- WorksInRangeWithTwoBucketsAndNaN[0m
+[32m- WorksInRangeWithTwoUnevenBuckets[0m
+[32m- WorksMixedRangeWithTwoUnevenBuckets[0m
+[32m- WorksMixedRangeWithFourUnevenBuckets[0m
+[32m- WorksMixedRangeWithUnevenBucketsAndNaN[0m
+[32m- WorksMixedRangeWithUnevenBucketsAndNaNAndNaNRange[0m
+[32m- WorksMixedRangeWithUnevenBucketsAndNaNAndNaNRangeAndInfity[0m
+[32m- WorksWithOutOfRangeWithInfiniteBuckets[0m
+[32m- ThrowsExceptionOnInvalidBucketArray[0m
+[32m- WorksWithoutBucketsBasic[0m
+[32m- WorksWithoutBucketsBasicSingleElement[0m
+[32m- WorksWithoutBucketsBasicNoRange[0m
+[32m- WorksWithoutBucketsBasicTwo[0m
+[32m- WorksWithDoubleValuesAtMinMax[0m
+[32m- WorksWithoutBucketsWithMoreRequestedThanElements[0m
+[32m- WorksWithoutBucketsForLargerDatasets[0m
+[32m- WorksWithoutBucketsWithNonIntegralBucketEdges[0m
+[32m- WorksWithHugeRange[0m
+[32m- ThrowsExceptionOnInvalidRDDs[0m
+[32mSorterSuite:[0m
+[32m- equivalent to Arrays.sort[0m
+[32m- KVArraySorter[0m
+[32m- SPARK-5984 TimSort bug[0m
+[33m- Sorter benchmark for key-value pairs !!! IGNORED !!![0m
+[33m- Sorter benchmark for primitive int array !!! IGNORED !!![0m
+[32mPoolSuite:[0m
+[32m- FIFO Scheduler Test[0m
+[32m- Fair Scheduler Test[0m
+[32m- Nested Pool Test[0m
+[32mDistributionSuite:[0m
+[32m- summary[0m
+[32mContextCleanerSuite:[0m
+[32m- cleanup RDD[0m
+[32m- cleanup shuffle[0m
+[32m- cleanup broadcast[0m
+[32m- automatically cleanup RDD[0m
+[32m- automatically cleanup shuffle[0m
+[32m- automatically cleanup broadcast[0m
+[32m- automatically cleanup checkpoint[0m
+[32m- automatically cleanup RDD + shuffle + broadcast[0m
+[32m- automatically cleanup RDD + shuffle + broadcast in distributed mode[0m
+[32mJsonProtocolSuite:[0m
+[32m- writeApplicationInfo[0m
+[32m- writeWorkerInfo[0m
+[32m- writeApplicationDescription[0m
+[32m- writeExecutorRunner[0m
+[32m- writeDriverInfo[0m
+[32m- writeMasterState[0m
+[32m- writeWorkerState[0m
+[32mHeartbeatReceiverSuite:[0m
+[32m- HeartbeatReceiver[0m
+[32m- HeartbeatReceiver re-register[0m
+[32mReplayListenerSuite:[0m
+[32m- Simple replay[0m
+[32m- End-to-end replay[0m
+[32m- End-to-end replay with compression[0m
+[32mHashShuffleManagerSuite:[0m
+[32m- consolidated shuffle can write to shuffle group without messing existing offsets/lengths[0m
+[32mMutableURLClassLoaderSuite:[0m
+[32m- child first[0m
+[32m- parent first[0m
+[32m- child first can fall back[0m
+[32m- child first can fail[0m
+[32m- driver sets context class loader in local mode[0m
+[32mCheckpointSuite:[0m
+[32m- basic checkpointing[0m
+[32m- RDDs with one-to-one dependencies[0m
+[32m- ParallelCollection[0m
+[32m- BlockRDD[0m
+[32m- ShuffledRDD[0m
+[32m- UnionRDD[0m
+[32m- CartesianRDD[0m
+[32m- CoalescedRDD[0m
+[32m- CoGroupedRDD[0m
+[32m- ZippedPartitionsRDD[0m
+[32m- PartitionerAwareUnionRDD[0m
+[32m- CheckpointRDD with zero partitions[0m
+[32mRDDOperationGraphListenerSuite:[0m
+[32m- run normal jobs[0m
+[32m- run jobs with skipped stages[0m
+[32m- clean up metadata[0m
+[32m- fate sharing between jobs and stages[0m
+[32mBlockObjectWriterSuite:[0m
+[32m- verify write metrics[0m
+[32m- verify write metrics on revert[0m
+[32m- Reopening a closed block writer[0m
+[32mTaskResultGetterSuite:[0m
+[32m- handling results smaller than Akka frame size[0m
+[32m- handling results larger than Akka frame size[0m
+[32m- task retried if result missing from block manager[0m
+[32mMesosSchedulerBackendSuite:[0m
+[32m- check spark-class location correctly[0m
+[32m- spark docker properties correctly populate the DockerInfo message[0m
+[32m- mesos resource offers result in launching tasks[0m
+[32mPartitionedSerializedPairBufferSuite:[0m
+[32m- OrderedInputStream single record[0m
+[32m- insert single record[0m
+[32m- insert multiple records[0m
+[32m- write single record[0m
+[32m- write multiple records[0m
+[32mMasterSuite:[0m
+[32m- toAkkaUrl[0m
+[32m- toAkkaUrl with SSL[0m
+[32m- toAkkaUrl: a typo url[0m
+[32m- toAkkaAddress[0m
+[32m- toAkkaAddress with SSL[0m
+[32m- toAkkaAddress: a typo url[0m
+[32m- can use a custom recovery mode factory[0m
+[32m- Master & worker web ui available[0m
+[32mExternalAppendOnlyMapSuite:[0m
+[32m- simple insert[0m
+[32m- insert with collision[0m
+[32m- ordering[0m
+[32m- null keys and values[0m
+[32m- simple aggregator[0m
+[32m- simple cogroup[0m
+[32m- spilling[0m
+[32m- spilling with compression[0m
+[32m- spilling with hash collisions[0m
+[32m- spilling with many hash collisions[0m
+[32m- spilling with hash collisions using the Int.MaxValue key[0m
+[32m- spilling with null keys and values[0m
+[32mStorageStatusListenerSuite:[0m
+[32m- block manager added/removed[0m
+[32m- task end without updated blocks[0m
+[32m- task end with updated blocks[0m
+[32m- unpersist RDD[0m
+[32mProactiveClosureSerializationSuite:[0m
+[32m- throws expected serialization exceptions on actions[0m
+[32m- mapPartitions transformations throw proactive serialization exceptions[0m
+[32m- map transformations throw proactive serialization exceptions[0m
+[32m- filter transformations throw proactive serialization exceptions[0m
+[32m- flatMap transformations throw proactive serialization exceptions[0m
+[32m- mapPartitionsWithIndex transformations throw proactive serialization exceptions[0m
+[36mRun completed in 13 minutes, 46 seconds.[0m
+[36mTotal number of tests run: 1250[0m
+[36mSuites: completed 151, aborted 0[0m
+[36mTests: succeeded 1250, failed 0, canceled 0, ignored 7, pending 0[0m
+[32mAll tests passed.[0m
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 15:14 min
+[INFO] Finished at: 2015-05-29T20:36:34-07:00
+[INFO] Final Memory: 54M/809M
+[INFO] ------------------------------------------------------------------------

@@ -42,17 +42,18 @@ class BagelSuite extends FunSuite with Assertions with BeforeAndAfter with Timeo
     sc = new SparkContext("local", "test")
     val verts = sc.parallelize(Array("a", "b", "c", "d").map(id => (id, new TestVertex(true, 0))))
     val msgs = sc.parallelize(Array[(String, TestMessage)]())
+        (self: TestVertex, msgs: Option[Array[TestMessage]], superstep: Int) =>
     val numSupersteps = 5
     val result =
+
       Bagel.run(sc, verts, msgs, sc.defaultParallelism) {
-        (self: TestVertex, msgs: Option[Array[TestMessage]], superstep: Int) =>
           (new TestVertex(superstep < numSupersteps - 1, self.age + 1), Array[TestMessage]())
       }
     for ((id, vert) <- result.collect) {
       assert(vert.age === numSupersteps)
     }
   }
-
+system.out.prin
   test("halting by message silence") {
     sc = new SparkContext("local", "test")
     val verts = sc.parallelize(Array("a", "b", "c", "d").map(id => (id, new TestVertex(false, 0))))

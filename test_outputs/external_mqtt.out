@@ -1,0 +1,92 @@
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Spark Project External MQTT 1.4.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-versions) @ spark-streaming-mqtt_2.10 ---
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:add-source (eclipse-add-source) @ spark-streaming-mqtt_2.10 ---
+[INFO] Add Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/external/mqtt/src/main/scala
+[INFO] Add Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/external/mqtt/src/test/scala
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-source (add-scala-sources) @ spark-streaming-mqtt_2.10 ---
+[INFO] Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/external/mqtt/src/main/scala added.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ spark-streaming-mqtt_2.10 ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spark-streaming-mqtt_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jeromenilmeier/Documents/spark_28may2015/spark/external/mqtt/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:compile (scala-compile-first) @ spark-streaming-mqtt_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 2 Scala sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/external/mqtt/target/scala-2.10/classes...[0m
+[0m[[0minfo[0m] [0mCompile success at Jun 1, 2015 9:36:12 AM [4.076s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ spark-streaming-mqtt_2.10 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/jeromenilmeier/Documents/spark_28may2015/spark/external/mqtt/target/scala-2.10/classes
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-test-source (add-scala-test-sources) @ spark-streaming-mqtt_2.10 ---
+[INFO] Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/external/mqtt/src/test/scala added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spark-streaming-mqtt_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:testCompile (scala-test-compile-first) @ spark-streaming-mqtt_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 1 Scala source and 2 Java sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/external/mqtt/target/scala-2.10/test-classes...[0m
+[0m[[33mwarn[0m] [0mwarning: [options] bootstrap class path not set in conjunction with -source 1.6[0m
+[0m[[33mwarn[0m] [0m1 warning[0m
+[0m[[0minfo[0m] [0mCompile success at Jun 1, 2015 9:36:18 AM [4.352s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ spark-streaming-mqtt_2.10 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:build-classpath (default) @ spark-streaming-mqtt_2.10 ---
+[INFO] Wrote classpath file '/Users/jeromenilmeier/Documents/spark_28may2015/spark/external/mqtt/target/spark-test-classpath.txt'.
+[INFO] 
+[INFO] --- gmavenplus-plugin:1.5:execute (default) @ spark-streaming-mqtt_2.10 ---
+[INFO] Using Groovy 2.3.7 to perform execute.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ spark-streaming-mqtt_2.10 ---
+[INFO] Surefire report directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/external/mqtt/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+Running org.apache.spark.streaming.mqtt.JavaMQTTStreamSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.11 sec - in org.apache.spark.streaming.mqtt.JavaMQTTStreamSuite
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- scalatest-maven-plugin:1.0:test (test) @ spark-streaming-mqtt_2.10 ---
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+[36mDiscovery starting.[0m
+[36mDiscovery completed in 248 milliseconds.[0m
+[36mRun starting. Expected test count is: 1[0m
+[32mMQTTStreamSuite:[0m
+[32m- mqtt input stream[0m
+[36mRun completed in 5 seconds, 4 milliseconds.[0m
+[36mTotal number of tests run: 1[0m
+[36mSuites: completed 2, aborted 0[0m
+[36mTests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0[0m
+[32mAll tests passed.[0m
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 23.651 s
+[INFO] Finished at: 2015-06-01T09:36:28-07:00
+[INFO] Final Memory: 49M/839M
+[INFO] ------------------------------------------------------------------------

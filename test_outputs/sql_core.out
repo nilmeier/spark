@@ -1,0 +1,2391 @@
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Spark Project SQL 1.4.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-versions) @ spark-sql_2.10 ---
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:add-source (eclipse-add-source) @ spark-sql_2.10 ---
+[INFO] Add Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala
+[INFO] Add Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/test/scala
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-source (add-scala-sources) @ spark-sql_2.10 ---
+[INFO] Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala added.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ spark-sql_2.10 ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spark-sql_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:compile (scala-compile-first) @ spark-sql_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 100 Scala sources and 24 Java sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/target/scala-2.10/classes...[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/sources/commands.scala:77: match may not be exhaustive.[0m
+[0m[[33mwarn[0m] [0mIt would fail on the following inputs: (_, false), (_, true)[0m
+[0m[[33mwarn[0m] [0m    val doInsertion = (mode, fs.exists(qualifiedOutputPath)) match {[0m
+[0m[[33mwarn[0m] [0m                      ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/ParquetRelation.scala:202: method makeQualified in class Path is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val path = origPath.makeQualified(fs)[0m
+[0m[[33mwarn[0m] [0m                        ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/ParquetTableOperations.scala:84: constructor Job in class Job is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val job = new Job(sc.hadoopConfiguration)[0m
+[0m[[33mwarn[0m] [0m              ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/ParquetTableOperations.scala:268: constructor Job in class Job is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val job = new Job(sqlContext.sparkContext.hadoopConfiguration)[0m
+[0m[[33mwarn[0m] [0m              ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/ParquetTableOperations.scala:324: constructor Job in class Job is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val job = new Job(conf)[0m
+[0m[[33mwarn[0m] [0m              ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/ParquetTableOperations.scala:661: method makeQualified in class Path is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val path = origPath.makeQualified(fs)[0m
+[0m[[33mwarn[0m] [0m                        ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/ParquetTableOperations.scala:662: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    if (!fs.exists(path) || !fs.getFileStatus(path).isDir) {[0m
+[0m[[33mwarn[0m] [0m                                                    ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/ParquetTableOperations.scala:667: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m      .flatMap { status => if(status.isDir) fs.listStatus(status.getPath) else List(status) }[0m
+[0m[[33mwarn[0m] [0m                                     ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/ParquetTypes.scala:404: method fromCaseClassString in object DataType is deprecated: Use DataType.fromJson instead[0m
+[0m[[33mwarn[0m] [0m    Try(DataType.fromJson(string)).getOrElse(DataType.fromCaseClassString(string)) match {[0m
+[0m[[33mwarn[0m] [0m                                                      ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/ParquetTypes.scala:436: method makeQualified in class Path is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val path = origPath.makeQualified(fs)[0m
+[0m[[33mwarn[0m] [0m                        ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/ParquetTypes.scala:437: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    if (fs.exists(path) && !fs.getFileStatus(path).isDir) {[0m
+[0m[[33mwarn[0m] [0m                                                   ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/ParquetTypes.scala:481: constructor Job in class Job is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val job = new Job()[0m
+[0m[[33mwarn[0m] [0m              ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/ParquetTypes.scala:487: method makeQualified in class Path is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val path = origPath.makeQualified(fs)[0m
+[0m[[33mwarn[0m] [0m                        ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/ParquetTypes.scala:492: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m        .flatMap { status => if(status.isDir) fs.listStatus(status.getPath) else List(status) }[0m
+[0m[[33mwarn[0m] [0m                                       ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/newParquet.scala:291: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m            f.getLen, f.isDir, f.getReplication, f.getBlockSize, f.getModificationTime,[0m
+[0m[[33mwarn[0m] [0m                        ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/parquet/newParquet.scala:521: method fromCaseClassString in object DataType is deprecated: Use DataType.fromJson instead[0m
+[0m[[33mwarn[0m] [0m              DataType.fromCaseClassString(serializedSchema)[0m
+[0m[[33mwarn[0m] [0m                       ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/sources/SqlNewHadoopRDD.scala:83: constructor Job in class Job is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    val newJob = new Job(conf)[0m
+[0m[[33mwarn[0m] [0m                 ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/sources/commands.scala:90: constructor Job in class Job is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m      val job = new Job(hadoopConf)[0m
+[0m[[33mwarn[0m] [0m                ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/sources/commands.scala:329: constructor TaskID in class TaskID is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    this.taskId = new TaskID(this.jobId, true, splitId)[0m
+[0m[[33mwarn[0m] [0m                  ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/sources/interfaces.scala:389: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m          val (dirs, files) = fs.listStatus(status.getPath).partition(_.isDir)[0m
+[0m[[33mwarn[0m] [0m                                                                        ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/main/scala/org/apache/spark/sql/sources/interfaces.scala:404: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m      val files = statuses.filterNot(_.isDir)[0m
+[0m[[33mwarn[0m] [0m                                       ^[0m
+[0m[[33mwarn[0m] [0m21 warnings found[0m
+[0m[[33mwarn[0m] [0mwarning: [options] bootstrap class path not set in conjunction with -source 1.6[0m
+[0m[[33mwarn[0m] [0m1 warning[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:49:25 PM [27.669s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ spark-sql_2.10 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 24 source files to /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/target/scala-2.10/classes
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-test-source (add-scala-test-sources) @ spark-sql_2.10 ---
+[INFO] Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/test/scala added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spark-sql_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:testCompile (scala-test-compile-first) @ spark-sql_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 58 Scala sources and 5 Java sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/target/scala-2.10/test-classes...[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/test/scala/org/apache/spark/sql/sources/TableScanSuite.scala:77: constructor Date in class Date is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m        new Date(1970, 1, 1),[0m
+[0m[[33mwarn[0m] [0m        ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/test/scala/org/apache/spark/sql/sources/TableScanSuite.scala:85: constructor Date in class Date is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m        Row(Seq(s"str_$i", s"str_${i + 1}"), Row(Seq(new Date(1970, 1, i + 1)))))[0m
+[0m[[33mwarn[0m] [0m                                                     ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/test/scala/org/apache/spark/sql/sources/TableScanSuite.scala:106: constructor Date in class Date is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m      new Date(1970, 1, 1),[0m
+[0m[[33mwarn[0m] [0m      ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/test/scala/org/apache/spark/sql/sources/TableScanSuite.scala:114: constructor Date in class Date is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m      Row(Seq(s"str_$i", s"str_${i + 1}"), Row(Seq(new Date(1970, 1, i + 1)))))[0m
+[0m[[33mwarn[0m] [0m                                                   ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/test/scala/org/apache/spark/sql/sources/TableScanSuite.scala:269: constructor Date in class Date is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    (1 to 10).map(i => Row(Seq(new Date(1970, 1, i + 1)))).toSeq)[0m
+[0m[[33mwarn[0m] [0m                               ^[0m
+[0m[[33mwarn[0m] [0m5 warnings found[0m
+[0m[[33mwarn[0m] [0mwarning: [options] bootstrap class path not set in conjunction with -source 1.6[0m
+[0m[[33mwarn[0m] [0mNote: /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/test/java/test/org/apache/spark/sql/JavaApplySchemaSuite.java uses or overrides a deprecated API.[0m
+[0m[[33mwarn[0m] [0mNote: Recompile with -Xlint:deprecation for details.[0m
+[0m[[33mwarn[0m] [0mNote: /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/src/test/java/test/org/apache/spark/sql/JavaDataFrameSuite.java uses unchecked or unsafe operations.[0m
+[0m[[33mwarn[0m] [0mNote: Recompile with -Xlint:unchecked for details.[0m
+[0m[[33mwarn[0m] [0m1 warning[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:49:47 PM [20.938s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ spark-sql_2.10 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:build-classpath (default) @ spark-sql_2.10 ---
+[INFO] Wrote classpath file '/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/target/spark-test-classpath.txt'.
+[INFO] 
+[INFO] --- gmavenplus-plugin:1.5:execute (default) @ spark-sql_2.10 ---
+[INFO] Using Groovy 2.3.7 to perform execute.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ spark-sql_2.10 ---
+[INFO] Surefire report directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/core/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+Running test.org.apache.spark.sql.JavaApplySchemaSuite
+20:49:50.325 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.76 sec - in test.org.apache.spark.sql.JavaApplySchemaSuite
+Running test.org.apache.spark.sql.JavaDataFrameSuite
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.22 sec - in test.org.apache.spark.sql.JavaDataFrameSuite
+Running test.org.apache.spark.sql.JavaRowSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in test.org.apache.spark.sql.JavaRowSuite
+Running test.org.apache.spark.sql.JavaUDFSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 sec - in test.org.apache.spark.sql.JavaUDFSuite
+Running test.org.apache.spark.sql.sources.JavaSaveLoadSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.731 sec - in test.org.apache.spark.sql.sources.JavaSaveLoadSuite
+
+Results :
+
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- scalatest-maven-plugin:1.0:test (test) @ spark-sql_2.10 ---
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+[36mDiscovery starting.[0m
+20:49:57.632 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[36mDiscovery completed in 3 seconds, 404 milliseconds.[0m
+[36mRun starting. Expected test count is: 832[0m
+[32mSQLQuerySuite:[0m
+[32m- SPARK-6743: no columns from cache[0m
+[32m- self join with aliases[0m
+[32m- support table.star[0m
+[32m- self join with alias in agg[0m
+[32m- SQL Dialect Switching to a new SQL parser[0m
+[32m- SQL Dialect Switch to an invalid parser with alias[0m
+[32m- SPARK-4625 support SORT BY in SimpleSQLParser & DSL[0m
+[32m- grouping on nested fields[0m
+[32m- SPARK-6201 IN type conversion[0m
+[32m- SPARK-3176 Added Parser of SQL ABS()[0m
+[32m- aggregation with codegen[0m
+[32m- Add Parser of SQL COALESCE()[0m
+[32m- SPARK-3176 Added Parser of SQL LAST()[0m
+[32m- SPARK-2041 column name equals tablename[0m
+[32m- SQRT[0m
+[32m- SQRT with automatic string casts[0m
+[32m- SPARK-2407 Added Parser of SQL SUBSTR()[0m
+[32m- SPARK-3173 Timestamp support in the parser[0m
+[32m- index into array[0m
+[32m- left semi greater than predicate[0m
+[32m- index into array of arrays[0m
+[32m- agg[0m
+[32m- literal in agg grouping expressions[0m
+[32m- aggregates with nulls[0m
+[32m- select *[0m
+[32m- simple select[0m
+[32m- sorting[0m
+[32m- external sorting[0m
+[32m- SPARK-6927 sorting with codegen on[0m
+[32m- SPARK-6927 external sorting with codegen on[0m
+[32m- limit[0m
+[32m- CTE feature[0m
+[32m- Allow only a single WITH clause per query[0m
+[32m- date row[0m
+[32m- from follow multiple brackets[0m
+[32m- average[0m
+[32m- average overflow[0m
+[32m- count[0m
+[32m- count distinct[0m
+[32m- approximate count distinct[0m
+[32m- approximate count distinct with user provided standard deviation[0m
+[32m- null count[0m
+[32m- inner join where, one match per row[0m
+[32m- inner join ON, one match per row[0m
+[32m- inner join, where, multiple matches[0m
+[32m- inner join, no matches[0m
+[32m- big inner join, 4 matches per row[0m
+[33m- cartesian product join !!! IGNORED !!![0m
+[32m- left outer join[0m
+[32m- right outer join[0m
+[32m- full outer join[0m
+[32m- SPARK-3349 partitioning after limit[0m
+[32m- mixed-case keywords[0m
+[32m- select with table name as qualifier[0m
+[32m- inner join ON with table name as qualifier[0m
+[32m- qualified select with inner join ON with table name as qualifier[0m
+[32m- system function upper()[0m
+[32m- system function lower()[0m
+[32m- UNION[0m
+[32m- UNION with column mismatches[0m
+[32m- EXCEPT[0m
+[32m- INTERSECT[0m
+[32m- SET commands semantics using sql()[0m
+20:50:23.667 WARN org.apache.spark.sql.execution.SetCommand: Property mapred.reduce.tasks is deprecated, automatically converted to spark.sql.shuffle.partitions instead.
+20:50:23.668 WARN org.apache.spark.sql.execution.SetCommand: Property mapred.reduce.tasks is deprecated, automatically converted to spark.sql.shuffle.partitions instead.
+20:50:23.669 WARN org.apache.spark.sql.execution.SetCommand: Property mapred.reduce.tasks is deprecated, automatically converted to spark.sql.shuffle.partitions instead.
+[32m- SET commands with illegal or inappropriate argument[0m
+[32m- apply schema[0m
+[32m- SPARK-3423 BETWEEN[0m
+[32m- cast boolean to string[0m
+[32m- metadata is propagated correctly[0m
+[32m- SPARK-3371 Renaming a function expression with group by gives error[0m
+[32m- SPARK-3813 CASE a WHEN b THEN c [WHEN d THEN e]* [ELSE f] END[0m
+[32m- SPARK-3813 CASE WHEN a THEN b [WHEN c THEN d]* [ELSE e] END[0m
+[32m- throw errors for non-aggregate attributes with aggregation[0m
+[32m- Test to check we can use Long.MinValue[0m
+[32m- Floating point number format[0m
+[32m- Auto cast integer type[0m
+[32m- Test to check we can apply sign to expression[0m
+[32m- Multiple join[0m
+[32m- SPARK-3483 Special chars in column names[0m
+[32m- SPARK-3814 Support Bitwise & operator[0m
+[32m- SPARK-3814 Support Bitwise | operator[0m
+[32m- SPARK-3814 Support Bitwise ^ operator[0m
+[32m- SPARK-3814 Support Bitwise ~ operator[0m
+[32m- SPARK-4120 Join of multiple tables does not work in SparkSQL[0m
+[32m- SPARK-4154 Query does not work if it has 'not between' in Spark SQL and HQL[0m
+[32m- SPARK-4207 Query which has syntax like 'not like' is not working in Spark SQL[0m
+[32m- SPARK-4322 Grouping field with struct field as sub expression[0m
+[32m- SPARK-4432 Fix attribute reference resolution error when using ORDER BY[0m
+[32m- oder by asc by default when not specify ascending and descending[0m
+[32m- Supporting relational operator '<=>' in Spark SQL[0m
+[32m- Multi-column COUNT(DISTINCT ...)[0m
+[32m- SPARK-4699 case sensitivity SQL query[0m
+[32m- SPARK-6145: ORDER BY test for nested fields[0m
+[32m- SPARK-6145: special cases[0m
+[32m- SPARK-6898: complete support for special chars in column names[0m
+[32mParquetDataSourceOffQuerySuite:[0m
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[32m- simple select queries[0m
+[32m- appending[0m
+[32m- overwriting[0m
+[32m- self-join[0m
+[32m- nested data - struct with array field[0m
+[32m- nested data - array of struct[0m
+[32m- SPARK-1913 regression: columns only referenced by pushed down filters should remain[0m
+[32m- SPARK-5309 strings stored using dictionary compression in parquet[0m
+[32mJDBCSuite:[0m
+[32m- SELECT *[0m
+[32m- SELECT * WHERE (simple predicates)[0m
+[32m- SELECT * WHERE (quoted strings)[0m
+[32m- SELECT first field[0m
+[32m- SELECT first field when fetchSize is two[0m
+[32m- SELECT second field[0m
+[32m- SELECT second field when fetchSize is two[0m
+[32m- SELECT * partitioned[0m
+[32m- SELECT WHERE (simple predicates) partitioned[0m
+[32m- SELECT second field partitioned[0m
+[32m- Register JDBC query with renamed fields[0m
+[32m- Basic API[0m
+[32m- Basic API with FetchSize[0m
+[32m- Partitioning via JDBCPartitioningInfo API[0m
+[32m- Partitioning via list-of-where-clauses API[0m
+[32m- H2 integral types[0m
+[32m- H2 null entries[0m
+[32m- H2 string types[0m
+[32m- H2 time types[0m
+[32m- test DATE types[0m
+[32m- test DATE types in cache[0m
+[32m- test types for null value[0m
+[32m- H2 floating-point types[0m
+[32m- SQL query as table name[0m
+[32m- Pass extra properties via OPTIONS[0m
+[32m- Remap types via JdbcDialects[0m
+[32m- Default jdbc dialect registration[0m
+[32m- Dialect unregister[0m
+[32m- Aggregated dialects[0m
+[32mDataFrameJoinSuite:[0m
+[32m- join - join using[0m
+[32m- join - join using self join[0m
+[32m- join - self join[0m
+[32m- join - using aliases after self join[0m
+20:50:30.114 WARN org.apache.spark.sql.Column: Constructing trivially true equals predicate, 'key#2162 = key#2162'. Perhaps you need to use aliases.
+20:50:30.134 WARN org.apache.spark.sql.Column: Constructing trivially true equals predicate, 'key#2162 = key#2162'. Perhaps you need to use aliases.
+20:50:30.153 WARN org.apache.spark.sql.Column: Constructing trivially true equals predicate, 'key#2162 = key#2162'. Perhaps you need to use aliases.
+20:50:30.177 WARN org.apache.spark.sql.Column: Constructing trivially true equals predicate, 'key#2162 = key#2162'. Perhaps you need to use aliases.
+[32m- [SPARK-6231] join - self join auto resolve ambiguity[0m
+[32mNullableColumnBuilderSuite:[0m
+[32m- INT column builder: empty column[0m
+[32m- INT column builder: buffer size auto growth[0m
+[32m- INT column builder: null values[0m
+[32m- LONG column builder: empty column[0m
+[32m- LONG column builder: buffer size auto growth[0m
+[32m- LONG column builder: null values[0m
+[32m- SHORT column builder: empty column[0m
+[32m- SHORT column builder: buffer size auto growth[0m
+[32m- SHORT column builder: null values[0m
+[32m- BOOLEAN column builder: empty column[0m
+[32m- BOOLEAN column builder: buffer size auto growth[0m
+[32m- BOOLEAN column builder: null values[0m
+[32m- BYTE column builder: empty column[0m
+[32m- BYTE column builder: buffer size auto growth[0m
+[32m- BYTE column builder: null values[0m
+[32m- STRING column builder: empty column[0m
+[32m- STRING column builder: buffer size auto growth[0m
+[32m- STRING column builder: null values[0m
+[32m- DOUBLE column builder: empty column[0m
+[32m- DOUBLE column builder: buffer size auto growth[0m
+[32m- DOUBLE column builder: null values[0m
+[32m- FLOAT column builder: empty column[0m
+[32m- FLOAT column builder: buffer size auto growth[0m
+[32m- FLOAT column builder: null values[0m
+[32m- FIXED_DECIMAL column builder: empty column[0m
+[32m- FIXED_DECIMAL column builder: buffer size auto growth[0m
+[32m- FIXED_DECIMAL column builder: null values[0m
+[32m- BINARY column builder: empty column[0m
+[32m- BINARY column builder: buffer size auto growth[0m
+[32m- BINARY column builder: null values[0m
+[32m- GENERIC column builder: empty column[0m
+[32m- GENERIC column builder: buffer size auto growth[0m
+[32m- GENERIC column builder: null values[0m
+[32m- DATE column builder: empty column[0m
+[32m- DATE column builder: buffer size auto growth[0m
+[32m- DATE column builder: null values[0m
+[32m- TIMESTAMP column builder: empty column[0m
+[32m- TIMESTAMP column builder: buffer size auto growth[0m
+[32m- TIMESTAMP column builder: null values[0m
+[32mParquetSchemaSuite:[0m
+[32m- basic types[0m
+[32m- logical integral types[0m
+[32m- binary logical types[0m
+[32m- array[0m
+[32m- map[0m
+[32m- struct[0m
+[32m- deeply nested type[0m
+[32m- optional types[0m
+[32m- thrift generated parquet schema[0m
+[32m- DataType string parser compatibility[0m
+[32m- merge with metastore schema[0m
+[32m- merge missing nullable fields from Metastore schema[0m
+[32mColumnTypeSuite:[0m
+[32m- defaultSize[0m
+[32m- actualSize[0m
+[32m- BOOLEAN.extract[0m
+[32m- BOOLEAN.append[0m
+[32m- INT.extract[0m
+[32m- INT.append[0m
+[32m- SHORT.extract[0m
+[32m- SHORT.append[0m
+[32m- LONG.extract[0m
+[32m- LONG.append[0m
+[32m- BYTE.extract[0m
+[32m- BYTE.append[0m
+[32m- DOUBLE.extract[0m
+[32m- DOUBLE.append[0m
+[32m- FIXED_DECIMAL.extract[0m
+[32m- FIXED_DECIMAL.append[0m
+[32m- FLOAT.extract[0m
+[32m- FLOAT.append[0m
+[32m- STRING.extract[0m
+[32m- STRING.append[0m
+[32m- BINARY.extract[0m
+[32m- BINARY.append[0m
+[32m- GENERIC[0m
+[32m- CUSTOM[0m
+[32m- column type for decimal types with different precision[0m
+[32mParquetIOSuiteBase:[0m
+[32m- basic data types (without binary)[0m
+[32m- raw binary[0m
+[32m- string[0m
+20:50:31.428 ERROR org.apache.spark.executor.Executor: Exception in task 0.0 in stage 558.0 (TID 1394)
+java.lang.RuntimeException: Unsupported datatype DecimalType(19,10)
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:50:31.428 ERROR org.apache.spark.executor.Executor: Exception in task 1.0 in stage 558.0 (TID 1395)
+java.lang.RuntimeException: Unsupported datatype DecimalType(19,10)
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:50:31.438 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 1.0 in stage 558.0 (TID 1395, localhost): java.lang.RuntimeException: Unsupported datatype DecimalType(19,10)
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+20:50:31.439 ERROR org.apache.spark.scheduler.TaskSetManager: Task 1 in stage 558.0 failed 1 times; aborting job
+20:50:31.444 ERROR org.apache.spark.sql.sources.InsertIntoHadoopFsRelation: Aborting job.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 1 in stage 558.0 failed 1 times, most recent failure: Lost task 1.0 in stage 558.0 (TID 1395, localhost): java.lang.RuntimeException: Unsupported datatype DecimalType(19,10)
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1262)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1253)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1252)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1252)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1446)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1407)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+20:50:31.446 ERROR org.apache.spark.sql.sources.DefaultWriterContainer: Job job_201505292050_0000 aborted.
+20:50:31.477 ERROR org.apache.spark.executor.Executor: Exception in task 1.0 in stage 559.0 (TID 1397)
+java.lang.RuntimeException: Unsupported datatype DecimalType()
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:50:31.477 ERROR org.apache.spark.executor.Executor: Exception in task 0.0 in stage 559.0 (TID 1396)
+java.lang.RuntimeException: Unsupported datatype DecimalType()
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:50:31.477 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 1.0 in stage 559.0 (TID 1397, localhost): java.lang.RuntimeException: Unsupported datatype DecimalType()
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+20:50:31.478 ERROR org.apache.spark.scheduler.TaskSetManager: Task 1 in stage 559.0 failed 1 times; aborting job
+20:50:31.478 ERROR org.apache.spark.sql.sources.InsertIntoHadoopFsRelation: Aborting job.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 1 in stage 559.0 failed 1 times, most recent failure: Lost task 1.0 in stage 559.0 (TID 1397, localhost): java.lang.RuntimeException: Unsupported datatype DecimalType()
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1262)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1253)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1252)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1252)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1446)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1407)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+20:50:31.479 ERROR org.apache.spark.sql.sources.DefaultWriterContainer: Job job_201505292050_0000 aborted.
+[32m- fixed-length decimals[0m
+[32m- date type[0m
+[32m- map[0m
+[32m- array[0m
+[32m- struct[0m
+[32m- nested struct with array of array as field[0m
+[32m- nested map with struct as value type[0m
+[32m- nulls[0m
+[32m- nones[0m
+[32m- compression codec[0m
+[32m- read raw Parquet file[0m
+[32m- write metadata[0m
+[32m- save - overwrite[0m
+[32m- save - ignore[0m
+[32m- save - throw[0m
+[32m- save - append[0m
+[32m- SPARK-6315 regression test[0m
+20:50:32.979 ERROR org.apache.spark.sql.sources.InsertIntoHadoopFsRelation: Aborting task.
+java.lang.ArithmeticException: / by zero
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply$mcII$sp(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:69)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf.eval(ScalaUdf.scala:958)
+	at org.apache.spark.sql.catalyst.expressions.Alias.eval(namedExpressions.scala:117)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:52)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:143)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:50:32.980 ERROR org.apache.spark.sql.sources.DefaultWriterContainer: Task attempt attempt_201505292050_0591_m_000000_0 aborted.
+20:50:32.980 ERROR org.apache.spark.executor.Executor: Exception in task 0.0 in stage 591.0 (TID 1461)
+org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:151)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ArithmeticException: / by zero
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply$mcII$sp(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:69)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf.eval(ScalaUdf.scala:958)
+	at org.apache.spark.sql.catalyst.expressions.Alias.eval(namedExpressions.scala:117)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:52)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:143)
+	... 8 more
+20:50:32.981 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 0.0 in stage 591.0 (TID 1461, localhost): org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:151)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ArithmeticException: / by zero
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply$mcII$sp(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:69)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf.eval(ScalaUdf.scala:958)
+	at org.apache.spark.sql.catalyst.expressions.Alias.eval(namedExpressions.scala:117)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:52)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:143)
+	... 8 more
+
+20:50:32.981 ERROR org.apache.spark.scheduler.TaskSetManager: Task 0 in stage 591.0 failed 1 times; aborting job
+20:50:32.981 ERROR org.apache.spark.sql.sources.InsertIntoHadoopFsRelation: Aborting job.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 591.0 failed 1 times, most recent failure: Lost task 0.0 in stage 591.0 (TID 1461, localhost): org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:151)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ArithmeticException: / by zero
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply$mcII$sp(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:69)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf.eval(ScalaUdf.scala:958)
+	at org.apache.spark.sql.catalyst.expressions.Alias.eval(namedExpressions.scala:117)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:52)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:143)
+	... 8 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1262)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1253)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1252)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1252)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1446)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1407)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+20:50:32.982 ERROR org.apache.spark.sql.sources.DefaultWriterContainer: Job job_201505292050_0000 aborted.
+[32m- SPARK-6352 DirectParquetOutputCommitter[0m
+[32mJoinSuite:[0m
+[32m- equi-join is hash-join[0m
+[32m- join operator selection[0m
+[32m- broadcasted hash join operator selection[0m
+[32m- multiple-key equi-join is hash-join[0m
+[32m- inner join where, one match per row[0m
+[32m- inner join ON, one match per row[0m
+[32m- inner join, where, multiple matches[0m
+[32m- inner join, no matches[0m
+[32m- big inner join, 4 matches per row[0m
+[32m- cartisian product join[0m
+[32m- left outer join[0m
+[32m- right outer join[0m
+[32m- full outer join[0m
+[32m- broadcasted left semi join operator selection[0m
+[32m- left semi join[0m
+[32mUDFSuite:[0m
+[32m- Simple UDF[0m
+[32m- ZeroArgument UDF[0m
+[32m- TwoArgument UDF[0m
+[32m- struct UDF[0m
+[32m- udf that is transformed[0m
+[32mCachedTableSuite:[0m
+[32m- cache temp table[0m
+[32m- unpersist an uncached table will not raise exception[0m
+[32m- cache table as select[0m
+[32m- uncaching temp table[0m
+[32m- too big for memory[0m
+[32m- calling .cache() should use in-memory columnar caching[0m
+[32m- calling .unpersist() should drop in-memory columnar cache[0m
+[32m- isCached[0m
+20:51:02.285 WARN org.apache.spark.sql.execution.CacheManager: Asked to cache already cached data.
+[32m- SPARK-1669: cacheTable should be idempotent[0m
+[32m- read from cached table and uncache[0m
+[32m- correct error on uncache of non-cached table[0m
+[32m- SELECT star from cached table[0m
+[32m- Self-join cached[0m
+[32m- 'CACHE TABLE' and 'UNCACHE TABLE' SQL statement[0m
+[32m- CACHE TABLE tableName AS SELECT * FROM anotherTable[0m
+[32m- CACHE TABLE tableName AS SELECT ...[0m
+[32m- CACHE LAZY TABLE tableName[0m
+[32m- InMemoryRelation statistics[0m
+[32m- Drops temporary table[0m
+[32m- Drops cached temporary table[0m
+[32m- Clear all cache[0m
+[32m- Clear accumulators when uncacheTable to prevent memory leaking[0m
+[32mParquetPartitionDiscoverySuite:[0m
+[32m- column type inference[0m
+[32m- parse partition[0m
+[32m- parse partitions[0m
+load the partitioned table
+[32m- read partitioned table - normal case[0m
+[32m- read partitioned table - partition key included in Parquet file[0m
+[32m- read partitioned table - with nulls[0m
+[32m- read partitioned table - with nulls and partition keys are included in Parquet file[0m
+[32m- read partitioned table - merging compatible schemas[0m
+[32m- SPARK-7749 Non-partitioned table should have empty partition spec[0m
+[32m- SPARK-7847: Dynamic partition directory path escaping and unescaping[0m
+[32m- Various partition value types[0m
+[32mSerializationSuite:[0m
+[32m- [SPARK-5235] SQLContext should be serializable[0m
+[32mSparkSqlSerializer2DataTypeSuite:[0m
+[32m- null is supported[0m
+[32m- NullType is supported[0m
+[32m- BooleanType is supported[0m
+[32m- ByteType is supported[0m
+[32m- ShortType is supported[0m
+[32m- IntegerType is supported[0m
+[32m- LongType is supported[0m
+[32m- FloatType is supported[0m
+[32m- DoubleType is supported[0m
+[32m- DateType is supported[0m
+[32m- TimestampType is supported[0m
+[32m- StringType is supported[0m
+[32m- BinaryType is supported[0m
+[32m- DecimalType(10,5) is supported[0m
+[32m- DecimalType() is supported[0m
+[32m- ArrayType(DoubleType,true) is unsupported[0m
+[32m- ArrayType(StringType,false) is unsupported[0m
+[32m- MapType(IntegerType,StringType,true) is unsupported[0m
+[32m- MapType(IntegerType,ArrayType(DoubleType,true),false) is unsupported[0m
+[32m- StructType(StructField(a,IntegerType,true)) is unsupported[0m
+[32m- org.apache.spark.sql.MyDenseVectorUDT@70ede57d is unsupported[0m
+[32mCreateTableAsSelectSuite:[0m
+[32m- CREATE TEMPORARY TABLE AS SELECT[0m
+20:51:05.610 WARN org.apache.hadoop.fs.FileUtil: Failed to delete file or dir [/private/var/folders/j5/0ggqyz5j0z12f2q5cz3562rh0000gn/T/spark-55a5fc31-424e-4590-a25e-3a9e589352c4/child]: it still exists.
+[32m- CREATE TEMPORARY TABLE AS SELECT based on the file without write permission[0m
+[32m- create a table, drop it and create another one with the same name[0m
+[32m- CREATE TEMPORARY TABLE AS SELECT with IF NOT EXISTS is not allowed[0m
+[32m- a CTAS statement with column definitions is not allowed[0m
+[32m- it is not allowed to write to a table while querying it.[0m
+[32mSQLContextSuite:[0m
+[32m- getOrCreate instantiates SQLContext[0m
+[32m- getOrCreate gets last explicitly instantiated SQLContext[0m
+[32mDDLTestSuite:[0m
+[32m- describe ddlPeople[0m
+[32m- SPARK-7686 DescribeCommand should have correct physical plan output attributes[0m
+[32mPrunedScanSuite:[0m
+[32m- SELECT * FROM oneToTenPruned[0m
+[32m- SELECT a, b FROM oneToTenPruned[0m
+[32m- SELECT b, a FROM oneToTenPruned[0m
+[32m- SELECT a FROM oneToTenPruned[0m
+[32m- SELECT a, a FROM oneToTenPruned[0m
+[32m- SELECT b FROM oneToTenPruned[0m
+[32m- SELECT a * 2 FROM oneToTenPruned[0m
+[32m- SELECT A AS b FROM oneToTenPruned[0m
+[32m- SELECT x.b, y.a FROM oneToTenPruned x JOIN oneToTenPruned y ON x.a = y.b[0m
+[32m- SELECT x.a, y.b FROM oneToTenPruned x JOIN oneToTenPruned y ON x.a = y.b[0m
+[32m- Columns output a,b: SELECT * FROM oneToTenPruned[0m
+[32m- Columns output a,b: SELECT a, b FROM oneToTenPruned[0m
+[32m- Columns output b,a: SELECT b, a FROM oneToTenPruned[0m
+[32m- Columns output b: SELECT b, b FROM oneToTenPruned[0m
+[32m- Columns output a: SELECT a FROM oneToTenPruned[0m
+[32m- Columns output b: SELECT b FROM oneToTenPruned[0m
+[32mParquetFilterSuiteBase:[0m
+[32m- filter pushdown - boolean[0m
+[32m- filter pushdown - short[0m
+[32m- filter pushdown - integer[0m
+[32m- filter pushdown - long[0m
+[32m- filter pushdown - float[0m
+[32m- filter pushdown - double[0m
+[32m- filter pushdown - string[0m
+[32m- filter pushdown - binary[0m
+[32mQueryTest:[0m
+[32mFilteredScanSuite:[0m
+[32m- SELECT * FROM oneToTenFiltered[0m
+[32m- SELECT a, b FROM oneToTenFiltered[0m
+[32m- SELECT b, a FROM oneToTenFiltered[0m
+[32m- SELECT a FROM oneToTenFiltered[0m
+[32m- SELECT b FROM oneToTenFiltered[0m
+[32m- SELECT a * 2 FROM oneToTenFiltered[0m
+[32m- SELECT A AS b FROM oneToTenFiltered[0m
+[32m- SELECT x.b, y.a FROM oneToTenFiltered x JOIN oneToTenFiltered y ON x.a = y.b[0m
+[32m- SELECT x.a, y.b FROM oneToTenFiltered x JOIN oneToTenFiltered y ON x.a = y.b[0m
+[32m- SELECT a, b FROM oneToTenFiltered WHERE a = 1[0m
+[32m- SELECT a, b FROM oneToTenFiltered WHERE a IN (1,3,5)[0m
+[32m- SELECT a, b FROM oneToTenFiltered WHERE A = 1[0m
+[32m- SELECT a, b FROM oneToTenFiltered WHERE b = 2[0m
+[32m- SELECT a, b FROM oneToTenFiltered WHERE a IS NULL[0m
+[32m- SELECT a, b FROM oneToTenFiltered WHERE a IS NOT NULL[0m
+[32m- SELECT a, b FROM oneToTenFiltered WHERE a < 5 AND a > 1[0m
+[32m- SELECT a, b FROM oneToTenFiltered WHERE a < 3 OR a > 8[0m
+[32m- SELECT a, b FROM oneToTenFiltered WHERE NOT (a < 6)[0m
+[32m- SELECT a, b, c FROM oneToTenFiltered WHERE c like 'c%'[0m
+[32m- SELECT a, b, c FROM oneToTenFiltered WHERE c like '%D'[0m
+[32m- SELECT a, b, c FROM oneToTenFiltered WHERE c like '%eE%'[0m
+[32m- PushDown Returns 1: SELECT * FROM oneToTenFiltered WHERE A = 1[0m
+[32m- PushDown Returns 1: SELECT a FROM oneToTenFiltered WHERE A = 1[0m
+[32m- PushDown Returns 1: SELECT b FROM oneToTenFiltered WHERE A = 1[0m
+[32m- PushDown Returns 1: SELECT a, b FROM oneToTenFiltered WHERE A = 1[0m
+[32m- PushDown Returns 1: SELECT * FROM oneToTenFiltered WHERE a = 1[0m
+[32m- PushDown Returns 1: SELECT * FROM oneToTenFiltered WHERE 1 = a[0m
+[32m- PushDown Returns 9: SELECT * FROM oneToTenFiltered WHERE a > 1[0m
+[32m- PushDown Returns 9: SELECT * FROM oneToTenFiltered WHERE a >= 2[0m
+[32m- PushDown Returns 9: SELECT * FROM oneToTenFiltered WHERE 1 < a[0m
+[32m- PushDown Returns 9: SELECT * FROM oneToTenFiltered WHERE 2 <= a[0m
+[32m- PushDown Returns 0: SELECT * FROM oneToTenFiltered WHERE 1 > a[0m
+[32m- PushDown Returns 2: SELECT * FROM oneToTenFiltered WHERE 2 >= a[0m
+[32m- PushDown Returns 0: SELECT * FROM oneToTenFiltered WHERE a < 1[0m
+[32m- PushDown Returns 2: SELECT * FROM oneToTenFiltered WHERE a <= 2[0m
+[32m- PushDown Returns 8: SELECT * FROM oneToTenFiltered WHERE a > 1 AND a < 10[0m
+[32m- PushDown Returns 3: SELECT * FROM oneToTenFiltered WHERE a IN (1,3,5)[0m
+[32m- PushDown Returns 0: SELECT * FROM oneToTenFiltered WHERE a = 20[0m
+[32m- PushDown Returns 10: SELECT * FROM oneToTenFiltered WHERE b = 1[0m
+[32m- PushDown Returns 3: SELECT * FROM oneToTenFiltered WHERE a < 5 AND a > 1[0m
+[32m- PushDown Returns 4: SELECT * FROM oneToTenFiltered WHERE a < 3 OR a > 8[0m
+[32m- PushDown Returns 5: SELECT * FROM oneToTenFiltered WHERE NOT (a < 6)[0m
+[32m- PushDown Returns 1: SELECT a, b, c FROM oneToTenFiltered WHERE c like 'c%'[0m
+[32m- PushDown Returns 0: SELECT a, b, c FROM oneToTenFiltered WHERE c like 'C%'[0m
+[32m- PushDown Returns 1: SELECT a, b, c FROM oneToTenFiltered WHERE c like '%D'[0m
+[32m- PushDown Returns 0: SELECT a, b, c FROM oneToTenFiltered WHERE c like '%d'[0m
+[32m- PushDown Returns 1: SELECT a, b, c FROM oneToTenFiltered WHERE c like '%eE%'[0m
+[32m- PushDown Returns 0: SELECT a, b, c FROM oneToTenFiltered WHERE c like '%Ee%'[0m
+[32mTableScanSuite:[0m
+[32m- SELECT * FROM oneToTen[0m
+[32m- SELECT i FROM oneToTen[0m
+[32m- SELECT i FROM oneToTen WHERE i < 5[0m
+[32m- SELECT i * 2 FROM oneToTen[0m
+[32m- SELECT a.i, b.i FROM oneToTen a JOIN oneToTen b ON a.i = b.i + 1[0m
+[32m- Schema and all fields[0m
+[32m- SELECT count(*) FROM tableWithSchema[0m
+[32m- SELECT `string$%Field` FROM tableWithSchema[0m
+[32m- SELECT int_Field FROM tableWithSchema WHERE int_Field < 5[0m
+[32m- SELECT `longField_:,<>=+/~^` * 2 FROM tableWithSchema[0m
+[32m- SELECT structFieldSimple.key, arrayFieldSimple[1] FROM tableWithSchema a where int_Field=1[0m
+[32m- SELECT structFieldComplex.Value.`value_(2)` FROM tableWithSchema[0m
+[32m- Caching[0m
+[32m- defaultSource[0m
+[32m- exceptions[0m
+[32m- SPARK-5196 schema field with comment[0m
+[32mJsonSuite:[0m
+[32m- Type promotion[0m
+[32m- Get compatible type[0m
+[32m- Complex field and type inferring with null in sampling[0m
+[32m- Primitive field and type inferring[0m
+[32m- Complex field and type inferring[0m
+[32m- GetField operation on complex data type[0m
+[32m- Type conflict in primitive field values[0m
+[33m- Type conflict in primitive field values (Ignored) !!! IGNORED !!![0m
+[32m- Type conflict in complex field values[0m
+[32m- Type conflict in array elements[0m
+[32m- Handling missing fields[0m
+[32m- jsonFile should be based on JSONRelation[0m
+[32m- Loading a JSON dataset from a text file[0m
+[32m- Loading a JSON dataset from a text file with SQL[0m
+[32m- Applying schemas[0m
+[32m- Applying schemas with MapType[0m
+[32m- SPARK-2096 Correctly parse dot notations[0m
+[32m- SPARK-3390 Complex arrays[0m
+[32m- SPARK-3308 Read top level JSON arrays[0m
+[32m- Corrupt records[0m
+[32m- SPARK-4068: nulls in arrays[0m
+[32m- SPARK-4228 DataFrame to JSON[0m
+[32m- JSONRelation equality test[0m
+[32m- SPARK-6245 JsonRDD.inferSchema on empty RDD[0m
+[32m- SPARK-7565 MapType in JsonRDD[0m
+[32mDictionaryEncodingSuite:[0m
+[32m- DictionaryEncoding with INT: empty[0m
+[32m- DictionaryEncoding with INT: simple case[0m
+[32m- DictionaryEncoding with INT: dictionary overflow[0m
+[32m- DictionaryEncoding with LONG: empty[0m
+[32m- DictionaryEncoding with LONG: simple case[0m
+[32m- DictionaryEncoding with LONG: dictionary overflow[0m
+[32m- DictionaryEncoding with STRING: empty[0m
+[32m- DictionaryEncoding with STRING: simple case[0m
+[32m- DictionaryEncoding with STRING: dictionary overflow[0m
+[32mDataFrameAggregateSuite:[0m
+[32m- groupBy[0m
+[32m- spark.sql.retainGroupColumns config[0m
+[32m- agg without groups[0m
+[32m- average[0m
+[32m- null average[0m
+[32m- zero average[0m
+[32m- count[0m
+[32m- null count[0m
+[32m- zero count[0m
+[32m- zero sum[0m
+[32m- zero sum distinct[0m
+[32mUserDefinedTypeSuite:[0m
+[32m- register user type: MyDenseVector for MyLabeledPoint[0m
+[32m- UDTs and UDFs[0m
+[32m- UDTs with Parquet[0m
+[32m- Repartition UDTs with Parquet[0m
+[32m- Local UDTs[0m
+[32m- HyperLogLogUDT[0m
+[32m- OpenHashSetUDT[0m
+[32mMathExpressionsSuite:[0m
+[32m- sin[0m
+[32m- asin[0m
+[32m- sinh[0m
+[32m- cos[0m
+[32m- acos[0m
+[32m- cosh[0m
+[32m- tan[0m
+[32m- atan[0m
+[32m- tanh[0m
+[32m- toDeg[0m
+[32m- toRad[0m
+[32m- cbrt[0m
+[32m- ceil[0m
+[32m- floor[0m
+[32m- rint[0m
+[32m- exp[0m
+[32m- expm1[0m
+[32m- signum[0m
+[32m- pow[0m
+[32m- hypot[0m
+[32m- atan2[0m
+[32m- log[0m
+[32m- log10[0m
+[32m- log1p[0m
+[32mSQLConfSuite:[0m
+[32m- propagate from spark conf[0m
+[32m- programmatic ways of basic setting and getting[0m
+[32m- parse SQL set commands[0m
+20:51:17.632 WARN org.apache.spark.sql.execution.SetCommand: Property mapred.reduce.tasks is deprecated, automatically converted to spark.sql.shuffle.partitions instead.
+[32m- deprecated property[0m
+[32mDataFrameSuite:[0m
+[32m- analysis error should be eagerly reported[0m
+[32m- dataframe toString[0m
+[32m- rename nested groupby[0m
+[32m- invalid plan toString, debug mode[0m
+[32m- access complex data[0m
+[32m- table scan[0m
+[32m- empty data frame[0m
+[32m- head and take[0m
+[32m- simple explode[0m
+[32m- explode[0m
+[32m- selectExpr[0m
+[32m- selectExpr with alias[0m
+[32m- filterExpr[0m
+[32m- repartition[0m
+[32m- coalesce[0m
+[32m- convert $"attribute name" into unresolved attribute[0m
+[32m- convert Scala Symbol 'attrname into unresolved attribute[0m
+[32m- select *[0m
+[32m- simple select[0m
+[32m- select with functions[0m
+[32m- global sorting[0m
+[32m- limit[0m
+[32m- except[0m
+[32m- intersect[0m
+[32m- udf[0m
+[32m- call udf in SQLContext[0m
+[32m- withColumn[0m
+[32m- replace column using withColumn[0m
+[32m- drop column using drop[0m
+[32m- drop unknown column (no-op)[0m
+[32m- withColumnRenamed[0m
+[32m- randomSplit[0m
+[32m- describe[0m
+[32m- apply on query results (SPARK-5462)[0m
+[33m- show !!! IGNORED !!![0m
+[32m- SPARK-7319 showString[0m
+[32m- SPARK-7327 show with empty dataFrame[0m
+[32m- createDataFrame(RDD[Row], StructType) should convert UDTs (SPARK-6672)[0m
+[32m- SPARK-6899[0m
+[32m- SPARK-7133: Implement struct, array, and map field accessor[0m
+[32m- SPARK-7551: support backticks for DataFrame attribute resolution[0m
+[32m- SPARK-7324 dropDuplicates[0m
+[32m- SPARK-7276: Project collapse for continuous select[0m
+[32m- SPARK-7150 range api[0m
+[32mDataFrameNaFunctionsSuite:[0m
+[32m- drop[0m
+[32m- drop with how[0m
+[32m- drop with threshold[0m
+[32m- fill[0m
+[32m- fill with map[0m
+[32m- replace[0m
+[32mSaveLoadSuite:[0m
+[32m- save with path and load[0m
+[32m- save with string mode and path, and load[0m
+[32m- save with path and datasource, and load[0m
+[32m- save with data source and options, and load[0m
+[32m- save and save again[0m
+[32mBooleanBitSetSuite:[0m
+[32m- BooleanBitSet: empty[0m
+[32m- BooleanBitSet: less than 1 word[0m
+[32m- BooleanBitSet: exactly 1 word[0m
+[32m- BooleanBitSet: multiple whole words[0m
+[32m- BooleanBitSet: multiple words and 1 more bit[0m
+[32mColumnStatsSuite:[0m
+[32m- ByteColumnStats: empty[0m
+[32m- ByteColumnStats: non-empty[0m
+[32m- ShortColumnStats: empty[0m
+[32m- ShortColumnStats: non-empty[0m
+[32m- IntColumnStats: empty[0m
+[32m- IntColumnStats: non-empty[0m
+[32m- LongColumnStats: empty[0m
+[32m- LongColumnStats: non-empty[0m
+[32m- FloatColumnStats: empty[0m
+[32m- FloatColumnStats: non-empty[0m
+[32m- DoubleColumnStats: empty[0m
+[32m- DoubleColumnStats: non-empty[0m
+[32m- FixedDecimalColumnStats: empty[0m
+[32m- FixedDecimalColumnStats: non-empty[0m
+[32m- StringColumnStats: empty[0m
+[32m- StringColumnStats: non-empty[0m
+[32m- DateColumnStats: empty[0m
+[32m- DateColumnStats: non-empty[0m
+[32m- TimestampColumnStats: empty[0m
+[32m- TimestampColumnStats: non-empty[0m
+[32mScalaReflectionRelationSuite:[0m
+[32m- query case class RDD[0m
+[32m- query case class RDD with nulls[0m
+[32m- query case class RDD with Nones[0m
+[32m- query binary data[0m
+[32m- query complex data[0m
+[32mSparkSqlSerializer2SortMergeShuffleSuite:[0m
+[32m- key schema and value schema are not nulls[0m
+[32m- key schema is null[0m
+[32m- value schema is null[0m
+[32m- no map output field[0m
+[32mSparkSqlSerializer2SortShuffleSuite:[0m
+[32m- key schema and value schema are not nulls[0m
+[32m- key schema is null[0m
+[32m- value schema is null[0m
+[32m- no map output field[0m
+[32mRunLengthEncodingSuite:[0m
+[32m- RunLengthEncoding with BOOLEAN: empty column[0m
+[32m- RunLengthEncoding with BOOLEAN: simple case[0m
+[32m- RunLengthEncoding with BOOLEAN: run length == 1[0m
+[32m- RunLengthEncoding with BOOLEAN: single long run[0m
+[32m- RunLengthEncoding with BYTE: empty column[0m
+[32m- RunLengthEncoding with BYTE: simple case[0m
+[32m- RunLengthEncoding with BYTE: run length == 1[0m
+[32m- RunLengthEncoding with BYTE: single long run[0m
+[32m- RunLengthEncoding with SHORT: empty column[0m
+[32m- RunLengthEncoding with SHORT: simple case[0m
+[32m- RunLengthEncoding with SHORT: run length == 1[0m
+[32m- RunLengthEncoding with SHORT: single long run[0m
+[32m- RunLengthEncoding with INT: empty column[0m
+[32m- RunLengthEncoding with INT: simple case[0m
+[32m- RunLengthEncoding with INT: run length == 1[0m
+[32m- RunLengthEncoding with INT: single long run[0m
+[32m- RunLengthEncoding with LONG: empty column[0m
+[32m- RunLengthEncoding with LONG: simple case[0m
+[32m- RunLengthEncoding with LONG: run length == 1[0m
+[32m- RunLengthEncoding with LONG: single long run[0m
+[32m- RunLengthEncoding with STRING: empty column[0m
+[32m- RunLengthEncoding with STRING: simple case[0m
+[32m- RunLengthEncoding with STRING: run length == 1[0m
+[32m- RunLengthEncoding with STRING: single long run[0m
+[32mParquetDataSourceOffFilterSuite:[0m
+[32m- filter pushdown - boolean[0m
+[32m- filter pushdown - short[0m
+[32m- filter pushdown - integer[0m
+[32m- filter pushdown - long[0m
+[32m- filter pushdown - float[0m
+[32m- filter pushdown - double[0m
+[32m- filter pushdown - string[0m
+[32m- filter pushdown - binary[0m
+[32m- SPARK-6742: don't push down predicates which reference partition columns[0m
+[32mParquetDataSourceOnFilterSuite:[0m
+[32m- filter pushdown - boolean[0m
+[32m- filter pushdown - short[0m
+[32m- filter pushdown - integer[0m
+[32m- filter pushdown - long[0m
+[32m- filter pushdown - float[0m
+[32m- filter pushdown - double[0m
+[32m- filter pushdown - string[0m
+[32m- filter pushdown - binary[0m
+[32m- SPARK-6554: don't push down predicates which reference partition columns[0m
+[32mNullableColumnAccessorSuite:[0m
+[32m- Nullable INT column accessor: empty column[0m
+[32m- Nullable INT column accessor: access null values[0m
+[32m- Nullable LONG column accessor: empty column[0m
+[32m- Nullable LONG column accessor: access null values[0m
+[32m- Nullable SHORT column accessor: empty column[0m
+[32m- Nullable SHORT column accessor: access null values[0m
+[32m- Nullable BOOLEAN column accessor: empty column[0m
+[32m- Nullable BOOLEAN column accessor: access null values[0m
+[32m- Nullable BYTE column accessor: empty column[0m
+[32m- Nullable BYTE column accessor: access null values[0m
+[32m- Nullable STRING column accessor: empty column[0m
+[32m- Nullable STRING column accessor: access null values[0m
+[32m- Nullable DOUBLE column accessor: empty column[0m
+[32m- Nullable DOUBLE column accessor: access null values[0m
+[32m- Nullable FLOAT column accessor: empty column[0m
+[32m- Nullable FLOAT column accessor: access null values[0m
+[32m- Nullable FIXED_DECIMAL column accessor: empty column[0m
+[32m- Nullable FIXED_DECIMAL column accessor: access null values[0m
+[32m- Nullable BINARY column accessor: empty column[0m
+[32m- Nullable BINARY column accessor: access null values[0m
+[32m- Nullable GENERIC column accessor: empty column[0m
+[32m- Nullable GENERIC column accessor: access null values[0m
+[32m- Nullable DATE column accessor: empty column[0m
+[32m- Nullable DATE column accessor: access null values[0m
+[32m- Nullable TIMESTAMP column accessor: empty column[0m
+[32m- Nullable TIMESTAMP column accessor: access null values[0m
+[32mDataFrameStatSuite:[0m
+[32m- pearson correlation[0m
+[32m- covariance[0m
+[32m- crosstab[0m
+[32m- Frequent Items[0m
+[32mParquetQuerySuiteBase:[0m
+[32m- simple select queries[0m
+[32m- appending[0m
+[32m- overwriting[0m
+[32m- self-join[0m
+[32m- nested data - struct with array field[0m
+[32m- nested data - array of struct[0m
+[32m- SPARK-1913 regression: columns only referenced by pushed down filters should remain[0m
+[32m- SPARK-5309 strings stored using dictionary compression in parquet[0m
+[32mRowSuite:[0m
+[32m- create row[0m
+[32m- SpecificMutableRow.update with null[0m
+[32m- serialize w/ kryo[0m
+[32m- get values by field name on Row created via .toDF[0m
+[32mResolvedDataSourceSuite:[0m
+[32m- builtin sources[0m
+[32mIntegralDeltaSuite:[0m
+[32m- IntDelta: empty column[0m
+[32m- IntDelta: simple case[0m
+[32m- IntDelta: long random series[0m
+[32m- LongDelta: empty column[0m
+[32m- LongDelta: simple case[0m
+[32m- LongDelta: long random series[0m
+[32mDataFrameFunctionsSuite:[0m
+[32m- array with column name[0m
+[32m- array with column expression[0m
+[33m- array: throw exception if putting columns of different types into an array !!! IGNORED !!![0m
+[32m- struct with column name[0m
+[32m- struct with column expression[0m
+[32m- struct: must use named column expression[0m
+[32m- bitwiseNOT[0m
+[32mColumnExpressionSuite:[0m
+[32m- single explode[0m
+[32m- explode and other columns[0m
+[32m- aliased explode[0m
+[32m- explode on map[0m
+[32m- explode on map with aliases[0m
+20:51:50.360 WARN org.apache.spark.sql.Column: Constructing trivially true equals predicate, 'i#11218 = i#11218'. Perhaps you need to use aliases.
+[32m- self join explode[0m
+[32m- collect on column produced by a binary operator[0m
+[32m- star[0m
+[32m- star qualified by data frame object[0m
+[32m- star qualified by table name[0m
+[32m- +[0m
+[32m- -[0m
+[32m- *[0m
+[32m- /[0m
+[32m- %[0m
+[32m- unary -[0m
+[32m- unary ![0m
+[32m- isNull[0m
+[32m- isNotNull[0m
+[32m- ===[0m
+[32m- <=>[0m
+[32m- !==[0m
+[32m- >[0m
+[32m- >=[0m
+[32m- <[0m
+[32m- <=[0m
+[32m- between[0m
+[32m- &&[0m
+[32m- ||[0m
+[32m- SPARK-7321 when conditional statements[0m
+[32m- sqrt[0m
+[32m- abs[0m
+[32m- upper[0m
+[32m- lower[0m
+[32m- monotonicallyIncreasingId[0m
+[32m- sparkPartitionId[0m
+[32m- lift alias out of cast[0m
+[32m- columns can be compared[0m
+[32m- alias with metadata[0m
+[32m- rand[0m
+[32m- randn[0m
+[32m- bitwiseAND[0m
+[32m- bitwiseOR[0m
+[32m- bitwiseXOR[0m
+[32mDataFrameImplicitsSuite:[0m
+[32m- RDD of tuples[0m
+[32m- Seq of tuples[0m
+[32m- RDD[Int][0m
+[32m- RDD[Long][0m
+[32m- RDD[String][0m
+[32mListTablesSuite:[0m
+[32m- get all tables[0m
+[32m- getting all Tables with a database name has no impact on returned table names[0m
+[32m- query the returned DataFrame of tables[0m
+[32mPartitionBatchPruningSuite:[0m
+[32m- SELECT key FROM pruningData WHERE key = 1[0m
+[32m- SELECT key FROM pruningData WHERE 1 = key[0m
+[32m- SELECT key FROM pruningData WHERE key < 12[0m
+[32m- SELECT key FROM pruningData WHERE key <= 11[0m
+[32m- SELECT key FROM pruningData WHERE key > 88[0m
+[32m- SELECT key FROM pruningData WHERE key >= 89[0m
+[32m- SELECT key FROM pruningData WHERE 12 > key[0m
+[32m- SELECT key FROM pruningData WHERE 11 >= key[0m
+[32m- SELECT key FROM pruningData WHERE 88 < key[0m
+[32m- SELECT key FROM pruningData WHERE 89 <= key[0m
+[32m- SELECT key FROM pruningData WHERE value IS NULL[0m
+[32m- SELECT key FROM pruningData WHERE value IS NOT NULL[0m
+[32m- SELECT key FROM pruningData WHERE key > 8 AND key <= 21[0m
+[32m- SELECT key FROM pruningData WHERE key < 2 OR key > 99[0m
+[32m- SELECT key FROM pruningData WHERE key < 12 AND key IS NOT NULL[0m
+[32m- SELECT key FROM pruningData WHERE key < 2 OR (key > 78 AND key < 92)[0m
+[32m- SELECT key FROM pruningData WHERE NOT (key < 88)[0m
+[32m- SELECT key FROM pruningData WHERE NOT (key IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30))[0m
+[32m- SELECT key FROM pruningData WHERE NOT (key IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30)) AND key > 88[0m
+[32mDebuggingSuite:[0m
+Results returned: 100
+== PhysicalRDD [key#0,value#1], MapPartitionsRDD[1] at SQLQuerySuite at NativeConstructorAccessorImpl.java:-2 ==
+Tuples output: 100
+ key IntegerType: {java.lang.Integer}
+ value StringType: {org.apache.spark.sql.types.UTF8String}
+[32m- DataFrame.debug()[0m
+Results returned: 100
+[32m- DataFrame.typeCheck()[0m
+[32mParquetDataSourceOnIOSuite:[0m
+[32m- basic data types (without binary)[0m
+[32m- raw binary[0m
+[32m- string[0m
+20:51:53.096 ERROR org.apache.spark.executor.Executor: Exception in task 0.0 in stage 2065.0 (TID 7084)
+java.lang.RuntimeException: Unsupported datatype DecimalType(19,10)
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:51:53.096 ERROR org.apache.spark.executor.Executor: Exception in task 1.0 in stage 2065.0 (TID 7085)
+java.lang.RuntimeException: Unsupported datatype DecimalType(19,10)
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:51:53.097 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 0.0 in stage 2065.0 (TID 7084, localhost): java.lang.RuntimeException: Unsupported datatype DecimalType(19,10)
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+20:51:53.097 ERROR org.apache.spark.scheduler.TaskSetManager: Task 0 in stage 2065.0 failed 1 times; aborting job
+20:51:53.097 ERROR org.apache.spark.sql.sources.InsertIntoHadoopFsRelation: Aborting job.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 2065.0 failed 1 times, most recent failure: Lost task 0.0 in stage 2065.0 (TID 7084, localhost): java.lang.RuntimeException: Unsupported datatype DecimalType(19,10)
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1262)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1253)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1252)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1252)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1446)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1407)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+20:51:53.098 ERROR org.apache.spark.sql.sources.DefaultWriterContainer: Job job_201505292051_0000 aborted.
+20:51:53.133 ERROR org.apache.spark.executor.Executor: Exception in task 0.0 in stage 2066.0 (TID 7086)
+java.lang.RuntimeException: Unsupported datatype DecimalType()
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:51:53.133 ERROR org.apache.spark.executor.Executor: Exception in task 1.0 in stage 2066.0 (TID 7087)
+java.lang.RuntimeException: Unsupported datatype DecimalType()
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:51:53.134 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 0.0 in stage 2066.0 (TID 7086, localhost): java.lang.RuntimeException: Unsupported datatype DecimalType()
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+20:51:53.134 ERROR org.apache.spark.scheduler.TaskSetManager: Task 0 in stage 2066.0 failed 1 times; aborting job
+20:51:53.134 ERROR org.apache.spark.sql.sources.InsertIntoHadoopFsRelation: Aborting job.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 2066.0 failed 1 times, most recent failure: Lost task 0.0 in stage 2066.0 (TID 7086, localhost): java.lang.RuntimeException: Unsupported datatype DecimalType()
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1262)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1253)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1252)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1252)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1446)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1407)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+20:51:53.135 ERROR org.apache.spark.sql.sources.DefaultWriterContainer: Job job_201505292051_0000 aborted.
+[32m- fixed-length decimals[0m
+[32m- date type[0m
+[32m- map[0m
+[32m- array[0m
+[32m- struct[0m
+[32m- nested struct with array of array as field[0m
+[32m- nested map with struct as value type[0m
+[32m- nulls[0m
+[32m- nones[0m
+[32m- compression codec[0m
+[32m- read raw Parquet file[0m
+[32m- write metadata[0m
+[32m- save - overwrite[0m
+[32m- save - ignore[0m
+[32m- save - throw[0m
+[32m- save - append[0m
+[32m- SPARK-6315 regression test[0m
+20:51:54.417 ERROR org.apache.spark.sql.sources.InsertIntoHadoopFsRelation: Aborting task.
+java.lang.ArithmeticException: / by zero
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply$mcII$sp(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:69)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf.eval(ScalaUdf.scala:958)
+	at org.apache.spark.sql.catalyst.expressions.Alias.eval(namedExpressions.scala:117)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:52)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:143)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:51:54.418 ERROR org.apache.spark.sql.sources.DefaultWriterContainer: Task attempt attempt_201505292051_2098_m_000000_0 aborted.
+20:51:54.418 ERROR org.apache.spark.executor.Executor: Exception in task 0.0 in stage 2098.0 (TID 7151)
+org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:151)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ArithmeticException: / by zero
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply$mcII$sp(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:69)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf.eval(ScalaUdf.scala:958)
+	at org.apache.spark.sql.catalyst.expressions.Alias.eval(namedExpressions.scala:117)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:52)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:143)
+	... 8 more
+20:51:54.418 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 0.0 in stage 2098.0 (TID 7151, localhost): org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:151)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ArithmeticException: / by zero
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply$mcII$sp(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:69)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf.eval(ScalaUdf.scala:958)
+	at org.apache.spark.sql.catalyst.expressions.Alias.eval(namedExpressions.scala:117)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:52)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:143)
+	... 8 more
+
+20:51:54.418 ERROR org.apache.spark.scheduler.TaskSetManager: Task 0 in stage 2098.0 failed 1 times; aborting job
+20:51:54.418 ERROR org.apache.spark.sql.sources.InsertIntoHadoopFsRelation: Aborting job.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 2098.0 failed 1 times, most recent failure: Lost task 0.0 in stage 2098.0 (TID 7151, localhost): org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:151)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ArithmeticException: / by zero
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply$mcII$sp(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:69)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf.eval(ScalaUdf.scala:958)
+	at org.apache.spark.sql.catalyst.expressions.Alias.eval(namedExpressions.scala:117)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:52)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:143)
+	... 8 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1262)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1253)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1252)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1252)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1446)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1407)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+20:51:54.419 ERROR org.apache.spark.sql.sources.DefaultWriterContainer: Job job_201505292051_0000 aborted.
+[32m- SPARK-6352 DirectParquetOutputCommitter[0m
+[32m- SPARK-6330 regression test[0m
+[32mInMemoryColumnarQuerySuite:[0m
+[32m- simple columnar query[0m
+[32m- default size avoids broadcast[0m
+[32m- projection[0m
+[32m- SPARK-1436 regression: in-memory columns must be able to be accessed multiple times[0m
+[32m- SPARK-1678 regression: compression must not lose repeated values[0m
+[32m- with null values[0m
+[32m- SPARK-2729 regression: timestamp data type[0m
+[32m- SPARK-3320 regression: batched column buffer building should work with empty partitions[0m
+[32m- SPARK-4182 Caching complex types[0m
+[32m- decimal type[0m
+[32m- test different data types[0m
+[32mParquetDataSourceOnQuerySuite:[0m
+[32m- simple select queries[0m
+[32m- appending[0m
+[32m- overwriting[0m
+[32m- self-join[0m
+[32m- nested data - struct with array field[0m
+[32m- nested data - array of struct[0m
+[32m- SPARK-1913 regression: columns only referenced by pushed down filters should remain[0m
+[32m- SPARK-5309 strings stored using dictionary compression in parquet[0m
+[32mInsertSuite:[0m
+[32m- Simple INSERT OVERWRITE a JSONRelation[0m
+[32m- PreInsert casting and renaming[0m
+[32m- SELECT clause generating a different number of columns is not allowed.[0m
+[32m- INSERT OVERWRITE a JSONRelation multiple times[0m
+[32m- INSERT INTO not supported for JSONRelation for now[0m
+[32m- save directly to the path of a JSON table[0m
+[32m- it is not allowed to write to a table while querying it.[0m
+[32m- Caching[0m
+[32m- it's not allowed to insert into a relation that is not an InsertableRelation[0m
+[32mParquetDataSourceOffIOSuite:[0m
+[32m- basic data types (without binary)[0m
+[32m- raw binary[0m
+[32m- string[0m
+20:51:59.872 ERROR org.apache.spark.executor.Executor: Exception in task 1.0 in stage 2212.0 (TID 7488)
+java.lang.RuntimeException: Unsupported datatype DecimalType(19,10)
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:51:59.872 ERROR org.apache.spark.executor.Executor: Exception in task 0.0 in stage 2212.0 (TID 7487)
+java.lang.RuntimeException: Unsupported datatype DecimalType(19,10)
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:51:59.873 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 1.0 in stage 2212.0 (TID 7488, localhost): java.lang.RuntimeException: Unsupported datatype DecimalType(19,10)
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+20:51:59.873 ERROR org.apache.spark.scheduler.TaskSetManager: Task 1 in stage 2212.0 failed 1 times; aborting job
+20:51:59.873 ERROR org.apache.spark.sql.sources.InsertIntoHadoopFsRelation: Aborting job.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 1 in stage 2212.0 failed 1 times, most recent failure: Lost task 1.0 in stage 2212.0 (TID 7488, localhost): java.lang.RuntimeException: Unsupported datatype DecimalType(19,10)
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1262)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1253)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1252)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1252)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1446)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1407)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+20:51:59.874 ERROR org.apache.spark.sql.sources.DefaultWriterContainer: Job job_201505292051_0000 aborted.
+20:51:59.896 ERROR org.apache.spark.executor.Executor: Exception in task 1.0 in stage 2213.0 (TID 7490)
+java.lang.RuntimeException: Unsupported datatype DecimalType()
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:51:59.896 ERROR org.apache.spark.executor.Executor: Exception in task 0.0 in stage 2213.0 (TID 7489)
+java.lang.RuntimeException: Unsupported datatype DecimalType()
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:51:59.897 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 1.0 in stage 2213.0 (TID 7490, localhost): java.lang.RuntimeException: Unsupported datatype DecimalType()
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+20:51:59.897 ERROR org.apache.spark.scheduler.TaskSetManager: Task 1 in stage 2213.0 failed 1 times; aborting job
+20:51:59.897 ERROR org.apache.spark.sql.sources.InsertIntoHadoopFsRelation: Aborting job.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 1 in stage 2213.0 failed 1 times, most recent failure: Lost task 1.0 in stage 2213.0 (TID 7490, localhost): java.lang.RuntimeException: Unsupported datatype DecimalType()
+	at scala.sys.package$.error(package.scala:27)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:374)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$fromDataType$2.apply(ParquetTypes.scala:318)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.fromDataType(ParquetTypes.scala:317)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:398)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$$anonfun$4.apply(ParquetTypes.scala:397)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:34)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at org.apache.spark.sql.parquet.ParquetTypesConverter$.convertFromAttributes(ParquetTypes.scala:396)
+	at org.apache.spark.sql.parquet.RowWriteSupport.init(ParquetTableSupport.scala:150)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:278)
+	at parquet.hadoop.ParquetOutputFormat.getRecordWriter(ParquetOutputFormat.java:252)
+	at org.apache.spark.sql.parquet.ParquetOutputWriter.<init>(newParquet.scala:111)
+	at org.apache.spark.sql.parquet.ParquetRelation2$$anon$4.newInstance(newParquet.scala:244)
+	at org.apache.spark.sql.sources.DefaultWriterContainer.initWriters(commands.scala:376)
+	at org.apache.spark.sql.sources.BaseWriterContainer.executorSideSetup(commands.scala:288)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:132)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1262)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1253)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1252)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1252)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1446)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1407)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+20:51:59.898 ERROR org.apache.spark.sql.sources.DefaultWriterContainer: Job job_201505292051_0000 aborted.
+[32m- fixed-length decimals[0m
+[32m- date type[0m
+[32m- map[0m
+[32m- array[0m
+[32m- struct[0m
+[32m- nested struct with array of array as field[0m
+[32m- nested map with struct as value type[0m
+[32m- nulls[0m
+[32m- nones[0m
+[32m- compression codec[0m
+[32m- read raw Parquet file[0m
+[32m- write metadata[0m
+[32m- save - overwrite[0m
+[32m- save - ignore[0m
+[32m- save - throw[0m
+[32m- save - append[0m
+[32m- SPARK-6315 regression test[0m
+20:52:01.213 ERROR org.apache.spark.sql.sources.InsertIntoHadoopFsRelation: Aborting task.
+java.lang.ArithmeticException: / by zero
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply$mcII$sp(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:69)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf.eval(ScalaUdf.scala:958)
+	at org.apache.spark.sql.catalyst.expressions.Alias.eval(namedExpressions.scala:117)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:52)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:143)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:52:01.213 ERROR org.apache.spark.sql.sources.DefaultWriterContainer: Task attempt attempt_201505292052_2245_m_000000_0 aborted.
+20:52:01.213 ERROR org.apache.spark.executor.Executor: Exception in task 0.0 in stage 2245.0 (TID 7554)
+org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:151)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ArithmeticException: / by zero
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply$mcII$sp(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:69)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf.eval(ScalaUdf.scala:958)
+	at org.apache.spark.sql.catalyst.expressions.Alias.eval(namedExpressions.scala:117)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:52)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:143)
+	... 8 more
+20:52:01.214 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 0.0 in stage 2245.0 (TID 7554, localhost): org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:151)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ArithmeticException: / by zero
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply$mcII$sp(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:69)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf.eval(ScalaUdf.scala:958)
+	at org.apache.spark.sql.catalyst.expressions.Alias.eval(namedExpressions.scala:117)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:52)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:143)
+	... 8 more
+
+20:52:01.214 ERROR org.apache.spark.scheduler.TaskSetManager: Task 0 in stage 2245.0 failed 1 times; aborting job
+20:52:01.214 ERROR org.apache.spark.sql.sources.InsertIntoHadoopFsRelation: Aborting job.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 2245.0 failed 1 times, most recent failure: Lost task 0.0 in stage 2245.0 (TID 7554, localhost): org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:151)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation$$anonfun$insert$1.apply(commands.scala:122)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ArithmeticException: / by zero
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply$mcII$sp(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.parquet.ParquetIOSuiteBase$$anonfun$22$$anonfun$apply$mcV$sp$5.apply(ParquetIOSuite.scala:391)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:69)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf$$anonfun$2.apply(ScalaUdf.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.ScalaUdf.eval(ScalaUdf.scala:958)
+	at org.apache.spark.sql.catalyst.expressions.Alias.eval(namedExpressions.scala:117)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:68)
+	at org.apache.spark.sql.catalyst.expressions.InterpretedMutableProjection.apply(Projection.scala:52)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at org.apache.spark.sql.sources.InsertIntoHadoopFsRelation.org$apache$spark$sql$sources$InsertIntoHadoopFsRelation$$writeRows$1(commands.scala:143)
+	... 8 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1262)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1253)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1252)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1252)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:726)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:726)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1446)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1407)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+20:52:01.215 ERROR org.apache.spark.sql.sources.DefaultWriterContainer: Job job_201505292052_0000 aborted.
+[32m- SPARK-6352 DirectParquetOutputCommitter[0m
+[32mHashedRelationSuite:[0m
+[32m- GeneralHashedRelation[0m
+[32m- UniqueKeyHashedRelation[0m
+[32mJDBCWriteSuite:[0m
+[32m- Basic CREATE[0m
+[32m- CREATE with overwrite[0m
+[32m- CREATE then INSERT to append[0m
+[32m- CREATE then INSERT to truncate[0m
+20:52:01.752 ERROR org.apache.spark.executor.Executor: Exception in task 1.0 in stage 2269.0 (TID 7587)
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO TEST.INCOMPATIBLETEST VALUES (?, ?, ?) [21002-183]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:265)
+	at org.h2.command.Parser.prepareCommand(Parser.java:247)
+	at org.h2.engine.Session.prepareLocal(Session.java:446)
+	at org.h2.engine.Session.prepareCommand(Session.java:388)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1189)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:72)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:277)
+	at org.apache.spark.sql.jdbc.package$JDBCWriteDetails$.insertStatement(jdbc.scala:43)
+	at org.apache.spark.sql.jdbc.package$JDBCWriteDetails$.savePartition(jdbc.scala:71)
+	at org.apache.spark.sql.jdbc.package$JDBCWriteDetails$$anonfun$saveTable$1.apply(jdbc.scala:189)
+	at org.apache.spark.sql.jdbc.package$JDBCWriteDetails$$anonfun$saveTable$1.apply(jdbc.scala:188)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$29.apply(RDD.scala:878)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$29.apply(RDD.scala:878)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1765)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1765)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:52:01.752 ERROR org.apache.spark.executor.Executor: Exception in task 0.0 in stage 2269.0 (TID 7586)
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO TEST.INCOMPATIBLETEST VALUES (?, ?, ?) [21002-183]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:265)
+	at org.h2.command.Parser.prepareCommand(Parser.java:247)
+	at org.h2.engine.Session.prepareLocal(Session.java:446)
+	at org.h2.engine.Session.prepareCommand(Session.java:388)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1189)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:72)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:277)
+	at org.apache.spark.sql.jdbc.package$JDBCWriteDetails$.insertStatement(jdbc.scala:43)
+	at org.apache.spark.sql.jdbc.package$JDBCWriteDetails$.savePartition(jdbc.scala:71)
+	at org.apache.spark.sql.jdbc.package$JDBCWriteDetails$$anonfun$saveTable$1.apply(jdbc.scala:189)
+	at org.apache.spark.sql.jdbc.package$JDBCWriteDetails$$anonfun$saveTable$1.apply(jdbc.scala:188)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$29.apply(RDD.scala:878)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$29.apply(RDD.scala:878)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1765)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1765)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+20:52:01.752 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 1.0 in stage 2269.0 (TID 7587, localhost): org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO TEST.INCOMPATIBLETEST VALUES (?, ?, ?) [21002-183]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:265)
+	at org.h2.command.Parser.prepareCommand(Parser.java:247)
+	at org.h2.engine.Session.prepareLocal(Session.java:446)
+	at org.h2.engine.Session.prepareCommand(Session.java:388)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1189)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:72)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:277)
+	at org.apache.spark.sql.jdbc.package$JDBCWriteDetails$.insertStatement(jdbc.scala:43)
+	at org.apache.spark.sql.jdbc.package$JDBCWriteDetails$.savePartition(jdbc.scala:71)
+	at org.apache.spark.sql.jdbc.package$JDBCWriteDetails$$anonfun$saveTable$1.apply(jdbc.scala:189)
+	at org.apache.spark.sql.jdbc.package$JDBCWriteDetails$$anonfun$saveTable$1.apply(jdbc.scala:188)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$29.apply(RDD.scala:878)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$29.apply(RDD.scala:878)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1765)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1765)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:63)
+	at org.apache.spark.scheduler.Task.run(Task.scala:70)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+20:52:01.752 ERROR org.apache.spark.scheduler.TaskSetManager: Task 1 in stage 2269.0 failed 1 times; aborting job
+[32m- Incompatible INSERT to append[0m
+[32m- INSERT to JDBC Datasource[0m
+[32m- INSERT to JDBC Datasource with overwrite[0m
+[32mPlannerSuite:[0m
+[32m- unions are collapsed[0m
+[32m- count is partially aggregated[0m
+[32m- count distinct is partially aggregated[0m
+[32m- mixed aggregates are partially aggregated[0m
+[32m- sizeInBytes estimation of limit operator for broadcast hash join optimization[0m
+[32m- InMemoryRelation statistics propagation[0m
+[36mRun completed in 2 minutes, 5 seconds.[0m
+[36mTotal number of tests run: 832[0m
+[36mSuites: completed 60, aborted 0[0m
+[36mTests: succeeded 832, failed 0, canceled 0, ignored 4, pending 0[0m
+[32mAll tests passed.[0m
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 03:08 min
+[INFO] Finished at: 2015-05-29T20:52:02-07:00
+[INFO] Final Memory: 47M/804M
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,691 @@
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Spark Project Catalyst 1.4.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-versions) @ spark-catalyst_2.10 ---
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:add-source (eclipse-add-source) @ spark-catalyst_2.10 ---
+[INFO] Add Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/catalyst/src/main/scala
+[INFO] Add Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/catalyst/src/test/scala
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-source (add-scala-sources) @ spark-catalyst_2.10 ---
+[INFO] Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/catalyst/src/main/scala added.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ spark-catalyst_2.10 ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spark-catalyst_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/catalyst/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:compile (scala-compile-first) @ spark-catalyst_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 100 Scala sources and 5 Java sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/catalyst/target/scala-2.10/classes...[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/catalyst/src/main/scala/org/apache/spark/sql/catalyst/CatalystTypeConverters.scala:231: non-variable type argument Any in type pattern scala.collection.Map[Any,Any] is unchecked since it is eliminated by erasure[0m
+[0m[[33mwarn[0m] [0m    case m: Map[Any, Any] =>[0m
+[0m[[33mwarn[0m] [0m            ^[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mwarning: [options] bootstrap class path not set in conjunction with -source 1.6[0m
+[0m[[33mwarn[0m] [0m1 warning[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:47:09 PM [30.966s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ spark-catalyst_2.10 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-test-source (add-scala-test-sources) @ spark-catalyst_2.10 ---
+[INFO] Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/catalyst/src/test/scala added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spark-catalyst_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:testCompile (scala-test-compile-first) @ spark-catalyst_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 15 Scala sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/catalyst/target/scala-2.10/test-classes...[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:47:17 PM [7.140s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ spark-catalyst_2.10 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:build-classpath (default) @ spark-catalyst_2.10 ---
+[INFO] Wrote classpath file '/Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/catalyst/target/spark-test-classpath.txt'.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:test-jar (test-jar-on-test-compile) @ spark-catalyst_2.10 ---
+[INFO] Building jar: /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/catalyst/target/spark-catalyst_2.10-1.4.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- gmavenplus-plugin:1.5:execute (default) @ spark-catalyst_2.10 ---
+[INFO] Using Groovy 2.3.7 to perform execute.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ spark-catalyst_2.10 ---
+[INFO] Surefire report directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/sql/catalyst/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+Running org.apache.spark.sql.catalyst.analysis.AnalysisSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.sql.catalyst.analysis.AnalysisSuite
+Running org.apache.spark.sql.catalyst.analysis.DecimalPrecisionSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.analysis.DecimalPrecisionSuite
+Running org.apache.spark.sql.catalyst.analysis.HiveTypeCoercionSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.analysis.HiveTypeCoercionSuite
+Running org.apache.spark.sql.catalyst.DistributionSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.DistributionSuite
+Running org.apache.spark.sql.catalyst.expressions.AttributeSetSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.expressions.AttributeSetSuite
+Running org.apache.spark.sql.catalyst.expressions.ExpressionEvaluationBaseSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.sql.catalyst.expressions.ExpressionEvaluationBaseSuite
+Running org.apache.spark.sql.catalyst.expressions.ExpressionEvaluationSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.expressions.ExpressionEvaluationSuite
+Running org.apache.spark.sql.catalyst.expressions.ExpressionEvaluationWithoutCodeGenSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.expressions.ExpressionEvaluationWithoutCodeGenSuite
+Running org.apache.spark.sql.catalyst.expressions.GeneratedEvaluationSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.expressions.GeneratedEvaluationSuite
+Running org.apache.spark.sql.catalyst.expressions.GeneratedMutableEvaluationSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.expressions.GeneratedMutableEvaluationSuite
+Running org.apache.spark.sql.catalyst.expressions.UnsafeFixedWidthAggregationMapSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec - in org.apache.spark.sql.catalyst.expressions.UnsafeFixedWidthAggregationMapSuite
+Running org.apache.spark.sql.catalyst.expressions.UnsafeRowConverterSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.expressions.UnsafeRowConverterSuite
+Running org.apache.spark.sql.catalyst.optimizer.BooleanSimplificationSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.optimizer.BooleanSimplificationSuite
+Running org.apache.spark.sql.catalyst.optimizer.CombiningLimitsSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.optimizer.CombiningLimitsSuite
+Running org.apache.spark.sql.catalyst.optimizer.ConstantFoldingSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.optimizer.ConstantFoldingSuite
+Running org.apache.spark.sql.catalyst.optimizer.ConvertToLocalRelationSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.optimizer.ConvertToLocalRelationSuite
+Running org.apache.spark.sql.catalyst.optimizer.ExpressionOptimizationSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.optimizer.ExpressionOptimizationSuite
+Running org.apache.spark.sql.catalyst.optimizer.FilterPushdownSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.sql.catalyst.optimizer.FilterPushdownSuite
+Running org.apache.spark.sql.catalyst.optimizer.LikeSimplificationSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.optimizer.LikeSimplificationSuite
+Running org.apache.spark.sql.catalyst.optimizer.OptimizeInSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.optimizer.OptimizeInSuite
+Running org.apache.spark.sql.catalyst.optimizer.SimplifyCaseConversionExpressionsSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.optimizer.SimplifyCaseConversionExpressionsSuite
+Running org.apache.spark.sql.catalyst.optimizer.UnionPushdownSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.sql.catalyst.optimizer.UnionPushdownSuite
+Running org.apache.spark.sql.catalyst.plans.PlanTest
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.plans.PlanTest
+Running org.apache.spark.sql.catalyst.plans.SameResultSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.sql.catalyst.plans.SameResultSuite
+Running org.apache.spark.sql.catalyst.ScalaReflectionSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.ScalaReflectionSuite
+Running org.apache.spark.sql.catalyst.SqlParserSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.sql.catalyst.SqlParserSuite
+Running org.apache.spark.sql.catalyst.trees.RuleExecutorSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.trees.RuleExecutorSuite
+Running org.apache.spark.sql.catalyst.trees.TreeNodeSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.trees.TreeNodeSuite
+Running org.apache.spark.sql.catalyst.util.MetadataSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.catalyst.util.MetadataSuite
+Running org.apache.spark.sql.RowTest
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.sql.RowTest
+Running org.apache.spark.sql.types.DataTypeParserSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.types.DataTypeParserSuite
+Running org.apache.spark.sql.types.DataTypeSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.types.DataTypeSuite
+Running org.apache.spark.sql.types.decimal.DecimalSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.types.decimal.DecimalSuite
+Running org.apache.spark.sql.types.UTF8StringSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.sql.types.UTF8StringSuite
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- scalatest-maven-plugin:1.0:test (test) @ spark-catalyst_2.10 ---
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+[36mDiscovery starting.[0m
+[36mDiscovery completed in 1 second, 230 milliseconds.[0m
+[36mRun starting. Expected test count is: 493[0m
+[32mSameResultSuite:[0m
+[32m- relations[0m
+[32m- projections[0m
+[32m- filters[0m
+[32m- sorts[0m
+[32mUnsafeFixedWidthAggregationMapSuite:[0m
+[32m- supported schemas[0m
+[32m- empty map[0m
+[32m- updating values for a single key[0m
+[32m- inserting large random keys[0m
+[32mPlanTest:[0m
+[32mExpressionEvaluationBaseSuite:[0m
+[32mAnalysisSuite:[0m
+[32m- union project *[0m
+[32m- check project's resolved[0m
+[32m- analyze project[0m
+[32m- resolve relations[0m
+[32m- unresolved window function[0m
+[32m- too many generators[0m
+[32m- unresolved attributes[0m
+[32m- bad casts[0m
+[32m- non-boolean filters[0m
+[32m- missing group by[0m
+[32m- ambiguous field[0m
+[32m- ambiguous field due to case insensitivity[0m
+[32m- missing field[0m
+[32m- catch all unresolved plan[0m
+[32m- divide should be casted into fractional types[0m
+[32m- SPARK-6452 regression test[0m
+[32mDataTypeSuite:[0m
+[32m- construct an ArrayType[0m
+[32m- construct an MapType[0m
+[32m- extract fields from a StructType[0m
+[32m- extract field index from a StructType[0m
+[32m- fieldsMap returns map of name to StructField[0m
+[32m- merge where right is empty[0m
+[32m- merge where left is empty[0m
+[32m- merge where both are non-empty[0m
+[32m- merge where right contains type conflict[0m
+[32m- JSON - NullType[0m
+[32m- JSON - BooleanType[0m
+[32m- JSON - ByteType[0m
+[32m- JSON - ShortType[0m
+[32m- JSON - IntegerType[0m
+[32m- JSON - LongType[0m
+[32m- JSON - FloatType[0m
+[32m- JSON - DoubleType[0m
+[32m- JSON - DecimalType(10,5)[0m
+[32m- JSON - DecimalType()[0m
+[32m- JSON - DateType[0m
+[32m- JSON - TimestampType[0m
+[32m- JSON - StringType[0m
+[32m- JSON - BinaryType[0m
+[32m- JSON - ArrayType(DoubleType,true)[0m
+[32m- JSON - ArrayType(StringType,false)[0m
+[32m- JSON - MapType(IntegerType,StringType,true)[0m
+[32m- JSON - MapType(IntegerType,ArrayType(DoubleType,true),false)[0m
+[32m- JSON - StructType(StructField(a,IntegerType,true), StructField(b,ArrayType(DoubleType,true),false), StructField(c,DoubleType,false))[0m
+[32m- Check the default size of NullType[0m
+[32m- Check the default size of BooleanType[0m
+[32m- Check the default size of ByteType[0m
+[32m- Check the default size of ShortType[0m
+[32m- Check the default size of IntegerType[0m
+[32m- Check the default size of LongType[0m
+[32m- Check the default size of FloatType[0m
+[32m- Check the default size of DoubleType[0m
+[32m- Check the default size of DecimalType(10,5)[0m
+[32m- Check the default size of DecimalType()[0m
+[32m- Check the default size of DateType[0m
+[32m- Check the default size of TimestampType[0m
+[32m- Check the default size of StringType[0m
+[32m- Check the default size of BinaryType[0m
+[32m- Check the default size of ArrayType(DoubleType,true)[0m
+[32m- Check the default size of ArrayType(StringType,false)[0m
+[32m- Check the default size of MapType(IntegerType,StringType,true)[0m
+[32m- Check the default size of MapType(IntegerType,ArrayType(DoubleType,true),false)[0m
+[32m- Check the default size of StructType(StructField(a,IntegerType,true), StructField(b,ArrayType(DoubleType,true),false), StructField(c,DoubleType,false))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: ArrayType(DoubleType,true), to: ArrayType(DoubleType,true))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: ArrayType(DoubleType,false), to: ArrayType(DoubleType,false))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: ArrayType(DoubleType,false), to: ArrayType(DoubleType,true))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: ArrayType(DoubleType,true), to: ArrayType(DoubleType,false))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: ArrayType(DoubleType,false), to: ArrayType(StringType,false))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: MapType(StringType,DoubleType,true), to: MapType(StringType,DoubleType,true))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: MapType(StringType,DoubleType,false), to: MapType(StringType,DoubleType,false))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: MapType(StringType,DoubleType,false), to: MapType(StringType,DoubleType,true))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: MapType(StringType,DoubleType,true), to: MapType(StringType,DoubleType,false))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: MapType(StringType,ArrayType(IntegerType,true),true), to: MapType(StringType,ArrayType(IntegerType,false),true))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: MapType(StringType,ArrayType(IntegerType,false),true), to: MapType(StringType,ArrayType(IntegerType,true),true))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: StructType(StructField(a,StringType,true)), to: StructType(StructField(a,StringType,true)))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: StructType(StructField(a,StringType,false)), to: StructType(StructField(a,StringType,false)))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: StructType(StructField(a,StringType,false)), to: StructType(StructField(a,StringType,true)))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: StructType(StructField(a,StringType,true)), to: StructType(StructField(a,StringType,false)))[0m
+[32m- equalsIgnoreCompatibleNullability: (from: StructType(StructField(a,StringType,false), StructField(b,StringType,true)), to: StructType(StructField(a,StringType,false), StructField(b,StringType,false)))[0m
+[32mCombiningLimitsSuite:[0m
+[32m- limits: combines two limits[0m
+[32m- limits: combines three limits[0m
+[32m- limits: combines two limits after ColumnPruning[0m
+[32mGeneratedMutableEvaluationSuite:[0m
+[32m- literals[0m
+[32m- unary BitwiseNOT[0m
+[32m- 3VL Not[0m
+[32m- 3VL AND[0m
+[32m- 3VL OR[0m
+[32m- 3VL =[0m
+[32m- IN[0m
+[32m- Divide[0m
+[32m- Remainder[0m
+[32m- INSET[0m
+[32m- MaxOf[0m
+[32m- MinOf[0m
+[32m- LIKE literal Regular Expression[0m
+[32m- LIKE Non-literal Regular Expression[0m
+[32m- RLIKE literal Regular Expression[0m
+[32m- RLIKE Non-literal Regular Expression[0m
+[32m- data type casting[0m
+[32m- date[0m
+[32m- casting to fixed-precision decimals[0m
+[32m- timestamp[0m
+[32m- date casting[0m
+[32m- timestamp casting[0m
+[32m- array casting[0m
+[32m- map casting[0m
+[32m- struct casting[0m
+[32m- complex casting[0m
+[32m- null checking[0m
+[32m- case when[0m
+[32m- case key when[0m
+[32m- complex type[0m
+[32m- error message of ExtractValue[0m
+[32m- arithmetic[0m
+[32m- fractional arithmetic[0m
+[32m- BinaryComparison[0m
+[32m- StringComparison[0m
+[32m- Substring[0m
+[32m- SQRT[0m
+[32m- Bitwise operations[0m
+[32m- sin[0m
+[32m- asin[0m
+[32m- sinh[0m
+[32m- cos[0m
+[32m- acos[0m
+[32m- cosh[0m
+[32m- tan[0m
+[32m- atan[0m
+[32m- tanh[0m
+[32m- toDegrees[0m
+[32m- toRadians[0m
+[32m- cbrt[0m
+[32m- ceil[0m
+[32m- floor[0m
+[32m- rint[0m
+[32m- exp[0m
+[32m- expm1[0m
+[32m- signum[0m
+[32m- log[0m
+[32m- log10[0m
+[32m- log1p[0m
+[32m- pow[0m
+[32m- hypot[0m
+[32m- atan2[0m
+[32mExpressionEvaluationSuite:[0m
+[32m- literals[0m
+[32m- unary BitwiseNOT[0m
+[32m- 3VL Not[0m
+[32m- 3VL AND[0m
+[32m- 3VL OR[0m
+[32m- 3VL =[0m
+[32m- IN[0m
+[32m- Divide[0m
+[32m- Remainder[0m
+[32m- INSET[0m
+[32m- MaxOf[0m
+[32m- MinOf[0m
+[32m- LIKE literal Regular Expression[0m
+[32m- LIKE Non-literal Regular Expression[0m
+[32m- RLIKE literal Regular Expression[0m
+[32m- RLIKE Non-literal Regular Expression[0m
+[32m- data type casting[0m
+[32m- date[0m
+[32m- casting to fixed-precision decimals[0m
+[32m- timestamp[0m
+[32m- date casting[0m
+[32m- timestamp casting[0m
+[32m- array casting[0m
+[32m- map casting[0m
+[32m- struct casting[0m
+[32m- complex casting[0m
+[32m- null checking[0m
+[32m- case when[0m
+[32m- case key when[0m
+[32m- complex type[0m
+[32m- error message of ExtractValue[0m
+[32m- arithmetic[0m
+[32m- fractional arithmetic[0m
+[32m- BinaryComparison[0m
+[32m- StringComparison[0m
+[32m- Substring[0m
+[32m- SQRT[0m
+[32m- Bitwise operations[0m
+[32m- sin[0m
+[32m- asin[0m
+[32m- sinh[0m
+[32m- cos[0m
+[32m- acos[0m
+[32m- cosh[0m
+[32m- tan[0m
+[32m- atan[0m
+[32m- tanh[0m
+[32m- toDegrees[0m
+[32m- toRadians[0m
+[32m- cbrt[0m
+[32m- ceil[0m
+[32m- floor[0m
+[32m- rint[0m
+[32m- exp[0m
+[32m- expm1[0m
+[32m- signum[0m
+[32m- log[0m
+[32m- log10[0m
+[32m- log1p[0m
+[32m- pow[0m
+[32m- hypot[0m
+[32m- atan2[0m
+[32mDataTypeParserSuite:[0m
+[32m- parse int[0m
+[32m- parse integer[0m
+[32m- parse BooLean[0m
+[32m- parse tinYint[0m
+[32m- parse smallINT[0m
+[32m- parse INT[0m
+[32m- parse INTEGER[0m
+[32m- parse bigint[0m
+[32m- parse float[0m
+[32m- parse dOUBle[0m
+[32m- parse decimal(10, 5)[0m
+[32m- parse decimal[0m
+[32m- parse DATE[0m
+[32m- parse timestamp[0m
+[32m- parse string[0m
+[32m- parse varchAr(20)[0m
+[32m- parse BINARY[0m
+[32m- parse array<doublE>[0m
+[32m- parse Array<map<int, tinYint>>[0m
+[32m- parse array<struct<tinYint:tinyint>>[0m
+[32m- parse MAP<int, STRING>[0m
+[32m- parse MAp<int, ARRAY<double>>[0m
+[32m- parse MAP<int, struct<varchar:string>>[0m
+[32m- parse struct<intType: int, ts:timestamp>[0m
+[32m- parse Struct<int: int, timestamp:timestamp>[0m
+[32m- parse struct<  struct:struct<deciMal:DECimal, anotherDecimal:decimAL(5,2)>,  MAP:Map<timestamp, varchar(10)>,  arrAy:Array<double>>    [0m
+[32m- parse Struct<TABLE: string, CASE:boolean>[0m
+[32m- parse struct<`x+y`:int, `!@#$%^&*()`:string, `1_2.345<>:"`:varchar(20)>[0m
+[32m- parse strUCt<>[0m
+[32m- it is not a data type is not supported[0m
+[32m- struct<x+y: int, 1.1:timestamp> is not supported[0m
+[32m- struct<x: int is not supported[0m
+[32m- struct<x int, y string> is not supported[0m
+[32m- struct<`x``y` int> is not supported[0m
+[32mBooleanSimplificationSuite:[0m
+[32m- a && a => a[0m
+[32m- a || a => a[0m
+[32m- (a && b && c && ...) || (a && b && d && ...) || (a && b && e && ...) ...[0m
+[32m- (a || b || c || ...) && (a || b || d || ...) && (a || b || e || ...) ...[0m
+[32mLikeSimplificationSuite:[0m
+[32m- simplify Like into StartsWith[0m
+[32m- simplify Like into EndsWith[0m
+[32m- simplify Like into Contains[0m
+[32m- simplify Like into EqualTo[0m
+[32mSimplifyCaseConversionExpressionsSuite:[0m
+[32m- simplify UPPER(UPPER(str))[0m
+[32m- simplify UPPER(LOWER(str))[0m
+[32m- simplify LOWER(UPPER(str))[0m
+[32m- simplify LOWER(LOWER(str))[0m
+[32mOptimizeInSuite:[0m
+[32m- OptimizedIn test: In clause optimized to InSet[0m
+[32m- OptimizedIn test: In clause not optimized in case filter has attributes[0m
+[32mUTF8StringSuite:[0m
+[32m- basic[0m
+[32m- contains[0m
+[32m- prefix[0m
+[32m- suffix[0m
+[32m- slice[0m
+[32mDecimalPrecisionSuite:[0m
+[32m- basic operations[0m
+[32m- Comparison operations[0m
+[32m- decimal precision for union[0m
+[32m- bringing in primitive types[0m
+[32m- unlimited decimals make everything else cast up[0m
+[32mRowTest:[0m
+[32mRow (without schema)[0m
+[32m- throws an exception when accessing by fieldName[0m
+[32mRow (with schema)[0m
+[32m- fieldIndex(name) returns field index[0m
+[32m- getAs[T] retrieves a value by fieldname[0m
+[32m- Accessing non existent field throws an exception[0m
+[32m- getValuesMap() retrieves values of multiple fields as a Map(field -> value)[0m
+[32mScalaReflectionSuite:[0m
+[32m- primitive data[0m
+[32m- nullable data[0m
+[32m- optional data[0m
+[32m- complex data[0m
+[32m- generic data[0m
+[32m- tuple data[0m
+[32m- get data type of a value[0m
+[32m- convert PrimitiveData to catalyst[0m
+[32m- convert Option[Product] to catalyst[0m
+[32m- infer schema from case class with multiple constructors[0m
+[32mGeneratedEvaluationSuite:[0m
+[32m- literals[0m
+[32m- unary BitwiseNOT[0m
+[32m- 3VL Not[0m
+[32m- 3VL AND[0m
+[32m- 3VL OR[0m
+[32m- 3VL =[0m
+[32m- IN[0m
+[32m- Divide[0m
+[32m- Remainder[0m
+[32m- INSET[0m
+[32m- MaxOf[0m
+[32m- MinOf[0m
+[32m- LIKE literal Regular Expression[0m
+[32m- LIKE Non-literal Regular Expression[0m
+[32m- RLIKE literal Regular Expression[0m
+[32m- RLIKE Non-literal Regular Expression[0m
+[32m- data type casting[0m
+[32m- date[0m
+[32m- casting to fixed-precision decimals[0m
+[32m- timestamp[0m
+[32m- date casting[0m
+[32m- timestamp casting[0m
+[32m- array casting[0m
+[32m- map casting[0m
+[32m- struct casting[0m
+[32m- complex casting[0m
+[32m- null checking[0m
+[32m- case when[0m
+[32m- case key when[0m
+[32m- complex type[0m
+[32m- error message of ExtractValue[0m
+[32m- arithmetic[0m
+[32m- fractional arithmetic[0m
+[32m- BinaryComparison[0m
+[32m- StringComparison[0m
+[32m- Substring[0m
+[32m- SQRT[0m
+[32m- Bitwise operations[0m
+[32m- sin[0m
+[32m- asin[0m
+[32m- sinh[0m
+[32m- cos[0m
+[32m- acos[0m
+[32m- cosh[0m
+[32m- tan[0m
+[32m- atan[0m
+[32m- tanh[0m
+[32m- toDegrees[0m
+[32m- toRadians[0m
+[32m- cbrt[0m
+[32m- ceil[0m
+[32m- floor[0m
+[32m- rint[0m
+[32m- exp[0m
+[32m- expm1[0m
+[32m- signum[0m
+[32m- log[0m
+[32m- log10[0m
+[32m- log1p[0m
+[32m- pow[0m
+[32m- hypot[0m
+[32m- atan2[0m
+[32m- multithreaded eval[0m
+[32mSqlParserSuite:[0m
+[32m- test long keyword[0m
+[32m- test case insensitive[0m
+[32mRuleExecutorSuite:[0m
+[32m- only once[0m
+[32m- to fixed point[0m
+[32m- to maxIterations[0m
+[32mDistributionSuite:[0m
+[32m- HashPartitioning is the output partitioning[0m
+[32m- RangePartitioning is the output partitioning[0m
+[32mHiveTypeCoercionSuite:[0m
+[32m- tightest common bound for types[0m
+[32m- boolean casts[0m
+[32m- coalesce casts[0m
+[32mFilterPushdownSuite:[0m
+[32m- eliminate subqueries[0m
+[32m- column pruning for group[0m
+[32m- column pruning for group with alias[0m
+[32m- column pruning for Project(ne, Limit)[0m
+[32m- simple push down[0m
+[32m- can't push without rewrite[0m
+[32m- filters: combines filters[0m
+[32m- joins: push to either side[0m
+[32m- joins: push to one side[0m
+[32m- joins: rewrite filter to push to either side[0m
+[32m- joins: push down left semi join[0m
+[32m- joins: push down left outer join #1[0m
+[32m- joins: push down right outer join #1[0m
+[32m- joins: push down left outer join #2[0m
+[32m- joins: push down right outer join #2[0m
+[32m- joins: push down left outer join #3[0m
+[32m- joins: push down right outer join #3[0m
+[32m- joins: push down left outer join #4[0m
+[32m- joins: push down right outer join #4[0m
+[32m- joins: push down left outer join #5[0m
+[32m- joins: push down right outer join #5[0m
+[32m- joins: can't push down[0m
+[32m- joins: conjunctive predicates[0m
+[32m- joins: conjunctive predicates #2[0m
+[32m- joins: conjunctive predicates #3[0m
+[32m- generate: predicate referenced no generated column[0m
+[32m- generate: part of conjuncts referenced generated column[0m
+[32m- generate: all conjuncts referenced generated column[0m
+[32m- push down project past sort[0m
+[32mAttributeSetSuite:[0m
+[32m- sanity check[0m
+[32m- checks by id not name[0m
+[32m- ++ preserves AttributeSet[0m
+[32m- extracts all references references[0m
+[32m- dedups attributes[0m
+[32m- subset[0m
+[32m- equality[0m
+[32mDecimalSuite:[0m
+[32m- creating decimals[0m
+[32m- double and long values[0m
+[32m- small decimals represented as unscaled long[0m
+[32m- hash code[0m
+[32m- equals[0m
+[32m- isZero[0m
+[32m- arithmetic[0m
+[32mExpressionOptimizationSuite:[0m
+[32m- literals[0m
+[32m- unary BitwiseNOT[0m
+[32m- 3VL Not[0m
+[32m- 3VL AND[0m
+[32m- 3VL OR[0m
+[32m- 3VL =[0m
+[32m- IN[0m
+[32m- Divide[0m
+[32m- Remainder[0m
+[32m- INSET[0m
+[32m- MaxOf[0m
+[32m- MinOf[0m
+[32m- LIKE literal Regular Expression[0m
+[32m- LIKE Non-literal Regular Expression[0m
+[32m- RLIKE literal Regular Expression[0m
+[32m- RLIKE Non-literal Regular Expression[0m
+[32m- data type casting[0m
+[32m- date[0m
+[32m- casting to fixed-precision decimals[0m
+[32m- timestamp[0m
+[32m- date casting[0m
+[32m- timestamp casting[0m
+[32m- array casting[0m
+[32m- map casting[0m
+[32m- struct casting[0m
+[32m- complex casting[0m
+[32m- null checking[0m
+[32m- case when[0m
+[32m- case key when[0m
+[32m- complex type[0m
+[32m- error message of ExtractValue[0m
+[32m- arithmetic[0m
+[32m- fractional arithmetic[0m
+[32m- BinaryComparison[0m
+[32m- StringComparison[0m
+[32m- Substring[0m
+[32m- SQRT[0m
+[32m- Bitwise operations[0m
+[32m- sin[0m
+[32m- asin[0m
+[32m- sinh[0m
+[32m- cos[0m
+[32m- acos[0m
+[32m- cosh[0m
+[32m- tan[0m
+[32m- atan[0m
+[32m- tanh[0m
+[32m- toDegrees[0m
+[32m- toRadians[0m
+[32m- cbrt[0m
+[32m- ceil[0m
+[32m- floor[0m
+[32m- rint[0m
+[32m- exp[0m
+[32m- expm1[0m
+[32m- signum[0m
+[32m- log[0m
+[32m- log10[0m
+[32m- log1p[0m
+[32m- pow[0m
+[32m- hypot[0m
+[32m- atan2[0m
+[32mMetadataSuite:[0m
+[32m- metadata builder and getters[0m
+[32m- metadata json conversion[0m
+[32mConvertToLocalRelationSuite:[0m
+[32m- Project on LocalRelation should be turned into a single LocalRelation[0m
+[32mExpressionEvaluationWithoutCodeGenSuite:[0m
+[32m- CreateStruct[0m
+[32mTreeNodeSuite:[0m
+[32m- top node changed[0m
+[32m- one child changed[0m
+[32m- no change[0m
+[32m- collect[0m
+[32m- pre-order transform[0m
+[32m- post-order transform[0m
+[32m- transform works on nodes with Option children[0m
+[32m- preserves origin[0m
+[32m- foreach up[0m
+[32m- find[0m
+[32m- collectFirst[0m
+[32mConstantFoldingSuite:[0m
+[32m- eliminate subqueries[0m
+[32m- Constant folding test: expressions only have literals[0m
+[32m- Constant folding test: expressions have attribute references and literals in arithmetic operations[0m
+[32m- Constant folding test: expressions have attribute references and literals in predicates[0m
+[32m- Constant folding test: expressions have foldable functions[0m
+[32m- Constant folding test: expressions have nonfoldable functions[0m
+[32m- Constant folding test: expressions have null literals[0m
+[32m- Constant folding test: Fold In(v, list) into true or false[0m
+[32mUnionPushdownSuite:[0m
+[32m- union: filter to each side[0m
+[32m- union: project to each side[0m
+[32mUnsafeRowConverterSuite:[0m
+[32m- basic conversion with only primitive types[0m
+[32m- basic conversion with primitive and string types[0m
+[32m- null handling[0m
+[36mRun completed in 1 minute, 31 seconds.[0m
+[36mTotal number of tests run: 493[0m
+[36mSuites: completed 35, aborted 0[0m
+[36mTests: succeeded 493, failed 0, canceled 0, ignored 0, pending 0[0m
+[32mAll tests passed.[0m
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 02:16 min
+[INFO] Finished at: 2015-05-29T20:48:52-07:00
+[INFO] Final Memory: 48M/808M
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,221 @@
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Spark Project Streaming 1.4.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-versions) @ spark-streaming_2.10 ---
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:add-source (eclipse-add-source) @ spark-streaming_2.10 ---
+[INFO] Add Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/src/main/scala
+[INFO] Add Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/src/test/scala
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-source (add-scala-sources) @ spark-streaming_2.10 ---
+[INFO] Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/src/main/scala added.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ spark-streaming_2.10 ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spark-streaming_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:compile (scala-compile-first) @ spark-streaming_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 85 Scala sources and 5 Java sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/target/scala-2.10/classes...[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/src/main/scala/org/apache/spark/streaming/util/FileBasedWriteAheadLog.scala:205: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    if (fileSystem.exists(logDirectoryPath) && fileSystem.getFileStatus(logDirectoryPath).isDir) {[0m
+[0m[[33mwarn[0m] [0m                                                                                          ^[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[33mwarn[0m] [0mwarning: [options] bootstrap class path not set in conjunction with -source 1.6[0m
+[0m[[33mwarn[0m] [0m1 warning[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:45:36 PM [19.505s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ spark-streaming_2.10 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/target/scala-2.10/classes
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-test-source (add-scala-test-sources) @ spark-streaming_2.10 ---
+[INFO] Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/src/test/scala added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spark-streaming_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:testCompile (scala-test-compile-first) @ spark-streaming_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 26 Scala sources and 6 Java sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/target/scala-2.10/test-classes...[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/src/test/scala/org/apache/spark/streaming/UISeleniumSuite.scala:104: a pure expression does nothing in statement position; you may be omitting necessary parentheses[0m
+[0m[[33mwarn[0m] [0m          (true)[0m
+[0m[[33mwarn[0m] [0m           ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/src/test/scala/org/apache/spark/streaming/DStreamClosureSuite.scala:107: method foreach in class DStream is deprecated: use foreachRDD[0m
+[0m[[33mwarn[0m] [0m    expectCorrectException { ds.foreach(foreachF1) }[0m
+[0m[[33mwarn[0m] [0m                                ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/src/test/scala/org/apache/spark/streaming/DStreamClosureSuite.scala:108: method foreach in class DStream is deprecated: use foreachRDD[0m
+[0m[[33mwarn[0m] [0m    expectCorrectException { ds.foreach(foreachF2) }[0m
+[0m[[33mwarn[0m] [0m                                ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/src/test/scala/org/apache/spark/streaming/util/WriteAheadLogSuite.scala:432: method isDir in class FileStatus is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[33mwarn[0m] [0m    if (fileSystem.exists(logDirectoryPath) && fileSystem.getFileStatus(logDirectoryPath).isDir) {[0m
+[0m[[33mwarn[0m] [0m                                                                                          ^[0m
+[0m[[33mwarn[0m] [0mfour warnings found[0m
+[0m[[33mwarn[0m] [0mwarning: [options] bootstrap class path not set in conjunction with -source 1.6[0m
+[0m[[33mwarn[0m] [0mNote: Some input files use unchecked or unsafe operations.[0m
+[0m[[33mwarn[0m] [0mNote: Recompile with -Xlint:unchecked for details.[0m
+[0m[[33mwarn[0m] [0m1 warning[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:45:53 PM [15.056s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ spark-streaming_2.10 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:build-classpath (default) @ spark-streaming_2.10 ---
+[INFO] Wrote classpath file '/Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/target/spark-test-classpath.txt'.
+[INFO] 
+[INFO] --- gmavenplus-plugin:1.5:execute (default) @ spark-streaming_2.10 ---
+[INFO] Using Groovy 2.3.7 to perform execute.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ spark-streaming_2.10 ---
+[INFO] Surefire report directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/streaming/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+Running org.apache.spark.streaming.JavaAPISuite
+Tests run: 52, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.865 sec - in org.apache.spark.streaming.JavaAPISuite
+Running org.apache.spark.streaming.JavaDurationSuite
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.streaming.JavaDurationSuite
+Running org.apache.spark.streaming.JavaReceiverAPISuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.046 sec - in org.apache.spark.streaming.JavaReceiverAPISuite
+Running org.apache.spark.streaming.JavaTimeSuite
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.streaming.JavaTimeSuite
+Running org.apache.spark.streaming.JavaWriteAheadLogSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.spark.streaming.JavaWriteAheadLogSuite
+
+Results :
+
+Tests run: 72, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- scalatest-maven-plugin:1.0:test (test) @ spark-streaming_2.10 ---
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+[36mDiscovery starting.[0m
+[36mDiscovery completed in 1 second, 94 milliseconds.[0m
+[36mRun starting. Expected test count is: 184[0m
+[32mJobGeneratorSuite:[0m
+Await over
+[32m- SPARK-6222: Do not clear received block data too soon[0m
+[32mReceivedBlockTrackerSuite:[0m
+[32m- block addition, and block to batch allocation[0m
+[32m- recovery and cleanup with write ahead logs[0m
+[32m- disable write ahead log when checkpoint directory is not set[0m
+[32mDurationSuite:[0m
+[32m- less[0m
+[32m- lessEq[0m
+[32m- greater[0m
+[32m- greaterEq[0m
+[32m- plus[0m
+[32m- minus[0m
+[32m- times[0m
+[32m- div[0m
+[32m- isMultipleOf[0m
+[32m- min[0m
+[32m- max[0m
+[32m- isZero[0m
+[32m- Milliseconds[0m
+[32m- Seconds[0m
+[32m- Minutes[0m
+[32mWindowOperationsSuite:[0m
+[32m- window - basic window[0m
+[32m- window - tumbling window[0m
+[32m- window - larger window[0m
+[32m- window - non-overlapping window[0m
+[32m- window - persistence level[0m
+[32m- reduceByKeyAndWindow - basic reduction[0m
+[32m- reduceByKeyAndWindow - key already in window and new value added into window[0m
+[32m- reduceByKeyAndWindow - new key added into window[0m
+[32m- reduceByKeyAndWindow - key removed from window[0m
+[32m- reduceByKeyAndWindow - larger slide time[0m
+[32m- reduceByKeyAndWindow - big test[0m
+[32m- reduceByKeyAndWindow with inverse function - basic reduction[0m
+[32m- reduceByKeyAndWindow with inverse function - key already in window and new value added into window[0m
+[32m- reduceByKeyAndWindow with inverse function - new key added into window[0m
+[32m- reduceByKeyAndWindow with inverse function - key removed from window[0m
+[32m- reduceByKeyAndWindow with inverse function - larger slide time[0m
+[32m- reduceByKeyAndWindow with inverse function - big test[0m
+[32m- reduceByKeyAndWindow with inverse and filter functions - big test[0m
+[32m- groupByKeyAndWindow[0m
+[32m- countByWindow[0m
+[32m- countByValueAndWindow[0m
+[32mTimeSuite:[0m
+[32m- less[0m
+[32m- lessEq[0m
+[32m- greater[0m
+[32m- greaterEq[0m
+[32m- plus[0m
+[32m- minus Time[0m
+[32m- minus Duration[0m
+[32m- floor[0m
+[32m- isMultipleOf[0m
+[32m- min[0m
+[32m- max[0m
+[32m- until[0m
+[32m- to[0m
+[32mWriteAheadLogSuite:[0m
+[32m- WriteAheadLogUtils - log selection and creation[0m
+[32m- FileBasedWriteAheadLogWriter - writing data[0m
+[32m- FileBasedWriteAheadLogWriter - syncing of data by writing and reading immediately[0m
+[32m- FileBasedWriteAheadLogReader - sequentially reading data[0m
+[32m- FileBasedWriteAheadLogReader - sequentially reading data written with writer[0m
+[32m- FileBasedWriteAheadLogReader - reading data written with writer after corrupted write[0m
+[32m- FileBasedWriteAheadLogRandomReader - reading data using random reader[0m
+[32m- FileBasedWriteAheadLogRandomReader- reading data using random reader written with writer[0m
+[32m- FileBasedWriteAheadLog - write rotating logs[0m
+[32m- FileBasedWriteAheadLog - read rotating logs[0m
+[32m- FileBasedWriteAheadLog - recover past logs when creating new manager[0m
+[32m- FileBasedWriteAheadLog - clean old logs[0m
+[32m- FileBasedWriteAheadLog - clean old logs synchronously[0m
+[32m- FileBasedWriteAheadLog - handling file errors while reading rotating logs[0m
+[32m- FileBasedWriteAheadLog - do not create directories or files unless write[0m
+[32mDStreamScopeSuite:[0m
+[32m- dstream without scope[0m
+[32m- input dstream without scope[0m
+[32m- scoping simple operations[0m
+[32m- scoping nested operations[0m
+[32mStreamingContextSuite:[0m
+[32m- from no conf constructor[0m
+[32m- from no conf + spark home[0m
+[32m- from no conf + spark home + env[0m
+[32m- from conf with settings[0m
+[32m- from existing SparkContext[0m
+[32m- from existing SparkContext with settings[0m
+[31m*** RUN ABORTED ***[0m
+[31m  java.lang.NoSuchMethodError: org.apache.spark.ui.JettyUtils$.createStaticHandler(Ljava/lang/String;Ljava/lang/String;)Lorg/eclipse/jetty/servlet/ServletContextHandler;[0m
+[31m  at org.apache.spark.streaming.ui.StreamingTab.attach(StreamingTab.scala:49)[0m
+[31m  at org.apache.spark.streaming.StreamingContext$$anonfun$start$2.apply(StreamingContext.scala:585)[0m
+[31m  at org.apache.spark.streaming.StreamingContext$$anonfun$start$2.apply(StreamingContext.scala:585)[0m
+[31m  at scala.Option.foreach(Option.scala:236)[0m
+[31m  at org.apache.spark.streaming.StreamingContext.start(StreamingContext.scala:585)[0m
+[31m  at org.apache.spark.streaming.StreamingContextSuite$$anonfun$8.apply$mcV$sp(StreamingContextSuite.scala:101)[0m
+[31m  at org.apache.spark.streaming.StreamingContextSuite$$anonfun$8.apply(StreamingContextSuite.scala:96)[0m
+[31m  at org.apache.spark.streaming.StreamingContextSuite$$anonfun$8.apply(StreamingContextSuite.scala:96)[0m
+[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m
+[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m
+[31m  ...[0m
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:19 min
+[INFO] Finished at: 2015-05-29T20:46:34-07:00
+[INFO] Final Memory: 48M/815M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.scalatest:scalatest-maven-plugin:1.0:test (test) on project spark-streaming_2.10: There are test failures -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,26 @@
++++ dirname ./make-distribution.sh
+++ cd .
+++ pwd
++ SPARK_HOME=/Users/jeromenilmeier/Documents/spark_28may2015/spark
++ DISTDIR=/Users/jeromenilmeier/Documents/spark_28may2015/spark/dist
++ SPARK_TACHYON=false
++ TACHYON_VERSION=0.6.4
++ TACHYON_TGZ=tachyon-0.6.4-bin.tar.gz
++ TACHYON_URL=https://github.com/amplab/tachyon/releases/download/v0.6.4/tachyon-0.6.4-bin.tar.gz
++ MAKE_TGZ=false
++ NAME=none
++ MVN=/Users/jeromenilmeier/Documents/spark_28may2015/spark/build/mvn
++ ((  2  ))
++ case $1 in
++ MAKE_TGZ=true
++ shift
++ ((  1  ))
++ case $1 in
++ break
++ '[' -z '' ']'
+++ command -v rpm
++ '[' ']'
++ '[' -z '' ']'
++ echo 'Error: JAVA_HOME is not set, cannot proceed.'
+Error: JAVA_HOME is not set, cannot proceed.
++ exit -1

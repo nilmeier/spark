@@ -1,0 +1,97 @@
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Spark Project Bagel 1.4.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-versions) @ spark-bagel_2.10 ---
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:add-source (eclipse-add-source) @ spark-bagel_2.10 ---
+[INFO] Add Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/bagel/src/main/scala
+[INFO] Add Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/bagel/src/test/scala
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-source (add-scala-sources) @ spark-bagel_2.10 ---
+[INFO] Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/bagel/src/main/scala added.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ spark-bagel_2.10 ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spark-bagel_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jeromenilmeier/Documents/spark_28may2015/spark/bagel/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:compile (scala-compile-first) @ spark-bagel_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /Users/jeromenilmeier/Documents/spark_28may2015/spark/bagel/target/scala-2.10/classes...[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:37:35 PM [4.453s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ spark-bagel_2.10 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/jeromenilmeier/Documents/spark_28may2015/spark/bagel/target/scala-2.10/classes
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-test-source (add-scala-test-sources) @ spark-bagel_2.10 ---
+[INFO] Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/bagel/src/test/scala added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spark-bagel_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:testCompile (scala-test-compile-first) @ spark-bagel_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /Users/jeromenilmeier/Documents/spark_28may2015/spark/bagel/target/scala-2.10/test-classes...[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:37:38 PM [1.936s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ spark-bagel_2.10 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:build-classpath (default) @ spark-bagel_2.10 ---
+[INFO] Wrote classpath file '/Users/jeromenilmeier/Documents/spark_28may2015/spark/bagel/target/spark-test-classpath.txt'.
+[INFO] 
+[INFO] --- gmavenplus-plugin:1.5:execute (default) @ spark-bagel_2.10 ---
+[INFO] Using Groovy 2.3.7 to perform execute.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ spark-bagel_2.10 ---
+[INFO] Surefire report directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/bagel/target/surefire-reports
+Downloading: https://repo1.maven.org/maven2/org/apache/maven/surefire/surefire-junit3/2.18.1/surefire-junit3-2.18.1.pom
+2/2 KB            Downloaded: https://repo1.maven.org/maven2/org/apache/maven/surefire/surefire-junit3/2.18.1/surefire-junit3-2.18.1.pom (2 KB at 3.0 KB/sec)
+Downloading: https://repo1.maven.org/maven2/org/apache/maven/surefire/surefire-junit3/2.18.1/surefire-junit3-2.18.1.jar
+4/25 KB   8/25 KB   12/25 KB   16/25 KB   20/25 KB   24/25 KB   25/25 KB              Downloaded: https://repo1.maven.org/maven2/org/apache/maven/surefire/surefire-junit3/2.18.1/surefire-junit3-2.18.1.jar (25 KB at 100.7 KB/sec)
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+Running org.apache.spark.bagel.BagelSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec - in org.apache.spark.bagel.BagelSuite
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- scalatest-maven-plugin:1.0:test (test) @ spark-bagel_2.10 ---
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+[36mDiscovery starting.[0m
+[36mDiscovery completed in 98 milliseconds.[0m
+[36mRun starting. Expected test count is: 4[0m
+[32mBagelSuite:[0m
+[32m- halting by voting[0m
+[32m- halting by message silence[0m
+[32m- large number of iterations[0m
+[32m- using non-default persistence level[0m
+[36mRun completed in 4 seconds, 823 milliseconds.[0m
+[36mTotal number of tests run: 4[0m
+[36mSuites: completed 2, aborted 0[0m
+[36mTests: succeeded 4, failed 0, canceled 0, ignored 0, pending 0[0m
+[32mAll tests passed.[0m
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 18.474 s
+[INFO] Finished at: 2015-05-29T20:37:46-07:00
+[INFO] Final Memory: 52M/806M
+[INFO] ------------------------------------------------------------------------

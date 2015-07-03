@@ -1,0 +1,782 @@
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Spark Project ML Library 1.4.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-versions) @ spark-mllib_2.10 ---
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:add-source (eclipse-add-source) @ spark-mllib_2.10 ---
+[INFO] Add Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/mllib/src/main/scala
+[INFO] Add Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/mllib/src/test/scala
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-source (add-scala-sources) @ spark-mllib_2.10 ---
+[INFO] Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/mllib/src/main/scala added.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ spark-mllib_2.10 ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spark-mllib_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jeromenilmeier/Documents/spark_28may2015/spark/mllib/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:compile (scala-compile-first) @ spark-mllib_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 187 Scala sources and 3 Java sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/mllib/target/scala-2.10/classes...[0m
+[0m[[33mwarn[0m] [0mwarning: [options] bootstrap class path not set in conjunction with -source 1.6[0m
+[0m[[33mwarn[0m] [0m1 warning[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:39:28 PM [32.984s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ spark-mllib_2.10 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /Users/jeromenilmeier/Documents/spark_28may2015/spark/mllib/target/scala-2.10/classes
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-test-source (add-scala-test-sources) @ spark-mllib_2.10 ---
+[INFO] Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/mllib/src/test/scala added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spark-mllib_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:testCompile (scala-test-compile-first) @ spark-mllib_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 105 Scala sources and 42 Java sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/mllib/target/scala-2.10/test-classes...[0m
+[0m[[33mwarn[0m] [0mwarning: [options] bootstrap class path not set in conjunction with -source 1.6[0m
+[0m[[33mwarn[0m] [0mNote: /Users/jeromenilmeier/Documents/spark_28may2015/spark/mllib/src/test/java/org/apache/spark/mllib/evaluation/JavaRankingMetricsSuite.java uses unchecked or unsafe operations.[0m
+[0m[[33mwarn[0m] [0mNote: Recompile with -Xlint:unchecked for details.[0m
+[0m[[33mwarn[0m] [0m1 warning[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:39:56 PM [27.038s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ spark-mllib_2.10 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:build-classpath (default) @ spark-mllib_2.10 ---
+[INFO] Wrote classpath file '/Users/jeromenilmeier/Documents/spark_28may2015/spark/mllib/target/spark-test-classpath.txt'.
+[INFO] 
+[INFO] --- gmavenplus-plugin:1.5:execute (default) @ spark-mllib_2.10 ---
+[INFO] Using Groovy 2.3.7 to perform execute.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ spark-mllib_2.10 ---
+[INFO] Surefire report directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/mllib/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+Running org.apache.spark.ml.attribute.JavaAttributeGroupSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.176 sec - in org.apache.spark.ml.attribute.JavaAttributeGroupSuite
+Running org.apache.spark.ml.attribute.JavaAttributeSuite
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.673 sec - in org.apache.spark.ml.attribute.JavaAttributeSuite
+Running org.apache.spark.ml.classification.JavaDecisionTreeClassifierSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.364 sec - in org.apache.spark.ml.classification.JavaDecisionTreeClassifierSuite
+Running org.apache.spark.ml.classification.JavaGBTClassifierSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.647 sec - in org.apache.spark.ml.classification.JavaGBTClassifierSuite
+Running org.apache.spark.ml.classification.JavaLogisticRegressionSuite
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.818 sec - in org.apache.spark.ml.classification.JavaLogisticRegressionSuite
+Running org.apache.spark.ml.classification.JavaOneVsRestSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.924 sec - in org.apache.spark.ml.classification.JavaOneVsRestSuite
+Running org.apache.spark.ml.classification.JavaRandomForestClassifierSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.219 sec - in org.apache.spark.ml.classification.JavaRandomForestClassifierSuite
+Running org.apache.spark.ml.classification.JavaStreamingLogisticRegressionSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.609 sec - in org.apache.spark.ml.classification.JavaStreamingLogisticRegressionSuite
+Running org.apache.spark.ml.feature.JavaHashingTFSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.183 sec - in org.apache.spark.ml.feature.JavaHashingTFSuite
+Running org.apache.spark.ml.feature.JavaNormalizerSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.224 sec - in org.apache.spark.ml.feature.JavaNormalizerSuite
+Running org.apache.spark.ml.feature.JavaPolynomialExpansionSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.112 sec - in org.apache.spark.ml.feature.JavaPolynomialExpansionSuite
+Running org.apache.spark.ml.feature.JavaStandardScalerSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.155 sec - in org.apache.spark.ml.feature.JavaStandardScalerSuite
+Running org.apache.spark.ml.feature.JavaTokenizerSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 sec - in org.apache.spark.ml.feature.JavaTokenizerSuite
+Running org.apache.spark.ml.feature.JavaVectorIndexerSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.126 sec - in org.apache.spark.ml.feature.JavaVectorIndexerSuite
+Running org.apache.spark.ml.feature.JavaWord2VecSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.215 sec - in org.apache.spark.ml.feature.JavaWord2VecSuite
+Running org.apache.spark.ml.JavaPipelineSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.248 sec - in org.apache.spark.ml.JavaPipelineSuite
+Running org.apache.spark.ml.param.JavaParamsSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.175 sec - in org.apache.spark.ml.param.JavaParamsSuite
+Running org.apache.spark.ml.regression.JavaDecisionTreeRegressorSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.175 sec - in org.apache.spark.ml.regression.JavaDecisionTreeRegressorSuite
+Running org.apache.spark.ml.regression.JavaGBTRegressorSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.371 sec - in org.apache.spark.ml.regression.JavaGBTRegressorSuite
+Running org.apache.spark.ml.regression.JavaLinearRegressionSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.357 sec - in org.apache.spark.ml.regression.JavaLinearRegressionSuite
+Running org.apache.spark.ml.regression.JavaRandomForestRegressorSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.174 sec - in org.apache.spark.ml.regression.JavaRandomForestRegressorSuite
+Running org.apache.spark.ml.tuning.JavaCrossValidatorSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.344 sec - in org.apache.spark.ml.tuning.JavaCrossValidatorSuite
+Running org.apache.spark.mllib.classification.JavaLogisticRegressionSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.559 sec - in org.apache.spark.mllib.classification.JavaLogisticRegressionSuite
+Running org.apache.spark.mllib.classification.JavaNaiveBayesSuite
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.39 sec - in org.apache.spark.mllib.classification.JavaNaiveBayesSuite
+Running org.apache.spark.mllib.classification.JavaSVMSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.205 sec - in org.apache.spark.mllib.classification.JavaSVMSuite
+Running org.apache.spark.mllib.clustering.JavaKMeansSuite
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.69 sec - in org.apache.spark.mllib.clustering.JavaKMeansSuite
+Running org.apache.spark.mllib.clustering.JavaLDASuite
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.883 sec - in org.apache.spark.mllib.clustering.JavaLDASuite
+Running org.apache.spark.mllib.evaluation.JavaRankingMetricsSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.129 sec - in org.apache.spark.mllib.evaluation.JavaRankingMetricsSuite
+Running org.apache.spark.mllib.feature.JavaTfIdfSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.494 sec - in org.apache.spark.mllib.feature.JavaTfIdfSuite
+Running org.apache.spark.mllib.feature.JavaWord2VecSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.131 sec - in org.apache.spark.mllib.feature.JavaWord2VecSuite
+Running org.apache.spark.mllib.fpm.JavaFPGrowthSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.126 sec - in org.apache.spark.mllib.fpm.JavaFPGrowthSuite
+Running org.apache.spark.mllib.linalg.JavaMatricesSuite
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec - in org.apache.spark.mllib.linalg.JavaMatricesSuite
+Running org.apache.spark.mllib.linalg.JavaVectorsSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.mllib.linalg.JavaVectorsSuite
+Running org.apache.spark.mllib.random.JavaRandomRDDsSuite
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.182 sec - in org.apache.spark.mllib.random.JavaRandomRDDsSuite
+Running org.apache.spark.mllib.recommendation.JavaALSSuite
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.119 sec - in org.apache.spark.mllib.recommendation.JavaALSSuite
+Running org.apache.spark.mllib.regression.JavaIsotonicRegressionSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.204 sec - in org.apache.spark.mllib.regression.JavaIsotonicRegressionSuite
+Running org.apache.spark.mllib.regression.JavaLassoSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.601 sec - in org.apache.spark.mllib.regression.JavaLassoSuite
+Running org.apache.spark.mllib.regression.JavaLinearRegressionSuite
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.277 sec - in org.apache.spark.mllib.regression.JavaLinearRegressionSuite
+Running org.apache.spark.mllib.regression.JavaRidgeRegressionSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.757 sec - in org.apache.spark.mllib.regression.JavaRidgeRegressionSuite
+Running org.apache.spark.mllib.regression.JavaStreamingLinearRegressionSuite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.301 sec - in org.apache.spark.mllib.regression.JavaStreamingLinearRegressionSuite
+Running org.apache.spark.mllib.tree.JavaDecisionTreeSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.244 sec - in org.apache.spark.mllib.tree.JavaDecisionTreeSuite
+-- org.jblas INFO Deleting /var/folders/j5/0ggqyz5j0z12f2q5cz3562rh0000gn/T/jblas3848771331672575537/libjblas.dylib
+-- org.jblas INFO Deleting /var/folders/j5/0ggqyz5j0z12f2q5cz3562rh0000gn/T/jblas3848771331672575537/libjblas_arch_flavor.dylib
+-- org.jblas INFO Deleting /var/folders/j5/0ggqyz5j0z12f2q5cz3562rh0000gn/T/jblas3848771331672575537
+
+Results :
+
+Tests run: 86, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- scalatest-maven-plugin:1.0:test (test) @ spark-mllib_2.10 ---
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+[36mDiscovery starting.[0m
+[36mDiscovery completed in 1 second, 223 milliseconds.[0m
+[36mRun starting. Expected test count is: 490[0m
+[32mKMeansSuite:[0m
+[32m- single cluster[0m
+[32m- no distinct points[0m
+[32m- more clusters than points[0m
+[32m- deterministic initialization[0m
+[32m- single cluster with big dataset[0m
+[32m- single cluster with sparse data[0m
+[32m- k-means|| initialization[0m
+[32m- two clusters[0m
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[32m- model save/load[0m
+[32mMatrixFactorizationModelSuite:[0m
+[32m- constructor[0m
+[32m- save/load[0m
+[32m- batch predict API recommendProductsForUsers[0m
+[32m- batch predict API recommendUsersForProducts[0m
+[32mDecisionTreeClassifierSuite:[0m
+[32m- Binary classification stump with ordered categorical features[0m
+[32m- Binary classification stump with fixed labels 0,1 for Entropy,Gini[0m
+[32m- Multiclass classification stump with 3-ary (unordered) categorical features[0m
+[32m- Binary classification stump with 1 continuous feature, to check off-by-1 error[0m
+[32m- Binary classification stump with 2 continuous features[0m
+[32m- Multiclass classification stump with unordered categorical features, with just enough bins[0m
+[32m- Multiclass classification stump with continuous features[0m
+[32m- Multiclass classification stump with continuous + unordered categorical features[0m
+[32m- Multiclass classification stump with 10-ary (ordered) categorical features[0m
+[32m- Multiclass classification tree with 10-ary (ordered) categorical features, with just enough bins[0m
+[32m- split must satisfy min instances per node requirements[0m
+[32m- do not choose split that does not satisfy min instance per node requirements[0m
+[32m- split must satisfy min info gain requirements[0m
+[32mKMeansClusterSuite:[0m
+[32m- task size should be small in both training and prediction[0m
+[32mMultilabelMetricsSuite:[0m
+[32m- Multilabel evaluation metrics[0m
+[32mFPTreeSuite:[0m
+[32m- add transaction[0m
+[32m- merge tree[0m
+[32m- extract freq itemsets[0m
+[32mPipelineSuite:[0m
+[32m- pipeline[0m
+[32m- pipeline with duplicate stages[0m
+[32mNumericParserSuite:[0m
+[32m- parser[0m
+[32mMatricesSuite:[0m
+[32m- dense matrix construction[0m
+[32m- dense matrix construction with wrong dimension[0m
+[32m- sparse matrix construction[0m
+[32m- sparse matrix construction with wrong number of elements[0m
+[32m- matrix copies are deep copies[0m
+[32m- matrix indexing and updating[0m
+[32m- toSparse, toDense[0m
+[32m- map, update[0m
+[32m- transpose[0m
+[32m- foreachActive[0m
+[32m- horzcat, vertcat, eye, speye[0m
+[32m- zeros[0m
+[32m- ones[0m
+[32m- eye[0m
+[32m- rand[0m
+[32m- randn[0m
+[32m- diag[0m
+[32m- sprand[0m
+[32m- sprandn[0m
+[32m- MatrixUDT[0m
+[32m- toString[0m
+[32mMultivariateGaussianSuite:[0m
+[32m- univariate[0m
+[32m- multivariate[0m
+[32m- multivariate degenerate[0m
+[32mStreamingLogisticRegressionSuite:[0m
+[32m- parameter accuracy[0m
+[32m- parameter convergence[0m
+[32m- predictions[0m
+[32m- training and prediction[0m
+[32mRandomDataGeneratorSuite:[0m
+[32m- UniformGenerator[0m
+[32m- StandardNormalGenerator[0m
+[32m- LogNormalGenerator[0m
+[32m- PoissonGenerator[0m
+[32m- ExponentialGenerator[0m
+[32m- GammaGenerator[0m
+[32mLogisticRegressionClusterSuite:[0m
+[32m- task size should be small in both training and prediction using SGD optimizer[0m
+[32m- task size should be small in both training and prediction using LBFGS optimizer[0m
+[32mRegressionEvaluatorSuite:[0m
+[32m- Regression Evaluator: default params[0m
+[32mRankingMetricsSuite:[0m
+[32m- Ranking metrics: map, ndcg[0m
+[32mStreamingKMeansSuite:[0m
+[32m- accuracy for single center and equivalence to grand average[0m
+[32m- accuracy for two centers[0m
+[32m- detecting dying clusters[0m
+[32mMLUtilsSuite:[0m
+[32m- epsilon computation[0m
+[32m- fast squared distance[0m
+[32m- loadLibSVMFile[0m
+[32m- saveAsLibSVMFile[0m
+[32m- appendBias[0m
+[32m- kFold[0m
+[32m- loadVectors[0m
+[32m- loadLabeledPoints[0m
+[32m- log1pExp[0m
+[32mRDDFunctionsSuite:[0m
+[32m- sliding[0m
+[32m- sliding with empty partitions[0m
+[32mGradientDescentClusterSuite:[0m
+[32m- task size should be small[0m
+[32mLogisticRegressionSuite:[0m
+[32m- logistic regression: default params[0m
+[32m- logistic regression doesn't fit intercept when fitIntercept is off[0m
+[32m- logistic regression with setters[0m
+[32m- logistic regression: Predictor, Classifier methods[0m
+[32m- MultiClassSummarizer[0m
+[32m- binary logistic regression with intercept without regularization[0m
+[32m- binary logistic regression without intercept without regularization[0m
+[32m- binary logistic regression with intercept with L1 regularization[0m
+[32m- binary logistic regression without intercept with L1 regularization[0m
+[32m- binary logistic regression with intercept with L2 regularization[0m
+[32m- binary logistic regression without intercept with L2 regularization[0m
+[32m- binary logistic regression with intercept with ElasticNet regularization[0m
+[32m- binary logistic regression without intercept with ElasticNet regularization[0m
+[32m- binary logistic regression with intercept with strong L1 regularization[0m
+[32mKernelDensitySuite:[0m
+[32m- kernel density single sample[0m
+[32m- kernel density multiple samples[0m
+[32mBreezeVectorConversionSuite:[0m
+[32m- dense to breeze[0m
+[32m- sparse to breeze[0m
+[32m- dense breeze to vector[0m
+[32m- sparse breeze to vector[0m
+[32m- sparse breeze with partially-used arrays to vector[0m
+[32mAttributeGroupSuite:[0m
+[32m- attribute group[0m
+[32m- attribute group without attributes[0m
+[32mCorrelationSuite:[0m
+[32m- corr(x, y) pearson, 1 value in data[0m
+[32m- corr(x, y) default, pearson[0m
+[32m- corr(x, y) spearman[0m
+[32m- corr(X) default, pearson[0m
+[32m- corr(X) spearman[0m
+[32m- method identification[0m
+[32mSVMClusterSuite:[0m
+[32m- task size should be small in both training and prediction[0m
+[32mRowMatrixClusterSuite:[0m
+[32m- task size should be small in svd[0m
+[32m- task size should be small in summarize[0m
+[32mBucketizerSuite:[0m
+[32m- Bucket continuous features, without -inf,inf[0m
+[32m- Bucket continuous features, with -inf,inf[0m
+[32m- Binary search correctness on hand-picked examples[0m
+[32m- Binary search correctness in contrast with linear search, on random data[0m
+[32mSVMSuite:[0m
+[32m- SVM with threshold[0m
+[32m- SVM using local random SGD[0m
+[32m- SVM local random SGD with initial weights[0m
+[32m- SVM with invalid labels[0m
+[32m- model save/load[0m
+[32mParamGridBuilderSuite:[0m
+[32m- param grid builder[0m
+[32mRegressionMetricsSuite:[0m
+[32m- regression metrics[0m
+[32m- regression metrics with complete fitting[0m
+[32mPowerIterationClusteringSuite:[0m
+[32m- power iteration clustering[0m
+[32m- normalize and powerIter[0m
+[32m- model save/load[0m
+[32mParamsSuite:[0m
+[32m- param[0m
+[32m- param pair[0m
+[32m- param map[0m
+[32m- params[0m
+[32m- ParamValidate[0m
+[32mCrossValidatorSuite:[0m
+[32m- cross validation with logistic regression[0m
+[32m- validateParams should check estimatorParamMaps[0m
+[32mLogisticRegressionSuite:[0m
+[32m- logistic regression with SGD[0m
+[32m- logistic regression with LBFGS[0m
+[32m- logistic regression with initial weights with SGD[0m
+[32m- logistic regression with initial weights and non-default regularization parameter[0m
+[32m- logistic regression with initial weights with LBFGS[0m
+[32m- numerical stability of scaling features using logistic regression with LBFGS[0m
+[32m- multinomial logistic regression with LBFGS[0m
+[32m- model save/load: binary classification[0m
+[32m- model save/load: multiclass classification[0m
+[32mOneHotEncoderSuite:[0m
+[32m- OneHotEncoder includeFirst = true[0m
+[32m- OneHotEncoder includeFirst = false[0m
+[32mVectorIndexerSuite:[0m
+[32m- Cannot fit an empty DataFrame[0m
+[32m- Throws error when given RDDs with different size vectors[0m
+[32m- Same result with dense and sparse vectors[0m
+[32m- Builds valid categorical feature value index, transform correctly, check metadata[0m
+[32m- Maintain sparsity for sparse vectors[0m
+[32m- Preserve metadata[0m
+[32mHashingTFSuite:[0m
+[32m- hashing tf on a single doc[0m
+[32m- hashing tf on an RDD[0m
+[32mLinearRegressionClusterSuite:[0m
+[32m- task size should be small in both training and prediction[0m
+[32mBreezeMatrixConversionSuite:[0m
+[32m- dense matrix to breeze[0m
+[32m- dense breeze matrix to matrix[0m
+[32m- sparse matrix to breeze[0m
+[32m- sparse breeze matrix to sparse matrix[0m
+[32mGBTClassifierSuite:[0m
+[32m- Binary classification with continuous features: Log Loss[0m
+[32mNaiveBayesClusterSuite:[0m
+[32m- task size should be small in both training and prediction[0m
+[32mCoordinateMatrixSuite:[0m
+[32m- size[0m
+[32m- empty entries[0m
+[32m- toBreeze[0m
+[32m- transpose[0m
+[32m- toIndexedRowMatrix[0m
+[32m- toRowMatrix[0m
+[32m- toBlockMatrix[0m
+[32mIsotonicRegressionSuite:[0m
+[32m- increasing isotonic regression[0m
+[32m- model save/load[0m
+[32m- isotonic regression with size 0[0m
+[32m- isotonic regression with size 1[0m
+[32m- isotonic regression strictly increasing sequence[0m
+[32m- isotonic regression strictly decreasing sequence[0m
+[32m- isotonic regression with last element violating monotonicity[0m
+[32m- isotonic regression with first element violating monotonicity[0m
+[32m- isotonic regression with negative labels[0m
+[32m- isotonic regression with unordered input[0m
+[32m- weighted isotonic regression[0m
+[32m- weighted isotonic regression with weights lower than 1[0m
+[32m- weighted isotonic regression with negative weights[0m
+[32m- weighted isotonic regression with zero weights[0m
+[32m- isotonic regression prediction[0m
+[32m- isotonic regression prediction with duplicate features[0m
+[32m- antitonic regression prediction with duplicate features[0m
+[32m- isotonic regression RDD prediction[0m
+[32m- antitonic regression prediction[0m
+[32m- model construction[0m
+[32mSharedParamsSuite:[0m
+[32m- outputCol[0m
+[32mALSSuite:[0m
+[32m- LocalIndexEncoder[0m
+[32m- normal equation construction[0m
+[32m- CholeskySolver[0m
+[32m- RatingBlockBuilder[0m
+[32m- UncompressedInBlock[0m
+[32m- exact rank-1 matrix[0m
+[32m- approximate rank-1 matrix[0m
+[32m- approximate rank-2 matrix[0m
+[32m- different block settings[0m
+[32m- more blocks than ratings[0m
+[32m- implicit feedback[0m
+[32m- using generic ID types[0m
+[32m- nonnegative constraint[0m
+[32m- als partitioner is a projection[0m
+[32m- partitioner in returned factors[0m
+[32m- als with large number of iterations[0m
+[32mWord2VecSuite:[0m
+[32m- Word2Vec[0m
+[32m- Word2VecModel[0m
+[32m- model load / save[0m
+[32mMulticlassMetricsSuite:[0m
+[32m- Multiclass evaluation metrics[0m
+[32mLassoClusterSuite:[0m
+[32m- task size should be small in both training and prediction[0m
+[32mAttributeSuite:[0m
+[32m- default numeric attribute[0m
+[32m- customized numeric attribute[0m
+[32m- bad numeric attributes[0m
+[32m- default nominal attribute[0m
+[32m- customized nominal attribute[0m
+[32m- bad nominal attributes[0m
+[32m- default binary attribute[0m
+[32m- customized binary attribute[0m
+[32m- bad binary attributes[0m
+[32m- attribute from struct field[0m
+[32mGeneralizedLinearPMMLModelExportSuite:[0m
+[32m- linear regression PMML export[0m
+[32m- ridge regression PMML export[0m
+[32m- lasso PMML export[0m
+[32mBaggedPointSuite:[0m
+[32m- BaggedPoint RDD: without subsampling[0m
+[32m- BaggedPoint RDD: with subsampling with replacement (fraction = 1.0)[0m
+[32m- BaggedPoint RDD: with subsampling with replacement (fraction = 0.5)[0m
+[32m- BaggedPoint RDD: with subsampling without replacement (fraction = 1.0)[0m
+[32m- BaggedPoint RDD: with subsampling without replacement (fraction = 0.5)[0m
+[32mLinearRegressionSuite:[0m
+[32m- linear regression with intercept without regularization[0m
+[32m- linear regression with intercept with L1 regularization[0m
+[32m- linear regression with intercept with L2 regularization[0m
+[32m- linear regression with intercept with ElasticNet regularization[0m
+[32mHypothesisTestSuite:[0m
+[32m- chi squared pearson goodness of fit[0m
+[32m- chi squared pearson matrix independence[0m
+[32m- chi squared pearson RDD[LabeledPoint][0m
+[32mVectorsSuite:[0m
+[32m- dense vector construction with varargs[0m
+[32m- dense vector construction from a double array[0m
+[32m- sparse vector construction[0m
+[32m- sparse vector construction with unordered elements[0m
+[32m- dense to array[0m
+[32m- sparse to array[0m
+[32m- vector equals[0m
+[32m- vectors equals with explicit 0[0m
+[32m- indexing dense vectors[0m
+[32m- indexing sparse vectors[0m
+[32m- parse vectors[0m
+[32m- zeros[0m
+[32m- Vector.copy[0m
+[32m- VectorUDT[0m
+[32m- fromBreeze[0m
+[32m- sqdist[0m
+[32m- foreachActive[0m
+[32m- vector p-norm[0m
+[32m- Vector numActive and numNonzeros[0m
+[32m- Vector toSparse and toDense[0m
+[32m- Vector.compressed[0m
+[32mHashingTFSuite:[0m
+[32m- params[0m
+[32m- hashingTF[0m
+[32mIndexedRowMatrixSuite:[0m
+[32m- size[0m
+[32m- empty rows[0m
+[32m- toBreeze[0m
+[32m- toRowMatrix[0m
+[32m- toCoordinateMatrix[0m
+[32m- toBlockMatrix[0m
+[32m- multiply a local matrix[0m
+[32m- gram[0m
+[32m- svd[0m
+[32m- validate k in svd[0m
+[32mDecisionTreeSuite:[0m
+[32m- Binary classification with continuous features: split and bin calculation[0m
+[32m- Binary classification with binary (ordered) categorical features: split and bin calculation[0m
+[32m- Binary classification with 3-ary (ordered) categorical features, with no samples for one category[0m
+[32m- extract categories from a number for multiclass classification[0m
+[32m- find splits for a continuous feature[0m
+[32m- Multiclass classification with unordered categorical features: split and bin calculations[0m
+[32m- Multiclass classification with ordered categorical features: split and bin calculations[0m
+[32m- Avoid aggregation on the last level[0m
+[32m- Avoid aggregation if impurity is 0.0[0m
+[32m- Second level node building with vs. without groups[0m
+[32m- Binary classification stump with ordered categorical features[0m
+[32m- Regression stump with 3-ary (ordered) categorical features[0m
+[32m- Regression stump with binary (ordered) categorical features[0m
+[32m- Binary classification stump with fixed label 0 for Gini[0m
+[32m- Binary classification stump with fixed label 1 for Gini[0m
+[32m- Binary classification stump with fixed label 0 for Entropy[0m
+[32m- Binary classification stump with fixed label 1 for Entropy[0m
+[32m- Multiclass classification stump with 3-ary (unordered) categorical features[0m
+[32m- Binary classification stump with 1 continuous feature, to check off-by-1 error[0m
+[32m- Binary classification stump with 2 continuous features[0m
+[32m- Multiclass classification stump with unordered categorical features, with just enough bins[0m
+[32m- Multiclass classification stump with continuous features[0m
+[32m- Multiclass classification stump with continuous + unordered categorical features[0m
+[32m- Multiclass classification stump with 10-ary (ordered) categorical features[0m
+[32m- Multiclass classification tree with 10-ary (ordered) categorical features, with just enough bins[0m
+[32m- split must satisfy min instances per node requirements[0m
+[32m- do not choose split that does not satisfy min instance per node requirements[0m
+[32m- split must satisfy min info gain requirements[0m
+[32m- Node.subtreeIterator[0m
+[32m- model save/load[0m
+[32mWord2VecSuite:[0m
+[32m- Word2Vec[0m
+[32mPythonMLLibAPISuite:[0m
+[32m- pickle vector[0m
+[32m- pickle labeled point[0m
+[32m- pickle double[0m
+[32m- pickle matrix[0m
+[32m- pickle rating[0m
+[32mLabeledPointSuite:[0m
+[32m- parse labeled points[0m
+[32m- parse labeled points with v0.9 format[0m
+[32mRandomRDDsSuite:[0m
+[32m- RandomRDD sizes[0m
+[32m- randomRDD for different distributions[0m
+[32m- randomVectorRDD for different distributions[0m
+[32mAreaUnderCurveSuite:[0m
+[32m- auc computation[0m
+[32m- auc of an empty curve[0m
+[32m- auc of a curve with a single point[0m
+[32mBlockMatrixSuite:[0m
+[32m- size[0m
+[32m- grid partitioner[0m
+[32m- toCoordinateMatrix[0m
+[32m- toIndexedRowMatrix[0m
+[32m- toBreeze and toLocalMatrix[0m
+[32m- add[0m
+[32m- multiply[0m
+[32m- validate[0m
+[32m- transpose[0m
+[32mTestingUtilsSuite:[0m
+[32m- Comparing doubles using relative error.[0m
+[32m- Comparing doubles using absolute error.[0m
+[32m- Comparing vectors using relative error.[0m
+[32m- Comparing vectors using absolute error.[0m
+[32mStandardScalerSuite:[0m
+[32m- Standardization with dense input when means and stds are provided[0m
+[32m- Standardization with dense input[0m
+[32m- Standardization with sparse input when means and stds are provided[0m
+[32m- Standardization with sparse input[0m
+[32m- Standardization with constant input when means and stds are provided[0m
+[32m- Standardization with constant input[0m
+[32m- StandardScalerModel argument nulls are properly handled[0m
+[32mDecisionTreeRegressorSuite:[0m
+[32m- Regression stump with 3-ary (ordered) categorical features[0m
+[32m- Regression stump with binary (ordered) categorical features[0m
+[32mRowMatrixSuite:[0m
+[32m- size[0m
+[32m- empty rows[0m
+[32m- toBreeze[0m
+[32m- gram[0m
+[32m- similar columns[0m
+[32m- svd of a full-rank matrix[0m
+[32m- svd of a low-rank matrix[0m
+[32m- validate k in svd[0m
+[32m- pca[0m
+[32m- multiply a local matrix[0m
+[32m- compute column summary statistics[0m
+[32mNaiveBayesSuite:[0m
+[32m- model types[0m
+[32m- get, set params[0m
+[32m- Naive Bayes Multinomial[0m
+[32m- Naive Bayes Bernoulli[0m
+[32m- detect negative values[0m
+[32m- detect non zero or one values in Bernoulli[0m
+[32m- model save/load: 2.0 to 2.0[0m
+[32m- model save/load: 1.0 to 2.0[0m
+[32mNNLSSuite:[0m
+[32m- NNLS: exact solution cases[0m
+[32m- NNLS: nonnegativity constraint active[0m
+[32m- NNLS: objective value test[0m
+[32mGradientDescentSuite:[0m
+[32m- Assert the loss is decreasing.[0m
+[32m- Test the loss and gradient of first iteration with regularization.[0m
+[32mPCASuite:[0m
+[32m- Correct computing use a PCA wrapper[0m
+[32mIdentifiableSuite:[0m
+[32m- Identifiable[0m
+[32mPMMLModelExportFactorySuite:[0m
+[32m- PMMLModelExportFactory create KMeansPMMLModelExport when passing a KMeansModel[0m
+[32m- PMMLModelExportFactory create GeneralizedLinearPMMLModelExport when passing a LinearRegressionModel, RidgeRegressionModel or LassoModel[0m
+[32m- PMMLModelExportFactory create BinaryClassificationPMMLModelExport when passing a LogisticRegressionModel or SVMModel[0m
+[32m- PMMLModelExportFactory throw IllegalArgumentException when passing a Multinomial Logistic Regression[0m
+[32m- PMMLModelExportFactory throw IllegalArgumentException when passing an unsupported model[0m
+[32mRandomForestRegressorSuite:[0m
+[32m- Regression with continuous features: comparing DecisionTree vs. RandomForest(numTrees = 1)[0m
+[32m- Regression with continuous features and node Id cache : comparing DecisionTree vs. RandomForest(numTrees = 1)[0m
+[32mBinaryClassificationMetricsSuite:[0m
+[32m- binary evaluation metrics[0m
+[32m- binary evaluation metrics for RDD where all examples have positive label[0m
+[32m- binary evaluation metrics for RDD where all examples have negative label[0m
+[32m- binary evaluation metrics with downsampling[0m
+[32mNormalizerSuite:[0m
+[32m- Normalization using L1 distance[0m
+[32m- Normalization using L2 distance[0m
+[32m- Normalization using L^Inf distance.[0m
+[32mRidgeRegressionClusterSuite:[0m
+[32m- task size should be small in both training and prediction[0m
+[32mALSSuite:[0m
+[32m- rank-1 matrices[0m
+[32m- rank-1 matrices bulk[0m
+[32m- rank-2 matrices[0m
+[32m- rank-2 matrices bulk[0m
+[32m- rank-1 matrices implicit[0m
+[32m- rank-1 matrices implicit bulk[0m
+[32m- rank-2 matrices implicit[0m
+[32m- rank-2 matrices implicit bulk[0m
+[32m- rank-2 matrices implicit negative[0m
+[32m- rank-2 matrices with different user and product blocks[0m
+[32m- pseudorandomness[0m
+[32m- Storage Level for RDDs in model[0m
+[32m- negative ids[0m
+[32m- NNALS, rank 2[0m
+[32mNormalizerSuite:[0m
+[32m- Normalization with default parameter[0m
+[32m- Normalization with setter[0m
+[32mChiSqSelectorSuite:[0m
+[32m- ChiSqSelector transform test (sparse & dense vector)[0m
+[32mGBTRegressorSuite:[0m
+[32m- Regression with continuous features: SquaredError[0m
+[32mImpuritySuite:[0m
+[32m- Gini impurity does not support negative labels[0m
+[32m- Entropy does not support negative labels[0m
+[32mKMeansPMMLModelExportSuite:[0m
+[32m- KMeansPMMLModelExport generate PMML format[0m
+[32mGradientBoostedTreesSuite:[0m
+[32m- Regression with continuous features: SquaredError[0m
+[32m- Regression with continuous features: Absolute Error[0m
+[32m- Binary classification with continuous features: Log Loss[0m
+[32m- SPARK-5496: BoostingStrategy.defaultParams should recognize Classification[0m
+[32m- model save/load[0m
+[32m- runWithValidation stops early and performs better on a validation dataset[0m
+[32mIDFSuite:[0m
+[32m- idf[0m
+[32m- idf minimum document frequency filtering[0m
+[32mRegexTokenizerSuite:[0m
+[32m- RegexTokenizer[0m
+[32mBinaryClassificationPMMLModelExportSuite:[0m
+[32m- logistic regression PMML export[0m
+[32m- linear SVM PMML export[0m
+[32mBLASSuite:[0m
+[32m- copy[0m
+[32m- scal[0m
+[32m- axpy[0m
+[32m- dot[0m
+[32m- syr[0m
+[32m- gemm[0m
+[32m- gemv[0m
+[32mRidgeRegressionSuite:[0m
+[32m- ridge regression can help avoid overfitting[0m
+[32m- model save/load[0m
+[32mLBFGSSuite:[0m
+[32m- LBFGS loss should be decreasing and match the result of Gradient Descent.[0m
+[32m- LBFGS and Gradient Descent with L2 regularization should get the same result.[0m
+[32m- The convergence criteria should work as we expect.[0m
+[32m- Optimize via class LBFGS.[0m
+[32mPolynomialExpansionSuite:[0m
+[32m- Polynomial expansion with default parameter[0m
+[32m- Polynomial expansion with setter[0m
+[32mLDASuite:[0m
+[32m- LocalLDAModel[0m
+[32m- running and DistributedLDAModel with default Optimizer (EM)[0m
+[32m- vertex indexing[0m
+[32m- setter alias[0m
+[32m- OnlineLDAOptimizer initialization[0m
+[32m- OnlineLDAOptimizer one iteration[0m
+[32m- OnlineLDAOptimizer with toy data[0m
+[32mLinearRegressionSuite:[0m
+[32m- linear regression[0m
+[32m- linear regression without intercept[0m
+[32m- sparse linear regression without intercept[0m
+[32m- model save/load[0m
+[32mOneVsRestSuite:[0m
+[32m- one-vs-rest: default params[0m
+[32m- one-vs-rest: pass label metadata correctly during train[0m
+[32mLBFGSClusterSuite:[0m
+[32m- task size should be small[0m
+[32mRandomForestSuite:[0m
+[32m- Binary classification with continuous features: comparing DecisionTree vs. RandomForest(numTrees = 1)[0m
+[32m- Binary classification with continuous features and node Id cache : comparing DecisionTree vs. RandomForest(numTrees = 1)[0m
+[32m- Regression with continuous features: comparing DecisionTree vs. RandomForest(numTrees = 1)[0m
+[32m- Regression with continuous features and node Id cache : comparing DecisionTree vs. RandomForest(numTrees = 1)[0m
+[32m- Binary classification with continuous features: subsampling features[0m
+[32m- Binary classification with continuous features and node Id cache: subsampling features[0m
+[32m- alternating categorical and continuous features with multiclass labels to test indexing[0m
+[32m- subsampling rate in RandomForest[0m
+[32m- model save/load[0m
+[32mStreamingLinearRegressionSuite:[0m
+[32m- parameter accuracy[0m
+[32m- parameter convergence[0m
+[32m- predictions[0m
+[32m- training and prediction[0m
+[32mRandomForestClassifierSuite:[0m
+[32m- Binary classification with continuous features: comparing DecisionTree vs. RandomForest(numTrees = 1)[0m
+[32m- Binary classification with continuous features and node Id cache: comparing DecisionTree vs. RandomForest(numTrees = 1)[0m
+[32m- alternating categorical and continuous features with multiclass labels to test indexing[0m
+[32m- subsampling rate in RandomForest[0m
+[32mStringIndexerSuite:[0m
+[32m- StringIndexer[0m
+[32m- StringIndexer with a numeric input column[0m
+[32mBinarizerSuite:[0m
+[32m- Binarize continuous features with default parameter[0m
+[32m- Binarize continuous features with setter[0m
+[32mGaussianMixtureSuite:[0m
+[32m- single cluster[0m
+[32m- two clusters[0m
+[32m- single cluster with sparse data[0m
+[32m- two clusters with sparse data[0m
+[32m- model save / load[0m
+[32mIDFSuite:[0m
+[32m- compute IDF with default parameter[0m
+[32m- compute IDF with setter[0m
+[32mVectorAssemblerSuite:[0m
+[32m- assemble[0m
+[32m- assemble should compress vectors[0m
+[32m- VectorAssembler[0m
+[32mElementwiseProductSuite:[0m
+[32m- elementwise (hadamard) product should properly apply vector to dense data set[0m
+[32m- elementwise (hadamard) product should properly apply vector to sparse data set[0m
+[32mMultivariateOnlineSummarizerSuite:[0m
+[32m- basic error handing[0m
+[32m- dense vector input[0m
+[32m- sparse vector input[0m
+[32m- mixing dense and sparse vector input[0m
+[32m- merging two summarizers[0m
+[32m- merging summarizer with empty summarizer[0m
+[32m- merging summarizer when one side has zero mean (SPARK-4355)[0m
+[32mLassoSuite:[0m
+[32m- Lasso local random SGD[0m
+[32m- Lasso local random SGD with initial weights[0m
+[32m- model save/load[0m
+[32mMLPairRDDFunctionsSuite:[0m
+[32m- topByKey[0m
+[32mPeriodicGraphCheckpointerSuite:[0m
+[32m- Persisting[0m
+[32m- Checkpointing[0m
+[32mFPGrowthSuite:[0m
+[32m- FP-Growth using String type[0m
+[32m- FP-Growth using Int type[0m
+[36mRun completed in 3 minutes, 48 seconds.[0m
+[36mTotal number of tests run: 490[0m
+[36mSuites: completed 110, aborted 0[0m
+[36mTests: succeeded 490, failed 0, canceled 0, ignored 0, pending 0[0m
+[32mAll tests passed.[0m
+-- org.jblas INFO Deleting /var/folders/j5/0ggqyz5j0z12f2q5cz3562rh0000gn/T/jblas1744154241312178853/libjblas.dylib
+-- org.jblas INFO Deleting /var/folders/j5/0ggqyz5j0z12f2q5cz3562rh0000gn/T/jblas1744154241312178853/libjblas_arch_flavor.dylib
+-- org.jblas INFO Deleting /var/folders/j5/0ggqyz5j0z12f2q5cz3562rh0000gn/T/jblas1744154241312178853
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 05:39 min
+[INFO] Finished at: 2015-05-29T20:44:32-07:00
+[INFO] Final Memory: 48M/817M
+[INFO] ------------------------------------------------------------------------

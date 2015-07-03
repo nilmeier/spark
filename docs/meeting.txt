@@ -1,0 +1,20 @@
+Christian Kadner 
+
+He didn’t understand what Spark was…we should make this more clear to our groups.  
+He liked the load balancing idea.  
+
+Streaming was good!  Spark and bd in the cloud.  
+
+Security concerns.  Encryption and decryption.  
+
+Comparison 
+
+Spark will be widely adopted.  
+
+Lots of Chinese perpsective.
+
+BTW Karthik returned his exercise. 
+
+Knowledge Transfer Sessions?
+Afternoon?  between 4-5.  
+Glenn 6:45 at latest.  4-5 training sessions.

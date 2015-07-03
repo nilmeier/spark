@@ -340,7 +340,7 @@ public class Java8APISuite implements Serializable {
     Assert.assertEquals(new Tuple2<>("1", 1), s.get(0));
     Assert.assertEquals(new Tuple2<>("2", 2), s.get(1));
   }
-
+s
   @Test
   public void mapOnPairRDD() {
     JavaRDD<Integer> rdd1 = sc.parallelize(Arrays.asList(1, 2, 3, 4));

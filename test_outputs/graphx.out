@@ -1,0 +1,264 @@
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Spark Project GraphX 1.4.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-versions) @ spark-graphx_2.10 ---
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:add-source (eclipse-add-source) @ spark-graphx_2.10 ---
+[INFO] Add Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/src/main/scala
+[INFO] Add Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/src/test/scala
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-source (add-scala-sources) @ spark-graphx_2.10 ---
+[INFO] Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/src/main/scala added.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ spark-graphx_2.10 ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spark-graphx_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:compile (scala-compile-first) @ spark-graphx_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 38 Scala sources and 5 Java sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/target/scala-2.10/classes...[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/src/main/scala/org/apache/spark/graphx/Pregel.scala:124: method mapReduceTriplets in class Graph is deprecated: use aggregateMessages[0m
+[0m[[33mwarn[0m] [0m    var messages = g.mapReduceTriplets(sendMsg, mergeMsg)[0m
+[0m[[33mwarn[0m] [0m                     ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/src/main/scala/org/apache/spark/graphx/Pregel.scala:141: method mapReduceTriplets in class Graph is deprecated: use aggregateMessages[0m
+[0m[[33mwarn[0m] [0m      messages = g.mapReduceTriplets(sendMsg, mergeMsg, Some((newVerts, activeDirection))).cache()[0m
+[0m[[33mwarn[0m] [0m                   ^[0m
+[0m[[33mwarn[0m] [0mtwo warnings found[0m
+[0m[[33mwarn[0m] [0mwarning: [options] bootstrap class path not set in conjunction with -source 1.6[0m
+[0m[[33mwarn[0m] [0m1 warning[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:38:03 PM [12.474s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ spark-graphx_2.10 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/target/scala-2.10/classes
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:add-test-source (add-scala-test-sources) @ spark-graphx_2.10 ---
+[INFO] Test Source directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/src/test/scala added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spark-graphx_2.10 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:testCompile (scala-test-compile-first) @ spark-graphx_2.10 ---
+[INFO] Using zinc server for incremental compilation
+[INFO] compiler plugin: BasicArtifact(org.scalamacros,paradise_2.10.4,2.0.1,null)
+[0m[[0minfo[0m] [0mCompiling 18 Scala sources to /Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/target/scala-2.10/test-classes...[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/src/test/scala/org/apache/spark/graphx/GraphSuite.scala:226: method mapReduceTriplets in class Graph is deprecated: use aggregateMessages[0m
+[0m[[33mwarn[0m] [0m      val result = graph.mapReduceTriplets[Int](et => Iterator((et.dstId, et.srcAttr)), _ + _)[0m
+[0m[[33mwarn[0m] [0m                         ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/src/test/scala/org/apache/spark/graphx/GraphSuite.scala:291: method mapReduceTriplets in class Graph is deprecated: use aggregateMessages[0m
+[0m[[33mwarn[0m] [0m      val neighborDegreeSums = starDeg.mapReduceTriplets([0m
+[0m[[33mwarn[0m] [0m                                       ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/src/test/scala/org/apache/spark/graphx/GraphSuite.scala:301: method mapReduceTriplets in class Graph is deprecated: use aggregateMessages[0m
+[0m[[33mwarn[0m] [0m      val numEvenNeighbors = vids.mapReduceTriplets(et => {[0m
+[0m[[33mwarn[0m] [0m                                  ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/src/test/scala/org/apache/spark/graphx/GraphSuite.scala:317: method mapReduceTriplets in class Graph is deprecated: use aggregateMessages[0m
+[0m[[33mwarn[0m] [0m      val numOddNeighbors = changedGraph.mapReduceTriplets(et => {[0m
+[0m[[33mwarn[0m] [0m                                         ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/src/test/scala/org/apache/spark/graphx/GraphSuite.scala:352: method mapReduceTriplets in class Graph is deprecated: use aggregateMessages[0m
+[0m[[33mwarn[0m] [0m      val neighborDegreeSums = reverseStarDegrees.mapReduceTriplets([0m
+[0m[[33mwarn[0m] [0m                                                  ^[0m
+[0m[[33mwarn[0m] [0m/Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/src/test/scala/org/apache/spark/graphx/GraphSuite.scala:425: method mapReduceTriplets in class Graph is deprecated: use aggregateMessages[0m
+[0m[[33mwarn[0m] [0m      val neighborAttrSums = graph.mapReduceTriplets[Int]([0m
+[0m[[33mwarn[0m] [0m                                   ^[0m
+[0m[[33mwarn[0m] [0m6 warnings found[0m
+[0m[[0minfo[0m] [0mCompile success at May 29, 2015 8:38:11 PM [6.864s][0m
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ spark-graphx_2.10 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:build-classpath (default) @ spark-graphx_2.10 ---
+[INFO] Wrote classpath file '/Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/target/spark-test-classpath.txt'.
+[INFO] 
+[INFO] --- gmavenplus-plugin:1.5:execute (default) @ spark-graphx_2.10 ---
+[INFO] Using Groovy 2.3.7 to perform execute.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ spark-graphx_2.10 ---
+[INFO] Surefire report directory: /Users/jeromenilmeier/Documents/spark_28may2015/spark/graphx/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+Running org.apache.spark.graphx.EdgeRDDSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.graphx.EdgeRDDSuite
+Running org.apache.spark.graphx.EdgeSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.graphx.EdgeSuite
+Running org.apache.spark.graphx.GraphOpsSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.spark.graphx.GraphOpsSuite
+Running org.apache.spark.graphx.GraphSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.graphx.GraphSuite
+Running org.apache.spark.graphx.impl.EdgePartitionSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.graphx.impl.EdgePartitionSuite
+Running org.apache.spark.graphx.impl.VertexPartitionSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.graphx.impl.VertexPartitionSuite
+Running org.apache.spark.graphx.lib.ConnectedComponentsSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.graphx.lib.ConnectedComponentsSuite
+Running org.apache.spark.graphx.lib.LabelPropagationSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.graphx.lib.LabelPropagationSuite
+Running org.apache.spark.graphx.lib.PageRankSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.graphx.lib.PageRankSuite
+Running org.apache.spark.graphx.lib.ShortestPathsSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.graphx.lib.ShortestPathsSuite
+Running org.apache.spark.graphx.lib.StronglyConnectedComponentsSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.graphx.lib.StronglyConnectedComponentsSuite
+Running org.apache.spark.graphx.lib.SVDPlusPlusSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.graphx.lib.SVDPlusPlusSuite
+Running org.apache.spark.graphx.lib.TriangleCountSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.graphx.lib.TriangleCountSuite
+Running org.apache.spark.graphx.PregelSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.graphx.PregelSuite
+Running org.apache.spark.graphx.util.BytecodeUtilsSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.graphx.util.BytecodeUtilsSuite
+Running org.apache.spark.graphx.util.GraphGeneratorsSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.spark.graphx.util.GraphGeneratorsSuite
+Running org.apache.spark.graphx.VertexRDDSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.spark.graphx.VertexRDDSuite
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- scalatest-maven-plugin:1.0:test (test) @ spark-graphx_2.10 ---
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+[36mDiscovery starting.[0m
+[36mDiscovery completed in 332 milliseconds.[0m
+[36mRun starting. Expected test count is: 98[0m
+[32mPregelSuite:[0m
+[32m- 1 iteration[0m
+[32m- chain propagation[0m
+[32mConnectedComponentsSuite:[0m
+[32m- Grid Connected Components[0m
+[32m- Reverse Grid Connected Components[0m
+[32m- Chain Connected Components[0m
+[32m- Reverse Chain Connected Components[0m
+[32m- Connected Components on a Toy Connected Graph[0m
+[32mShortestPathsSuite:[0m
+[32m- Shortest Path Computations[0m
+[32mPageRankSuite:[0m
+[32m- Star PageRank[0m
+[32m- Star PersonalPageRank[0m
+[32m- Grid PageRank[0m
+[32m- Chain PageRank[0m
+[32m- Chain PersonalizedPageRank[0m
+[32mEdgeRDDSuite:[0m
+[32m- cache, getStorageLevel[0m
+[32mBytecodeUtilsSuite:[0m
+[32m- closure invokes a method[0m
+[32m- closure inside a closure invokes a method[0m
+[32m- closure inside a closure inside a closure invokes a method[0m
+[32m- closure calling a function that invokes a method[0m
+[32m- closure calling a function that invokes a method which uses another closure[0m
+[32m- nested closure[0m
+[32mGraphOpsSuite:[0m
+[32m- joinVertices[0m
+[32m- collectNeighborIds[0m
+[32m- filter[0m
+[32m- convertToCanonicalEdges[0m
+[32m- collectEdgesCycleDirectionOut[0m
+[32m- collectEdgesCycleDirectionIn[0m
+[32m- collectEdgesCycleDirectionEither[0m
+[32m- collectEdgesChainDirectionOut[0m
+[32m- collectEdgesChainDirectionIn[0m
+[32m- collectEdgesChainDirectionEither[0m
+[32mVertexPartitionSuite:[0m
+[32m- isDefined, filter[0m
+[32m- map[0m
+[32m- diff[0m
+[32m- leftJoin[0m
+[32m- innerJoin[0m
+[32m- createUsingIndex[0m
+[32m- innerJoinKeepLeft[0m
+[32m- aggregateUsingIndex[0m
+[32m- reindex[0m
+[32m- serialization[0m
+[32mGraphGeneratorsSuite:[0m
+[32m- GraphGenerators.generateRandomEdges[0m
+[32m- GraphGenerators.sampleLogNormal[0m
+[32m- GraphGenerators.logNormalGraph[0m
+0 edges
+[32m- SPARK-5064 GraphGenerators.rmatGraph numEdges upper bound[0m
+[32mVertexRDDSuite:[0m
+[32m- filter[0m
+[32m- mapValues[0m
+[32m- minus[0m
+[32m- minus with RDD[(VertexId, VD)][0m
+[32m- minus with non-equal number of partitions[0m
+[32m- diff[0m
+[32m- diff with RDD[(VertexId, VD)][0m
+[32m- diff vertices with non-equal number of partitions[0m
+[32m- leftJoin[0m
+[32m- leftJoin vertices with non-equal number of partitions[0m
+[32m- innerJoin[0m
+[32m- innerJoin vertices with the non-equal number of partitions[0m
+[32m- aggregateUsingIndex[0m
+[32m- mergeFunc[0m
+[32m- cache, getStorageLevel[0m
+[32mStronglyConnectedComponentsSuite:[0m
+[32m- Island Strongly Connected Components[0m
+[32m- Cycle Strongly Connected Components[0m
+[32m- 2 Cycle Strongly Connected Components[0m
+[32mTriangleCountSuite:[0m
+[32m- Count a single triangle[0m
+[32m- Count two triangles[0m
+[32m- Count two triangles with bi-directed edges[0m
+[32m- Count a single triangle with duplicate edges[0m
+[32mEdgePartitionSuite:[0m
+[32m- reverse[0m
+[32m- map[0m
+[32m- filter[0m
+[32m- groupEdges[0m
+[32m- innerJoin[0m
+[32m- isActive, numActives, replaceActives[0m
+[32m- tripletIterator[0m
+[32m- serialization[0m
+[32mEdgeSuite:[0m
+[32m- compare[0m
+[32mLabelPropagationSuite:[0m
+[32m- Label Propagation[0m
+[32mSVDPlusPlusSuite:[0m
+[32m- Test SVD++ with mean square error on training set[0m
+[32mGraphSuite:[0m
+[32m- Graph.fromEdgeTuples[0m
+[32m- Graph.fromEdges[0m
+[32m- Graph.apply[0m
+[32m- triplets[0m
+[32m- partitionBy[0m
+[32m- mapVertices[0m
+[32m- mapVertices changing type with same erased type[0m
+[32m- mapEdges[0m
+[32m- mapTriplets[0m
+[32m- reverse[0m
+[32m- reverse with join elimination[0m
+[32m- subgraph[0m
+[32m- mask[0m
+[32m- groupEdges[0m
+[32m- mapReduceTriplets[0m
+[32m- aggregateMessages[0m
+[32m- outerJoinVertices[0m
+[32m- more edge partitions than vertex partitions[0m
+[32m- checkpoint[0m
+[32m- cache, getStorageLevel[0m
+[32m- non-default number of edge partitions[0m
+[36mRun completed in 35 seconds, 852 milliseconds.[0m
+[36mTotal number of tests run: 98[0m
+[36mSuites: completed 18, aborted 0[0m
+[36mTests: succeeded 98, failed 0, canceled 0, ignored 0, pending 0[0m
+[32mAll tests passed.[0m
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:02 min
+[INFO] Finished at: 2015-05-29T20:38:50-07:00
+[INFO] Final Memory: 47M/803M
+[INFO] ------------------------------------------------------------------------

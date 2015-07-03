@@ -1,0 +1,61 @@
+15/06/01 10:10:48 INFO Utils: Successfully started service 'sparkDriver' on port 59350.
+15/06/01 10:10:48 INFO SparkEnv: Registering MapOutputTracker
+15/06/01 10:10:48 INFO SparkEnv: Registering BlockManagerMaster
+15/06/01 10:10:48 INFO DiskBlockManager: Created local directory at /private/var/folders/j5/0ggqyz5j0z12f2q5cz35
+62rh0000gn/T/spark-14a9784c-ea80-4b3c-87af-96e81e6fba01/blockmgr-73fe1708-d368-45e7-a41c-310f84df7de7
+15/06/01 10:10:48 INFO MemoryStore: MemoryStore started with capacity 265.1 MB
+15/06/01 10:10:48 INFO HttpFileServer: HTTP File server directory is /private/var/folders/j5/0ggqyz5j0z12f2q5cz3
+562rh0000gn/T/spark-14a9784c-ea80-4b3c-87af-96e81e6fba01/httpd-83f8bdf0-8517-40f7-948d-d875a67b5122
+15/06/01 10:10:48 INFO HttpServer: Starting HTTP Server
+15/06/01 10:10:48 INFO Utils: Successfully started service 'HTTP file server' on port 59351.
+15/06/01 10:10:48 INFO SparkEnv: Registering OutputCommitCoordinator
+15/06/01 10:10:48 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+15/06/01 10:10:48 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+15/06/01 10:10:48 INFO SparkUI: Started SparkUI at http://9.72.139.215:4041
+15/06/01 10:10:48 INFO Executor: Starting executor ID driver on host localhost
+15/06/01 10:10:48 INFO Executor: Using REPL class URI: http://9.72.139.215:59349
+15/06/01 10:10:48 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferSer
+vice' on port 59352.
+15/06/01 10:10:48 INFO NettyBlockTransferService: Server created on 59352
+15/06/01 10:10:48 INFO BlockManagerMaster: Trying to register BlockManager
+15/06/01 10:10:48 INFO BlockManagerMasterEndpoint: Registering block manager localhost:59352 with 265.1 MB RAM, 
+BlockManagerId(driver, localhost, 59352)
+15/06/01 10:10:48 INFO BlockManagerMaster: Registered BlockManager
+15/06/01 10:10:48 INFO SparkILoop: Created spark context..
+Spark context available as sc.
+15/06/01 10:10:48 INFO HiveContext: Initializing execution hive, version 0.13.1
+15/06/01 10:10:49 INFO HiveMetaStore: 0: Opening raw store with implemenation class:org.apache.hadoop.hive.metas
+tore.ObjectStore
+15/06/01 10:10:49 INFO ObjectStore: ObjectStore, initialize called
+15/06/01 10:10:49 INFO Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+15/06/01 10:10:49 INFO Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+15/06/01 10:10:49 WARN Connection: BoneCP specified but not present in CLASSPATH (or one of dependencies)
+15/06/01 10:10:49 WARN Connection: BoneCP specified but not present in CLASSPATH (or one of dependencies)
+15/06/01 10:10:50 INFO ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="
+i
+
+
+
+c
+
+Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+15/06/01 10:10:50 INFO MetaStoreDirectSql: MySQL check failed, assuming we are not on mysql: Lexical error at li
+ne 1, column 5.  Encountered: "@" (64), after : "".
+15/06/01 10:10:50 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "
+embedded-only" so does not have its own datastore table.
+15/06/01 10:10:50 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedd
+ed-only" so does not have its own datastore table.
+15/06/01 10:10:51 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "
+embedded-only" so does not have its own datastore table.
+15/06/01 10:10:51 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedd
+ed-only" so does not have its own datastore table.
+15/06/01 10:10:51 INFO ObjectStore: Initialized ObjectStore
+15/06/01 10:10:51 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verificati
+on is not enabled so recording the schema version 0.13.1aa
+15/06/01 10:10:51 INFO HiveMetaStore: Added admin role in metastore
+15/06/01 10:10:51 INFO HiveMetaStore: Added public role in metastore
+15/06/01 10:10:51 INFO HiveMetaStore: No user is added in admin role, since config is empty
+15/06/01 10:10:51 INFO SessionState: No Tez session required at this point. hive.execution.engine=mr.
+15/06/01 10:10:51 INFO SparkILoop: Created sql context (with Hive support)..
+SQL context available as sqlContext.
+
